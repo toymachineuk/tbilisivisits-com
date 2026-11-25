@@ -1925,7 +1925,7 @@
      GURIA — GURIA
 ===================================== -->
 <article class="tv-rectangle-card" data-region="guria">
-  <img class="tv-rectangle-image" src="/img/regions/guria.jpg" alt="Guria" loading="lazy">
+  <img class="tv-rectangle-image" src="/img/georgia-regions/guria.jpg" alt="Guria" loading="lazy">
   <div class="vertical-badge no-icon tv-region-filter region-guria">
     <span>Guria</span>
   </div>
@@ -1957,7 +1957,7 @@
      KVEMO KARTLI — KVEMO KARTLI
 ===================================== -->
 <article class="tv-rectangle-card" data-region="kvemo-kartli">
-  <img class="tv-rectangle-image" src="/img/regions/kvemo-kartli.jpg" alt="Kvemo Kartli" loading="lazy">
+  <img class="tv-rectangle-image" src="/img/georgia-regions/kvemo-kartli/kvemo-kartli.jpg" alt="Kvemo Kartli" loading="lazy">
   <div class="vertical-badge no-icon tv-region-filter region-kvemo-kartli">
     <span>Kvemo Kartli</span>
   </div>
