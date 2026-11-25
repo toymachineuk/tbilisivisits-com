@@ -13,7 +13,7 @@
   gap: clamp(28px, 4vw, 64px);
 
   width: 100%;
-  max-width: 1600px;
+  max-width: 1400px;
   margin-inline: auto;
   padding-bottom: var(--space-lg);
 
@@ -34,7 +34,8 @@
 }
 
 .tv-editorial-hero--featured .tv-editorial-hero-media {
-  aspect-ratio: 1 / 1;
+   aspect-ratio: 21 / 20;
+  overflow: hidden;
 }
 
 .tv-editorial-hero-media img {
@@ -243,9 +244,7 @@
       minmax(0, 1.1fr);
   }
 
-  .tv-editorial-hero--featured .tv-editorial-hero-media {
-    aspect-ratio: 0.9 / 1;
-  }
+ 
 
   .tv-editorial-hero-content > .text-label {
     margin-bottom: 18px;
@@ -284,7 +283,7 @@
   /* IMAGE */
 
   .tv-editorial-hero--featured .tv-editorial-hero-media {
-    aspect-ratio: 5 / 4;
+  
     border-radius: 8px;
   }
 
