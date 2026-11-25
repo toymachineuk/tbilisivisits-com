@@ -1,0 +1,271 @@
+/* =========================================================
+   TV MOVING ANIMATION — UNIVERSAL COMPONENT
+========================================================= */
+
+.tv-moving-animation {
+  --animation-size: 150px;
+
+  --animation-color: #E87818;
+  --animation-border: #C45D10;
+  --animation-text: #fff;
+  --animation-pulse: #F5B77D;
+
+  --animation-ring-width: 2px;
+
+  position: relative;
+  isolation: isolate;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: var(--animation-size);
+  height: var(--animation-size);
+
+  flex: 0 0 auto;
+  pointer-events: none;
+  user-select: none;
+}
+
+
+/* =========================================================
+   ANIMATION CONTAINER
+========================================================= */
+
+.tv-moving-animation .ml8 {
+  position: relative;
+
+  width: 3em;
+  height: 3em;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: calc(var(--animation-size) / 3);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.045em;
+
+  color: var(--animation-text);
+}
+
+
+/* =========================================================
+   LETTERS
+========================================================= */
+
+.tv-moving-animation .letters-container {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 1em;
+
+  margin: auto;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.tv-moving-animation .letters {
+  position: relative;
+  display: inline-block;
+
+  font-size: 0.9em;
+  line-height: 1;
+
+  transform-origin: center;
+}
+
+.tv-moving-animation .letters-left {
+  margin-right: -0.025em;
+}
+
+.tv-moving-animation .bang {
+  font-size: 1.2em;
+  margin-left: 0.015em;
+
+  transform-origin: center;
+}
+
+
+/* =========================================================
+   CIRCLES — BASE
+========================================================= */
+
+.tv-moving-animation .circle {
+  position: absolute;
+  inset: 0;
+
+  margin: auto;
+  border-radius: 50%;
+  box-sizing: border-box;
+
+  transform-origin: center;
+}
+
+
+/* =========================================================
+   EXPANDING PULSE
+========================================================= */
+
+.tv-moving-animation .circle-white {
+  width: 2.35em;
+  height: 2.35em;
+
+  border: var(--animation-ring-width) solid
+    var(--animation-pulse);
+
+  background: transparent;
+  opacity: 0;
+
+  z-index: 0;
+}
+
+
+/* =========================================================
+   SOLID INNER CIRCLE
+========================================================= */
+
+.tv-moving-animation .circle-dark {
+  width: 2.05em;
+  height: 2.05em;
+
+  background: var(--animation-color);
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   ROTATING OUTER CIRCLE
+========================================================= */
+
+.tv-moving-animation .circle-container {
+  position: absolute;
+  inset: 0;
+
+  margin: auto;
+  z-index: 2;
+}
+
+.tv-moving-animation .circle-dark-dashed {
+  width: 2.6em;
+  height: 2.6em;
+
+  border: var(--animation-ring-width) dashed
+    var(--animation-border);
+
+  background: transparent;
+}
+
+
+/* =========================================================
+   SIZE VARIANTS
+========================================================= */
+
+.tv-moving-animation--xs {
+  --animation-size: 70px;
+  --animation-ring-width: 1px;
+}
+
+.tv-moving-animation--sm {
+  --animation-size: 90px;
+  --animation-ring-width: 1.5px;
+}
+
+.tv-moving-animation--md {
+  --animation-size: 120px;
+}
+
+.tv-moving-animation--lg {
+  --animation-size: 180px;
+}
+
+.tv-moving-animation--xl {
+  --animation-size: 220px;
+  --animation-ring-width: 2.5px;
+}
+
+
+/* =========================================================
+   COLOR VARIANTS
+========================================================= */
+
+/* ORANGE */
+
+.tv-moving-animation--orange {
+  --animation-color: #E87818;
+  --animation-border: #C45D10;
+  --animation-pulse: #F5B77D;
+}
+
+
+/* BLUE */
+
+.tv-moving-animation--blue {
+  --animation-color: #3975C6;
+  --animation-border: #24599E;
+  --animation-pulse: #A8C5EB;
+}
+
+
+/* DARK */
+
+.tv-moving-animation--dark {
+  --animation-color: #252525;
+  --animation-border: #666;
+  --animation-pulse: #999;
+}
+
+
+/* PEACH */
+
+.tv-moving-animation--peach {
+  --animation-color: #F4A17C;
+  --animation-border: #C66B49;
+  --animation-pulse: #F8CDB8;
+  --animation-text: #171717;
+}
+
+
+/* IVORY */
+
+.tv-moving-animation--ivory {
+  --animation-color: #F5F2EA;
+  --animation-border: #C8BBA7;
+  --animation-pulse: #E5D9C7;
+  --animation-text: #171717;
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .tv-moving-animation *,
+  .tv-moving-animation *::before,
+  .tv-moving-animation *::after {
+    animation: none !important;
+    transition: none !important;
+    transform: none !important;
+  }
+
+  .tv-moving-animation .circle-white {
+    opacity: 0 !important;
+  }
+
+  .tv-moving-animation .letters,
+  .tv-moving-animation .circle-dark,
+  .tv-moving-animation .circle-container {
+    opacity: 1 !important;
+  }
+
+}

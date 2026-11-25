@@ -1,0 +1,1216 @@
+
+/* This is deliberately empty. */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&display=swap');
+
+
+/* =====================================
+   GALLERY DELUXE ORIGINAL VARIABLES
+===================================== */
+
+:root {
+
+  /* Colors */
+
+  --white: #fff;
+  --black: #000;
+
+  --tv-page: #ffffff;
+  --tv-brand-ivory: #E7E0D5;
+  --tv-brand-dark: #242424;
+  --tv-brand-accent: #C66B49;
+  --tv-brand-warm-ivory: #F5F2EA;
+
+  --tv-text: #171717;
+  --tv-muted: #666666;
+  --tv-border: #e7e5df;
+
+
+  /* Fonts */
+
+  --font-family-serif:
+    Charter,
+    "Bitstream Charter",
+    "Sitka Text",
+    Cambria,
+    serif;
+
+  --font-family-sans-serif:
+    "DM Sans",
+    sans-serif;
+
+  --font-family-base: var(--font-family-sans-serif);
+
+  --font-size-base: 16px;
+}
+
+
+/* =====================================
+   TBILISI VISITS VARIABLES
+===================================== */
+
+
+:root {
+  /* ---------------------------------
+     BRAND COLORS
+  --------------------------------- */
+
+  --tv-logo-red: #FCE8E5;
+  --tv-logo-orange: #FFF0DE;
+  --tv-logo-blue: #E7F1F9;
+  --tv-logo-teal: #E3EFED;
+  --tv-logo-lavender: #E9EAF8;
+  --tv-logo-rose: #F4E5E2;
+
+  /* ---------------------------------
+     BASE COLORS
+  --------------------------------- */
+
+  --tv-black: #151515;
+  --tv-white: #FFFFFF;
+
+  /* Borders and muted accents */
+  --tv-border: #E2E2E2;
+  --tv-text-muted: #666666;
+
+  /* Existing green accent */
+  --tv-green-dark: #5F8061;
+  --tv-green-border: #B8CBB9;
+
+  /* ---------------------------------
+     TYPOGRAPHY
+  --------------------------------- */
+
+  --font-sans: "DM Sans", sans-serif;
+
+  /* Body text */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-md: 18px;
+  --text-lg: 21px;
+
+  /* Headings */
+  --heading-sm: 24px;
+  --heading-md: 32px;
+  --heading-lg: 48px;
+  --heading-xl: 64px;
+  --heading-xxl: 88px;
+
+  /* Font weights */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-heavy: 800;
+  --weight-black: 900;
+
+  /* ---------------------------------
+     LINE HEIGHT
+  --------------------------------- */
+
+  --line-tight: 0.95;
+  --line-heading: 1.02;
+  --line-subheading: 1.15;
+  --line-body: 1.55;
+  --line-relaxed: 1.7;
+
+  /* ---------------------------------
+     LETTER SPACING
+  --------------------------------- */
+
+  --tracking-tight: -0.04em;
+  --tracking-heading: -0.035em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.02em;
+  --tracking-wider: 0.06em;
+
+  /* ---------------------------------
+     SPACING
+  --------------------------------- */
+
+  --space-xs: 8px;
+  --space-sm: 16px;
+  --space-md: 24px;
+  --space-lg: 48px;
+  --space-xl: 72px;
+  --space-xxl: 96px;
+
+  /* Section rhythm */
+  --section-gap-sm: 32px;
+  --section-gap-md: 48px;
+  --section-gap-lg: 64px;
+
+  /* Content rhythm */
+  --content-gap: 24px;
+  --heading-gap: 20px;
+}
+
+
+
+
+
+
+/* ---------------------------------
+   BRAND BACKGROUND UTILITIES
+--------------------------------- */
+/* Backgrounds */
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-page {
+  background-color: var(--tv-page);
+}
+
+.bg-ivory {
+  background-color: var(--tv-brand-ivory);
+}
+
+.tv-brand-warm-ivory {
+
+ background-color: var(--tv-brand-warm-ivory);
+
+}
+
+.bg-brand {
+  background-color: var(--tv-brand-dark);
+}
+
+.bg-accent {
+  background-color: var(--tv-brand-accent);
+}
+
+.bg-black {
+  background-color: var(--black);
+}
+
+.tv-bg-red {
+  background-color: var(--tv-logo-red);
+}
+
+.tv-bg-orange {
+  background-color: var(--tv-logo-orange);
+}
+
+.tv-bg-blue {
+  background-color: var(--tv-logo-blue);
+}
+
+.tv-bg-teal {
+  background-color: var(--tv-logo-teal);
+}
+
+.tv-bg-lavender {
+  background-color: var(--tv-logo-lavender);
+}
+
+.tv-bg-rose {
+  background-color: var(--tv-logo-rose);
+}
+
+
+.tv-bg-borscht {
+
+  background: #89221B;
+}
+
+
+.tv-bg-halite-blue {
+    background: #16354B;
+}
+
+/* =====================================
+   SECTION BACKGROUNDS
+===================================== */
+
+/* Pure white */
+.tv-section-white {
+  background-color: #ffffff;
+  color: #171717;
+}
+
+/* Soft warm ivory */
+.tv-section-ivory {
+  background-color: #E2773A;
+  color: #171717;
+}
+
+/* Deeper warm ivory */
+.tv-section-warm {
+background-color: #FFCB68;
+  color: #171717;
+}
+
+/* Dark warm charcoal */
+.tv-section-dark {
+ background-color: #222A2A;
+  color: #ffffff;
+}
+
+
+
+/* =====================================
+   BLUE SECTION PALETTE
+===================================== */
+
+/* Very light blue */
+.tv-section-blue-light {
+  background-color: #eaf4f7;
+  color: #171717;
+}
+
+/* Soft blue */
+.tv-section-blue {
+  background-color: #d7eaf0;
+  color: #171717;
+}
+
+/* Primary brand blue */
+.tv-section-blue-primary {
+  background-color: #3a98b9;
+  color: #ffffff;
+}
+
+/* Deep blue */
+.tv-section-blue-dark {
+  background-color: #24647d;
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Terracotta accent */
+.tv-accent {
+  color: #c66b49;
+}
+
+/* Subtle section separator */
+.tv-section-divider {
+  border-top: 1px solid #e7e5df;
+}
+.white {
+  color: #fff;
+}
+
+
+@media (max-width: 768px) {
+
+  :root {
+
+    /* Typography */
+
+    --text-xs: 11px;
+    --text-sm: 13px;
+    --text-base: 16px;
+    --text-md: 17px;
+    --text-lg: 19px;
+
+    --heading-sm: 22px;
+    --heading-md: 28px;
+    --heading-lg: 38px;
+    --heading-xl: 48px;
+    --heading-xxl: 60px;
+
+
+    /* Line height */
+
+    --line-tight: 0.95;
+    --line-heading: 1.02;
+    --line-subheading: 1.2;
+    --line-body: 1.55;
+
+
+    /* Letter spacing */
+
+    --tracking-tight: -0.035em;
+    --tracking-heading: -0.025em;
+
+
+/* Spacing — mobile */
+--space-xs: 6px;
+--space-sm: 12px;
+--space-md: 20px;
+--space-lg: 36px;
+--space-xl: 52px;
+--space-xxl: 72px;
+
+--section-gap-sm: 24px;
+--section-gap-md: 36px;
+--section-gap-lg: 48px;
+
+--content-gap: 20px;
+--heading-gap: 16px;
+
+  }
+
+}
+
+.muted {
+  color: #6f6f6f;
+  
+}
+
+
+
+
+/* =========================================
+   DISPLAY TITLES
+========================================= */
+
+.title-xl {
+  font-family: var(--font-sans);
+  font-size: clamp(52px, 8vw, 120px);
+  line-height: .88;
+  letter-spacing: -.055em;
+  font-weight: 900;
+  margin: 0;
+}
+
+
+.title-xxl {
+  max-width: 900px;
+  margin: 0 0 24px;
+  font-size: clamp(52px, 6.5vw, 88px);
+  line-height: 0.95;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-heading);
+}
+
+.title-lg {
+  max-width: 720px;
+  margin: 0 0 20px;
+  font-size: clamp(42px, 4.5vw, 60px);
+  line-height: 1;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-heading);
+}
+
+.title-md {
+
+ max-width: 560px;
+  margin: 0 0 16px;
+  font-size: clamp(32px, 3.2vw, 42px);
+  line-height: 1.05;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-heading);
+
+}
+
+.title-sm {
+max-width: 480px;
+  margin: 0 0 14px;
+  font-size: clamp(26px, 2.6vw, 34px);
+  line-height: 1.1;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-heading);
+}
+
+.title-xs {
+  max-width: 420px;
+  margin: 0 0 12px;
+  font-size: clamp(22px, 2.2vw, 28px);
+  line-height: 1.15;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-heading);
+}
+
+.title-xxs {
+  max-width: 360px;
+  margin: 0 0 10px;
+  font-size: clamp(18px, 1.6vw, 22px);
+  line-height: 1.2;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-heading);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+/* =========================================
+   MOBILE TYPOGRAPHY
+========================================= */
+@media (max-width: 650px) {
+
+  .title-xl {
+    font-size: 44px;
+    line-height: 0.98;
+    letter-spacing: -0.045em;
+    margin-bottom: 20px;
+  }
+
+  .title-lg {
+    font-size: 34px;
+    line-height: 1.02;
+    letter-spacing: -0.035em;
+   margin-bottom: var(--space-sm);
+  }
+
+  .title-md {
+    font-size: 28px;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    margin-bottom: 16px;
+  }
+
+  .title-sm {
+    font-size: 23px;
+    line-height: 1.14;
+    letter-spacing: -0.025em;
+    margin-bottom: 14px;
+  }
+
+  .title-xs {
+    font-size: 19px;
+    line-height: 1.2;
+    letter-spacing: -0.015em;
+    margin-bottom: 12px;
+  }
+
+  .title-xxs {
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+  }
+
+}
+/* =====================================
+   BODY TEXT
+===================================== */
+
+.text-lg {
+
+  font-family: var(--font-sans);
+
+  font-size: 18px;
+
+  line-height: 1.55;
+
+  letter-spacing: -.005em;
+
+  font-weight: 400;
+
+  max-width: 44ch;
+
+}
+
+
+.text-md {
+
+  font-family: var(--font-sans);
+
+  font-size: 16px;
+
+  line-height: 1.55;
+
+  letter-spacing: 0;
+
+  font-weight: 400;
+
+  max-width: 46ch;
+
+}
+
+
+.text-sm {
+
+  font-family: var(--font-sans);
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+  letter-spacing: 0;
+
+  font-weight: 400;
+
+  max-width: 48ch;
+
+}
+
+
+.text-xs {
+
+  font-family: var(--font-sans);
+
+  font-size: 13px;
+
+  line-height: 1.45;
+
+  letter-spacing: 0;
+
+  font-weight: 400;
+
+}
+
+.text-xxs {
+
+  font-family: var(--font-sans);
+
+  font-size: 12px;
+
+  line-height: 1.4;
+
+  letter-spacing: 0;
+
+  font-weight: 400;
+
+}
+
+
+
+/* =====================================
+   MOBILE TYPOGRAPHY
+===================================== */
+
+@media (max-width: 768px) {
+
+  .text-lg {
+    font-size: 17px;
+    line-height: 1.5;
+    letter-spacing: -.005em;
+    max-width: 100%;
+  }
+
+  .text-md {
+    font-size: 15px;
+    line-height: 1.55;
+    max-width: 100%;
+  }
+
+  .text-sm {
+    font-size: 13px;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+
+  .text-xs {
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  .text-xxs {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+}
+
+
+.section-header {
+  margin-bottom: var(--heading-gap);
+}
+.section-header .title-sm,
+.section-header .title-md,
+.section-header .title-lg {
+  margin-bottom: 0;
+}
+
+.text-label {
+
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 12px;
+
+  line-height: 1.1;
+
+  font-weight: 700;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+
+  color: var(--muted);
+
+}
+
+
+@media (max-width: 650px) {
+  .text-label {
+    margin-bottom: 5px;
+    font-size: 11px;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: .08em;
+  }
+}
+
+/* =====================================
+   SECTION SPACING
+===================================== */
+
+.section-xxs {
+  padding-block: var(--space-sm);
+}
+
+.section-xs {
+  padding-block: var(--space-md);
+}
+
+.section-sm {
+  padding-block: var(--section-gap-sm);
+}
+
+.section-md {
+  padding-block: var(--section-gap-md);
+}
+
+.section-lg {
+  padding-block: var(--section-gap-lg);
+}
+
+.section-xl {
+  padding-block: var(--space-xl);
+}
+
+.section-lg-0 {
+  padding-top: var(--section-gap-lg);
+  padding-bottom: 0;
+}
+
+.section-0-md {
+  padding-bottom: var(--section-gap-md);
+  padding-top: 0;
+}
+
+.section-0-lg {
+  padding-bottom: var(--section-gap-lg);
+  padding-top: 0;
+}
+
+.section-md-0 {
+  padding-top: var(--section-gap-md);
+  padding-bottom: 0;
+}
+/* =====================================
+   MARGIN
+===================================== */
+
+.mt-xs {
+
+  margin-top: var(--space-xs);
+
+}
+
+
+.mt-sm {
+
+  margin-top: var(--space-sm);
+
+}
+
+
+.mt-md {
+
+  margin-top: var(--space-md);
+
+}
+
+
+.mt-lg {
+
+  margin-top: var(--space-lg);
+
+}
+
+
+.mt-xl {
+
+  margin-top: var(--space-xl);
+
+}
+
+
+.mb-xs {
+
+  margin-bottom: var(--space-xs);
+
+}
+
+
+.mb-sm {
+
+  margin-bottom: var(--space-sm);
+
+}
+
+
+.mb-md {
+
+  margin-bottom: var(--space-md);
+
+}
+
+
+.mb-lg {
+
+  margin-bottom: var(--space-lg);
+
+}
+
+
+.mb-xl {
+
+  margin-bottom: var(--space-xl);
+
+}
+
+
+/* =====================================
+   PADDING
+===================================== */
+
+.p-lg-sm {
+  padding: var(--space-lg) var(--space-sm);
+}
+
+.p-md-xs {
+  padding: var(--space-md) var(--space-xs);
+}
+
+.p-sm {
+
+  padding: var(--space-sm);
+
+}
+
+
+.p-md {
+
+  padding: var(--space-md);
+
+}
+
+
+.p-lg {
+
+  padding: var(--space-lg);
+
+}
+
+
+
+@media (max-width: 600px) {
+  .tv--mobile-full {
+    width: calc(100% + 32px);
+    margin-inline: -16px;
+  }
+}
+
+
+
+
+.px-md {
+
+  padding-inline: var(--space-md);
+
+}
+
+.px-sm {
+
+  padding-inline: var(--space-sm);
+
+}
+
+
+
+.px-lg {
+
+  padding-inline: var(--space-lg);
+
+}
+
+
+.py-md {
+
+  padding-block: var(--space-md);
+
+}
+
+
+.py-lg {
+
+  padding-block: var(--space-lg);
+
+}
+
+
+
+.padding-inline {
+  padding-inline: 16px;
+}
+/* =====================================
+   GAP
+===================================== */
+
+.gap-sm {
+
+  gap: var(--space-sm);
+
+}
+
+
+.gap-md {
+
+  gap: var(--space-md);
+
+}
+
+
+.gap-lg {
+
+  gap: var(--space-lg);
+
+}
+
+
+.gap-xl {
+
+  gap: var(--space-xl);
+
+}
+
+
+.tv-text-white {
+  color: #fff;
+}
+
+
+.text-align-right {
+  text-align: right;
+}
+
+.tv-text-white .section-header-description,
+.tv-text-white .section-header > p {
+  color: #fff;
+}
+/* =========================================
+   FLEX ALIGNMENT
+========================================= */
+
+.center {
+  justify-content: center;
+}
+
+.start {
+  justify-content: flex-start;
+}
+
+.end {
+  justify-content: flex-end;
+}
+
+.between {
+  justify-content: space-between;
+}
+
+.around {
+  justify-content: space-around;
+}
+
+.evenly {
+  justify-content: space-evenly;
+}
+
+
+/* =========================================
+   CROSS-AXIS ALIGNMENT
+========================================= */
+
+.align-center {
+  align-items: center;
+}
+
+.align-start {
+  align-items: flex-start;
+}
+
+.align-end {
+  align-items: flex-end;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+
+
+/* =========================================
+   FLEX DIRECTION
+========================================= */
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+
+/* =========================================
+   COMMON COMBINATIONS
+========================================= */
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.width-1200 {
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.width-1400 {
+  max-width: 1400px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.width-full {
+  width: 100%;
+  max-width: none;
+}
+
+
+
+
+
+
+:root {
+  /* TBILISI DISTRICT COLORS */
+
+  --tv-district-saburtalo: #477FA3;
+  --tv-district-vake: #8B719D;
+  --tv-district-chugureti: #C27B59;
+  --tv-district-vera: #B58B45;
+  --tv-district-mtatsminda: #416B87;
+  --tv-district-avlabari: #B56578;
+  --tv-district-sololaki: #A27656;
+  --tv-district-kala: #697C91;
+}
+
+
+
+/* =====================================
+   DISTRICT BADGE COLORS
+===================================== */
+
+.vertical-badge[data-district="saburtalo"] {
+  background: var(--tv-district-saburtalo);
+}
+
+.vertical-badge[data-district="vake"] {
+  background: var(--tv-district-vake);
+}
+
+.vertical-badge[data-district="chugureti"] {
+  background: var(--tv-district-chugureti);
+}
+
+.vertical-badge[data-district="vera"] {
+  background: var(--tv-district-vera);
+}
+
+.vertical-badge[data-district="mtatsminda"] {
+  background: var(--tv-district-mtatsminda);
+}
+
+.vertical-badge[data-district="avlabari"] {
+  background: var(--tv-district-avlabari);
+}
+
+.vertical-badge[data-district="sololaki"] {
+  background: var(--tv-district-sololaki);
+}
+
+.vertical-badge[data-district="kala"] {
+  background: var(--tv-district-kala);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   03. REGION PANEL COLOR VARIABLES
+   DEEPER EDITORIAL PALETTE
+===================================== */
+
+.tv-region-filter[data-region="kvemo-kartli"] {
+  --region-color: #B77F53;
+}
+
+.tv-region-filter[data-region="adjara"] {
+  --region-color: #477F83;
+}
+
+.tv-region-filter[data-region="guria"] {
+  --region-color: #668A63;
+}
+
+.tv-region-filter[data-region="imereti"] {
+  --region-color: #628CA3;
+}
+
+.tv-region-filter[data-region="kakheti"] {
+  --region-color: #B08A38;
+}
+
+
+
+.tv-region-filter[data-region="mtskheta-mtianeti"] {
+  --region-color: #82718F;
+}
+
+.tv-region-filter[data-region="racha-lechkhumi-kvemo-svaneti"] {
+  --region-color: #7187A4;
+}
+
+.tv-region-filter[data-region="samegrelo-zemo-svaneti"] {
+  --region-color: #648F82;
+}
+
+.tv-region-filter[data-region="samtskhe-javakheti"] {
+  --region-color: #A77565;
+}
+
+.tv-region-filter[data-region="shida-kartli"] {
+  --region-color: #AD8744;
+}
+
+.tv-region-filter[data-region="tbilisi"] {
+  --region-color: #A66D88;
+}
+/* =====================================
+   REGION DETAILS — REGION COLORS
+===================================== */
+
+.tv-region-details[data-region="kvemo-kartli"] {
+  --region-color: #DFC59F;
+}
+
+.tv-region-details[data-region="guria"] {
+  --region-color: #C8DDC1;
+}
+
+.tv-region-details[data-region="mtskheta-mtianeti"] {
+  --region-color: #D5CDDD;
+}
+
+.tv-region-details[data-region="racha-lechkhumi-kvemo-svaneti"] {
+  --region-color: #CBD6E3;
+}
+
+.tv-region-details[data-region="samegrelo-zemo-svaneti"] {
+  --region-color: #C6DCD2;
+}
+
+.tv-region-details[data-region="samtskhe-javakheti"] {
+  --region-color: #DFC0B3;
+}
+
+.tv-region-details[data-region="shida-kartli"] {
+  --region-color: #B7A4C7;
+}
+
+.tv-region-details[data-region="tbilisi"] {
+  --region-color: #596B8C;
+}

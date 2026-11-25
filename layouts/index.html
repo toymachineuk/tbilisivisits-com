@@ -1,0 +1,232 @@
+{{ define "main" }}
+
+
+
+
+
+<!-- =====================================
+     HERO
+===================================== -->
+
+
+
+<section class="tv-editorial-hero tv-editorial-hero--featured">
+
+  <!-- IMAGE -->
+  <div class="tv-editorial-hero-media">
+    <img
+      src="/img/pages/heros/hero-discovery.jpg"
+      alt="Travellers discovering Georgia"
+      fetchpriority="high"
+      decoding="async"
+    >
+  </div>
+
+  <!-- CONTENT -->
+  <div class="tv-editorial-hero-content">
+
+    <span class="text-label">
+      A travel guide to Georgia
+    </span>
+
+
+
+<h1 class="tv-editorial-hero-title">
+
+  <span class="hero-title-main ml2">
+    Don’t speak Georgian?
+  </span>
+
+  <span class="hero-title-secondary">
+    First trip outside of
+    <span class="tv-gradient-text">Europe?</span>
+  </span>
+
+</h1>
+
+<p class="hero-title-conclusion">
+  Then this guide is for you.
+</p>
+
+<div class="tv-hero-description">
+
+  <p>
+    Created by people who discovered Georgia just like you,
+    fell in love with this country, and learned how to find
+    places that offer the perfect mix of the familiar and
+    the unexpected.
+  </p>
+
+  <p>
+    Places where you can feel comfortable stepping outside
+    your comfort zone — and discover a country that might
+    surprise you in the best possible way.
+  </p>
+
+</div>
+
+
+
+  </div>
+
+</section>
+
+
+ {{ partial "strips/strip--partners.html" . }}
+
+
+
+<section class="tv-quick-links tv-quick-links--image tv-quick-links--featured section-lg">
+
+
+  <a class="tv-quick-link" href="#see-do" style="--quick-link-image: url('/img/quick-links/where-to-go.jpg');">
+
+    <span class="tv-quick-link-number">
+      01 / EXPLORE 
+    </span>
+
+    <span class="tv-quick-link-title">
+     Where to Go
+    </span>
+
+    <span class="tv-quick-link-detail">
+      Neighborhoods, landmarks and local experiences
+    </span>
+
+    <span class="tv-quick-link-arrow" aria-hidden="true">↗</span>
+
+  </a>
+
+
+  <a class="tv-quick-link" href="#transport" style="--quick-link-image: url('/img/quick-links/getting-around.jpg');">
+
+    <span class="tv-quick-link-number">
+       02 / Get Around
+    </span>
+
+    <span class="tv-quick-link-title">
+    Getting Around
+    </span>
+
+    <span class="tv-quick-link-detail">
+      Metro, buses, taxis and getting around the city
+    </span>
+
+    <span class="tv-quick-link-arrow" aria-hidden="true">↗</span>
+
+  </a>
+
+
+  <a class="tv-quick-link" href="#tbilisi-districts" style="--quick-link-image: url('/img/quick-links/tbilisi-districts.jpg');">
+
+    <span class="tv-quick-link-number">
+       03 / Get Around
+    </span>
+
+    <span class="tv-quick-link-title">
+Tbilisi Districts
+    </span>
+
+    <span class="tv-quick-link-detail">
+      Find your way around, one neighborhood at a time
+    </span>
+
+    <span class="tv-quick-link-arrow" aria-hidden="true">↗</span>
+
+  </a>
+
+
+
+  <a class="tv-quick-link" href="#chillout" style="--quick-link-image: url('/img/quick-links/where-to-eat.jpg');">
+
+    <span class="tv-quick-link-number">
+         05 / Eat & Drink
+    </span>
+
+    <span class="tv-quick-link-title">
+   Where to Eat
+    </span>
+
+    <span class="tv-quick-link-detail">
+     From traditional Georgian kitchens to modern cafés and wine bars
+    </span>
+
+    <span class="tv-quick-link-arrow" aria-hidden="true">↗</span>
+
+  </a>
+
+
+
+
+  
+
+
+
+  <a class="tv-quick-link" href="#chillout" style="--quick-link-image: url('/img/quick-links/nightlife.jpg');">
+
+    <span class="tv-quick-link-number">
+      06 / After Dark
+    </span>
+
+    <span class="tv-quick-link-title">
+      Nightlife & Wellness
+    </span>
+
+    <span class="tv-quick-link-detail">
+      Late-night bars, clubs, bathhouses and places to unwind
+    </span>
+
+    <span class="tv-quick-link-arrow" aria-hidden="true">
+      ↗
+    </span>
+  </a>
+
+</section>
+
+
+  
+ {{ partial "sections/see-do.html" . }}
+
+
+ {{ partial "strips/strip--transport.html" . }}
+{{ partial "strips/strip-transport--apps.html" . }}
+
+{{ partial "sections/tv-editorial.html" . }}
+
+
+
+ 
+
+
+
+
+{{ partial "carousels/food.html" . }}
+
+
+
+
+
+{{ partial "strips/strip--food.html" . }}
+
+{{ partial "strips/strip-food--apps.html" . }}
+
+{{ partial "strips/strip--wine.html" . }}
+{{ partial "carousels/foodcourts.html" . }}
+
+{{ partial "carousels/chillout.html" . }}
+
+
+
+{{ partial "strips/strip--safety.html" . }}
+
+
+
+
+
+
+
+
+
+
+
+{{ end }}

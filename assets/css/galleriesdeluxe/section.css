@@ -1,0 +1,1034 @@
+/* =========================================================
+   TBILISI VISITS — SECTION-RELATED CSS
+   Consolidated stylesheet based on the supplied CSS extract.
+   Includes headers, editorial sections, banners and related components.
+========================================================= */
+
+/* =========================================================
+   SECTION HEADERS — BASE
+========================================================= */
+
+.section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: clamp(24px, 5vw, 64px);
+  width: 100%;
+  margin-bottom: var(--space-lg);
+}
+
+.section-header-main {
+  display: flex;
+  flex: 1 1 60%;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  min-width: 0;
+  margin: 0;
+}
+
+.section-header-label-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 12px;
+}
+
+.section-header .text-label {
+  display: block;
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--tv-brand-accent, #c66b49);
+}
+
+.section-header h2,
+.section-header-main h3 {
+  max-width: 100%;
+  margin: 0;
+}
+
+.section-header .section-header-subtitle {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: var(--line-subheading);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-heading);
+  color: var(--tv-text, #171717);
+}
+
+.section-header-description,
+.section-header > p {
+  flex: 0 1 300px;
+  min-width: 0;
+  margin: 0 0 4px;
+  color: var(--tv-muted, #666);
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: var(--line-body);
+  font-weight: 400;
+}
+
+.section-header-aside {
+  display: flex;
+  flex: 0 1 560px;
+  align-items: center;
+  justify-content: flex-end;
+  gap: clamp(20px, 3vw, 40px);
+  min-width: 0;
+  margin: 0;
+}
+
+.section-header:has(.title-sm) {
+  gap: var(--space-sm);
+}
+
+/* Header divider on filter sections */
+main > section.tv-filter-section > .section-header,
+.accommodation--cars .tv-filter-section > .section-header {
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--tv-border, #e7e5df);
+}
+
+/* =========================================================
+   SECTION HEADER — UNIVERSAL VARIANT
+   Left: title / number. Right: description / action.
+========================================================= */
+
+.section-header--universal {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 480px);
+  align-items: center;
+  column-gap: clamp(32px, 5vw, 80px);
+  width: 100%;
+}
+
+.section-header--universal .section-header-main {
+  flex: none;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
+
+.section-header--universal .section-header-aside {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+}
+
+.section-header--universal .section-header-aside > p {
+  flex: none;
+  width: 100%;
+  max-width: 480px;
+  min-width: 0;
+  margin: 0;
+}
+
+.section-header--universal .section-header-aside > a {
+  flex: none;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0;
+}
+
+/* Number alongside title */
+.section-header-title-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-width: 0;
+}
+
+.section-header-title-row .section-number-sm {
+  flex: 0 0 auto;
+}
+
+.section-header-title-row h2,
+.section-header-title-row h3 {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.section-header--number-inline .section-number-sm {
+  flex-shrink: 0;
+}
+
+/* =========================================================
+   SECTION HEADER — NUMBER + DESCRIPTION ROW
+========================================================= */
+
+.section-header-description-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 440px;
+  box-sizing: border-box;
+}
+
+.section-header-description-row .section-header-main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.section-header-description {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+}
+
+/* =========================================================
+   SECTION NUMBER — LARGE
+========================================================= */
+
+.section-header-number {
+  --number-bg: var(--tv-section-soft, #f5f2ea);
+  --number-color: var(--tv-brand-accent, #c66b49);
+
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: clamp(44px, 5vw, 68px);
+  aspect-ratio: 1;
+  box-sizing: border-box;
+  border-radius: 7px;
+  background: var(--number-bg);
+  color: var(--number-color);
+  font-family: "DM Sans", sans-serif;
+  font-size: clamp(22px, 2.5vw, 32px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.section-header-number--ivory {
+  --number-bg: #f5f2ea;
+  --number-color: #c66b49;
+}
+
+.section-header-number--blue {
+  --number-bg: #3a98b9;
+  --number-color: #fff;
+}
+
+.section-header-number--terracotta {
+  --number-bg: #c66b49;
+  --number-color: #fff;
+}
+
+.section-header-number--stone {
+  --number-bg: #e8e5e0;
+  --number-color: #171717;
+}
+
+/* =========================================================
+   SECTION NUMBER — SMALL
+========================================================= */
+
+.section-number-sm {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  background: #eaf2f5;
+  color: #3a7893;
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* =========================================================
+   SECTION HEADER — WITHOUT NUMBER
+========================================================= */
+
+.section-header-main--no-number {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.section-header-main--no-number .section-header-label-row {
+  gap: 0;
+  margin-bottom: 14px;
+}
+
+.section-header-main--no-number .text-label {
+  margin: 0;
+  line-height: 1.3;
+}
+
+.section-header-main--no-number .title-xs {
+  margin: 0;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+/* =========================================================
+   SECTION HEADER — HALITE BLUE
+========================================================= */
+
+.tv-bg-halite-blue,
+.tv-bg-halite-blue .section-header-description,
+.tv-bg-halite-blue .section-header > p,
+.tv-bg-halite-blue .tv-feature-header h2,
+.tv-bg-halite-blue .tv-feature-header .section-header-main,
+.tv-bg-halite-blue .tv-editorial-content p,
+.tv-bg-halite-blue .tv-editorial-row {
+  color: #fff;
+}
+
+/* =========================================================
+   ACCOMMODATION — SECTION HEADERS
+========================================================= */
+
+.accommodation--cars .section-header {
+  align-items: flex-end;
+  gap: clamp(24px, 5vw, 64px);
+  margin-bottom: var(--space-md);
+}
+
+.accommodation--cars .section-header-main {
+  flex: 1 1 auto;
+  max-width: 680px;
+  gap: 10px;
+}
+
+.accommodation--cars .section-header-main .text-label,
+.accommodation--cars .section-header-main h3 {
+  margin: 0;
+}
+
+.accommodation--cars .section-header-description {
+  flex: none;
+  max-width: 520px;
+  margin: 4px 0 0;
+  color: var(--tv-muted);
+}
+
+.accommodation--cars .section-header-aside {
+  flex: 0 0 auto;
+}
+
+.accommodation--cars .stay-price {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border: 1px solid var(--tv-border);
+  border-radius: 10px;
+  background: var(--tv-section-soft);
+}
+
+.accommodation--cars .stay-price .tv-icon {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+}
+
+.accommodation--cars .stay-price-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.accommodation--cars .stay-price-label {
+  color: var(--tv-muted);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.accommodation--cars .stay-price-value {
+  color: var(--tv-text);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.accommodation--cars .stay-price-value small {
+  color: var(--tv-muted);
+  font-size: 12px;
+  font-weight: 400;
+}
+
+/* Style two: compact price header */
+.accommodation--cars .tv-filter-section.tv-card-section--style-two > .section-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0;
+  border: 0;
+}
+
+.accommodation--cars .tv-card-section--style-two .stay-price {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.accommodation--cars .tv-card-section--style-two .section-header-aside {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: flex-end;
+  width: auto;
+  margin-left: auto;
+}
+
+.accommodation--cars .tv-card-section--style-two .stay-price-mobile {
+  display: none;
+}
+
+/* =========================================================
+   REUSABLE EDITORIAL SECTION
+========================================================= */
+
+.tv-editorial {
+  width: 100%;
+  min-width: 0;
+  margin-inline: auto;
+  color: var(--tv-black);
+  box-sizing: border-box;
+}
+
+/* Editorial section heading */
+.tv-editorial-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  min-width: 0;
+}
+
+.tv-editorial-heading .title-sm {
+  max-width: 14ch;
+  margin: 0;
+}
+
+.tv-editorial-intro {
+  max-width: 560px;
+  min-width: 0;
+}
+
+.tv-editorial-intro > :first-child {
+  margin-top: 0;
+}
+
+.tv-editorial-intro > :last-child {
+  margin-bottom: 0;
+}
+
+.tv-editorial-intro .title-xs {
+  max-width: 24ch;
+  margin: 0 0 var(--space-sm);
+}
+
+/* Editorial list */
+.tv-editorial-list {
+  border-top: 1px solid var(--tv-pearl);
+}
+
+/* Editorial row image */
+.tv-editorial-row > img {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* Editorial row content */
+.tv-editorial-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-xs);
+  max-width: 620px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.tv-editorial-content > :first-child {
+  margin-top: 0;
+}
+
+.tv-editorial-content > :last-child {
+  margin-bottom: 0;
+}
+
+.tv-editorial-content .text-label,
+.tv-editorial-content .title-xxs,
+.tv-editorial-content .text-sm {
+  margin-block: 0;
+}
+
+.tv-editorial-content .tv-button-link {
+  margin-top: var(--space-sm);
+}
+
+/* Editorial modifiers — layout inherited */
+.tv-editorial--money,
+.tv-editorial--transport {
+  /* Shared editorial layout */
+}
+
+/* Editorial row responsive layout */
+@media (max-width: 900px) {
+  .tv-editorial-row {
+    grid-template-columns: 150px minmax(0, 1fr);
+  }
+
+  .tv-editorial-content {
+    order: 1;
+  }
+}
+
+@media (max-width: 650px) {
+  .tv-editorial-heading .title-sm {
+    max-width: 100%;
+  }
+
+  .tv-editorial-row {
+    grid-template-columns: 112px minmax(0, 1fr);
+    align-items: start;
+    gap: var(--space-sm);
+  }
+}
+
+@media (max-width: 420px) {
+  .tv-editorial-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .tv-editorial-row > img {
+    aspect-ratio: 16 / 9;
+    order: 2;
+  }
+}
+
+/* =========================================================
+   SECTION LAYOUT
+========================================================= */
+
+main > section {
+  width: 100%;
+  padding-inline: 16px;
+  box-sizing: border-box;
+}
+
+main > section.tv-filter-section > .section-header,
+main > section.tv-filter-section > .tv-filters,
+main > section.tv-filter-section > .tv-filter-count,
+main > section.tv-filter-section > .tv-grid--wrapper {
+  width: 100%;
+   margin-inline: auto;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   BRAND TITLE
+========================================================= */
+
+.tv-brand-title {
+  position: relative;
+  display: inline-block;
+  isolation: isolate;
+  font-size: clamp(42px, 5.5vw, 76px);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  color: #111;
+  padding: 12px 18px;
+  margin: 0 0 24px;
+  border-radius: 12px;
+}
+
+
+
+
+
+
+/* =========================================================
+   COMING SOON LABEL
+========================================================= */
+
+.tv-coming-soon-label {
+  display: inline-block;
+  margin-top: 12px;
+  color: #9a7656;
+  letter-spacing: 0.08em;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+/* Universal headers stack before the aside becomes cramped. */
+@media (max-width: 900px) {
+  .section-header--universal {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 24px;
+  }
+
+  .section-header--universal .section-header-main,
+  .section-header--universal .section-header-aside {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Small number tiles */
+@media (max-width: 768px) {
+  .section-number-sm {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    min-height: 36px;
+    flex: 0 0 36px;
+    border-radius: 7px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+  }
+
+  .section-header-main,
+  .section-header-aside {
+    flex: none;
+    width: 100%;
+  }
+
+  .section-header-description,
+  .section-header > p {
+    flex: none;
+    max-width: 42ch;
+    margin: 0;
+  }
+
+  .section-header:has(.title-sm) {
+    gap: 10px;
+  }
+
+  /* Universal modifier */
+  .section-header--universal {
+    gap: 20px;
+  }
+
+  .section-header--universal .section-header-description {
+    max-width: 100%;
+  }
+
+  .section-header--universal .section-header-aside {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .section-header--universal .section-header-aside > p {
+    flex: none;
+    width: 100%;
+    max-width: 42ch;
+  }
+
+  /* Number + header row */
+  .section-header-description-row {
+    align-items: center;
+    gap: 12px;
+    max-width: 440px;
+    margin-top: 0;
+  }
+
+  .section-header-description-row .section-header-main {
+    flex: 1 1 auto;
+    width: auto;
+  }
+
+  .section-header-number {
+    width: 44px;
+    flex-basis: 44px;
+    font-size: 21px;
+  }
+
+  /* No-number modifier */
+  .section-header-main--no-number .section-header-label-row {
+    margin-bottom: 10px;
+  }
+
+  /* District nav */
+  .tv-district-nav {
+    margin-left: 0;
+  }
+
+  /* Accommodation headers */
+  .accommodation--cars .section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .accommodation--cars .section-header-main,
+  .accommodation--cars .section-header > div:first-child {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .accommodation--cars .section-header-description,
+  .accommodation--cars .section-header > p {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .accommodation--cars .section-header-aside {
+    flex: none;
+    width: auto;
+  }
+
+  .accommodation--cars .stay-price {
+    padding: 10px 14px;
+  }
+
+  .accommodation--cars .stay-price-value {
+    font-size: 18px;
+  }
+
+  /* Style two: mobile price placement */
+  .accommodation--cars .tv-card-section--style-two > .section-header {
+    display: none;
+  }
+
+  .accommodation--cars .tv-card-section--style-two .stay-price-mobile {
+    display: block;
+  }
+
+  .accommodation--cars .tv-card-section--style-two .stay-price-mobile .stay-price {
+    display: inline-flex;
+    width: fit-content;
+    max-width: 100%;
+    margin-top: 16px;
+  }
+
+  /* Section padding */
+  main > section {
+    padding-inline: 16px;
+  }
+
+  .accommodation--cars {
+    padding-inline: 16px;
+  }
+
+  /* Banner */
+  .tv-banner-section {
+    padding-top: 24px;
+    padding-bottom: 36px;
+  }
+
+  .tv-banner {
+    padding: 24px 20px;
+  }
+
+  .tv-banner-top {
+    margin-bottom: 24px;
+  }
+
+  .tv-banner-index {
+    display: none;
+  }
+
+  .tv-banner-content {
+    gap: 12px;
+  }
+
+  .tv-banner-title {
+    font-size: clamp(28px, 7vw, 36px);
+    line-height: 1.12;
+    letter-spacing: -0.04em;
+  }
+
+  .tv-banner-title > span {
+    display: inline;
+  }
+
+  .tv-banner-description {
+    max-width: 100%;
+  }
+
+  .tv-banner-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .tv-banner-note {
+    text-align: left;
+  }
+}
+
+/* Narrow mobile */
+@media (max-width: 600px) {
+  .tv-brand-title {
+    padding: 10px 12px;
+  }
+}
+
+/* =========================================================
+   FEATURE HEADER — EXISTING NUMBER / TITLE / DESCRIPTION
+   Only applies when the header has two description-row children.
+   Other feature-header variants are left untouched.
+========================================================= */
+
+.tv-feature-header:has(> .section-header-description-row) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(20px, 3vw, 48px);
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.tv-feature-header > .section-header-description-row {
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 2vw, 20px);
+  min-width: 0;
+  max-width: none;
+  width: auto;
+}
+
+.tv-feature-header > .section-header-description-row:first-child {
+  flex: 1.3 1 0;
+}
+
+.tv-feature-header > .section-header-description-row:last-child {
+  flex: 0.7 1 0;
+}
+
+.tv-feature-header .section-header-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1 1 auto;
+  min-width: 0;
+  gap: 8px;
+}
+
+.tv-feature-header .section-header-main .text-label,
+.tv-feature-header .section-header-main h2,
+.tv-feature-header .section-header-main h3 {
+  margin: 0;
+}
+
+.tv-feature-header > .section-header-description-row .section-header-description {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 42ch;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Stack before either column becomes too narrow. */
+@media (max-width: 900px) {
+  .tv-feature-header:has(> .section-header-description-row) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
+  }
+
+  .tv-feature-header > .section-header-description-row,
+  .tv-feature-header > .section-header-description-row:first-child,
+  .tv-feature-header > .section-header-description-row:last-child {
+    flex: 0 1 auto;
+    width: 100%;
+    max-width: none;
+  }
+
+  .tv-feature-header > .section-header-description-row .section-header-description {
+    max-width: 55ch;
+  }
+}
+
+@media (max-width: 700px) {
+  .tv-feature-header:has(> .section-header-description-row) {
+    gap: 18px;
+  }
+
+  .tv-feature-header > .section-header-description-row {
+    gap: 12px;
+  }
+
+  .tv-feature-header > .section-header-description-row .section-header-description {
+    max-width: 100%;
+  }
+}
+
+/* =========================================================
+   FEATURE HEADER — REUSABLE MODIFIERS
+   Opt-in modifiers; default feature headers remain unchanged.
+========================================================= */
+
+/* Compact headers (e.g. Food Courts) */
+.tv-feature-header--compact .section-header-main {
+  gap: 6px;
+}
+
+.tv-feature-header--compact .section-header-label-row {
+  margin-bottom: 0;
+}
+
+/* Optional third row for embedded navigation/content. */
+.tv-feature-header--with-nav {
+  flex-wrap: wrap;
+}
+
+.tv-feature-header--with-nav > .tv-district-explorer {
+  flex: 0 0 100%;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  /* Explicitly stack any opted-in feature header. */
+  .tv-feature-header--stacked {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 20px;
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .tv-feature-header--stacked > .section-header-description-row {
+    display: flex;
+    flex: none;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    max-width: none;
+    min-width: 0;
+  }
+
+  .tv-feature-header--stacked > .section-header-description-row .section-header-main {
+    flex: 1 1 auto;
+    min-width: 0;
+    width: auto;
+  }
+
+  .tv-feature-header--stacked > .section-header-description-row:nth-child(2) {
+    flex: none;
+    width: 100%;
+    max-width: none;
+  }
+
+  .tv-feature-header--stacked > .section-header-description-row .section-header-description {
+    flex: none;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 700px) {
+  .tv-feature-header--compact {
+    gap: 16px;
+  }
+
+  .tv-feature-header--with-nav > .tv-district-explorer {
+    display: block;
+    flex: none;
+    width: 100%;
+    max-width: none;
+  }
+
+  .tv-feature-header--with-nav .tv-district-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .tv-feature-header--with-nav .tv-district-btn {
+    width: 100%;
+    min-width: 0;
+    min-height: 46px;
+    padding: 10px 8px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   FEATURE HEADER — MOBILE SPACING
+========================================= */
+
+@media (max-width: 700px) {
+
+  .tv-feature-header.tv--mobile-full {
+    width: 100%;
+    max-width: none;
+    margin-inline: auto;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+
+}

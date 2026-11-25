@@ -1,0 +1,2115 @@
+{{ define "main" }}
+
+
+<section class="tv-editorial-hero width-1600">
+
+  <!-- LEFT: IMAGE -->
+  <div class="tv-editorial-hero-media">
+    <img
+      src="/img/maps/bg-map--georgia.jpg"
+      alt="Getting around Tbilisi by car"
+      fetchpriority="high"
+    >
+  </div>
+
+  <!-- RIGHT: CONTENT -->
+  <div class="tv-editorial-hero-content">
+
+    <span class="text-label">
+      YOUR FIRST HOURS IN GEORGIA
+    </span>
+
+    <h1 class="title-lg tv-editorial-hero-title">
+      <span class="tv-hero-title-main">
+        Discover Georgia
+      </span>
+
+      <span class="tv-hero-title-secondary">
+        Beyond
+        <span class="tv-gradient-text">Tbilisi</span>
+      </span>
+    </h1>
+
+    
+
+    
+
+
+<!-- =====================================
+     DISCOVER GEORGIA — QUICK LINKS
+===================================== -->
+<nav
+  class="tv-quick-links tv-quick-links--compact tv-quick-links--image tv-quick-links--georgia"
+  aria-label="Discover Georgia"
+>
+
+  <!-- 01. INTERACTIVE MAP -->
+
+  <a
+    class="tv-quick-link"
+    href="#mapgeorgia"
+    style="--quick-link-image: url('/img/quick-links/georgia-map.jpg');"
+  >
+
+    <span class="tv-quick-link-number">
+      01 / EXPLORE GEORGIA
+    </span>
+
+    <span class="tv-quick-link-title">
+      Explore the Map
+    </span>
+
+    <span class="tv-quick-link-detail">
+      Discover regions, towns &amp; places worth visiting
+    </span>
+
+    <span class="tv-quick-link-arrow" aria-hidden="true">↗</span>
+
+  </a>
+
+
+  <!-- 02. WILDLIFE -->
+
+  <a
+    class="tv-quick-link"
+    href="#georgia-wildlife"
+    style="--quick-link-image: url('/img/quick-links/wild-nature.jpg');"
+  >
+
+    <span class="tv-quick-link-number">
+      02 / WILDLIFE
+    </span>
+
+    <span class="tv-quick-link-title">
+      Wild Nature
+    </span>
+
+    <span class="tv-quick-link-detail">
+      From mountain bears to Black Sea dolphins
+    </span>
+
+    <span class="tv-quick-link-arrow" aria-hidden="true">↗</span>
+
+  </a>
+
+
+  <!-- 03. SKIING -->
+
+  <a
+    class="tv-quick-link"
+    href="#georgia-skiing"
+    style="--quick-link-image: url('/img/quick-links/skiing.jpg');"
+  >
+
+    <span class="tv-quick-link-number">
+      03 / WINTER ADVENTURES
+    </span>
+
+    <span class="tv-quick-link-title">
+      Skiing in Georgia
+    </span>
+
+    <span class="tv-quick-link-detail">
+      Discover ski resorts &amp; trusted local operators
+    </span>
+
+    <span class="tv-quick-link-arrow" aria-hidden="true">↗</span>
+
+  </a>
+
+
+  <!-- 04. CAVES -->
+
+  <a
+    class="tv-quick-link"
+    href="#georgia-caves"
+    style="--quick-link-image: url('/img/quick-links/cave.jpg');"
+  >
+
+    <span class="tv-quick-link-number">
+      04 / UNDERGROUND GEORGIA
+    </span>
+
+    <span class="tv-quick-link-title">
+      Caves &amp; Hidden Worlds
+    </span>
+
+    <span class="tv-quick-link-detail">
+      Explore ancient cave cities &amp; natural wonders
+    </span>
+
+    <span class="tv-quick-link-arrow" aria-hidden="true">↗</span>
+
+  </a>
+
+</nav>
+
+
+
+
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================================
+     GEORGIA — INTERACTIVE MAP SECTION
+========================================= -->
+
+<section id="mapgeorgia" class="tv-feature-section map-section width-1600 ">
+
+  <div class="tv-feature-layout tv-feature-layout--header-right">
+
+
+    <!-- =====================================
+         01. INTERACTIVE MAP
+    ====================================== -->
+
+    <div class="tv-feature-content">
+
+      {{ partial "maps/georgia-map.html" . }}
+
+    </div>
+
+
+    <!-- =====================================
+         02. SECTION HEADER
+    ====================================== -->
+
+    <header class="tv-feature-header">
+
+      <div class="section-header-description-row">
+
+        <div class="section-header-main">
+
+          <div class="section-header-label-row">
+
+            <div
+              class="section-header-number"
+              aria-hidden="true"
+            >
+              01
+            </div>
+
+            <span class="text-label">
+              NAVIGATE
+            </span>
+
+          </div>
+
+          <h2 class="title-md">
+            Maps &amp; Districts
+          </h2>
+
+        </div>
+
+      </div>
+
+      <p class="text-md section-header-description">
+        Explore Georgia region by region.
+        Select a region to discover its landscapes,
+        towns and places worth visiting.
+      </p>
+
+    </header>
+
+
+    <!-- =====================================
+         03. REGION NAVIGATION & PANELS
+    ====================================== -->
+
+    <div class="tv-region-components">
+
+      {{ partial "carousels/nav-regions--ge.html" . }}
+
+    </div>
+
+
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+<!-- =========================================
+     GEORGIA — SELECTED REGION
+========================================= -->
+
+<section
+  class="tv-feature-section tv-filter-section  width-1400  tv-georgia-explorer"
+>
+
+
+
+<header class="tv-georgia-explorer-header">
+
+  <!-- =====================================
+       DEFAULT STATE — GEORGIA
+  ====================================== -->
+
+  <div class="tv-region-filter-initial">
+
+    <div class="tv-region-heading  p-md-xs">
+
+      <!-- COUNTRY IDENTITY -->
+
+      <div class="tv-region-identity">
+
+        <div class="tv-region-heading-image">
+
+          <img
+            src="/img/georgia-regions/tbilisi-logo.png"
+            alt="Mountain landscape in Georgia"
+            loading="lazy"
+          >
+
+        </div>
+
+        <div class="tv-region-name">
+
+          <h3 class="title-md">
+            Georgia
+          </h3>
+
+          <span class="tv-region-eyebrow">
+            The Caucasus · Black Sea
+          </span>
+
+          <span class="text-label tv-region-capital">
+            Tbilisi · Capital
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <!-- COUNTRY DESCRIPTION -->
+
+      <div class="tv-region-heading-description">
+
+        <p class="text-md section-header-description">
+          Ancient cities, dramatic mountains,
+          centuries-old wine traditions and
+          landscapes stretching from the
+          Caucasus to the Black Sea.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- =====================================
+       SELECTED REGION HEADING
+       Populated by JavaScript
+  ====================================== -->
+
+  <div class="tv-region-panel-target"></div>
+
+</header>
+
+
+
+  <!-- =====================================
+       02. DESTINATION CAROUSEL
+  ====================================== -->
+
+  <div class="tv-georgia-explorer-content">
+
+    {{ partial "carousels/georgia-regions--car.html" . }}
+
+  </div>
+
+
+  <!-- =====================================
+       03. REGION INFORMATION CARDS
+  ====================================== -->
+
+  <div class="tv-region-details-target"></div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{ partial "strips/strip--animals.html" . }}
+
+
+
+
+
+
+
+
+<!-- =========================================
+     SKIING IN GEORGIA
+========================================= -->
+
+<section id="skiingingeorgia" class="tv-editorial page-layout tv-bg-halite-blue width-1600 section-md">
+
+  <!-- =====================================
+       SECTION INTRODUCTION
+  ====================================== -->
+
+  <div class="tv-feature-intro width-1400">
+
+    <div class="tv-editorial-header">
+
+      <div class="tv-feature-header">
+
+        <div class="section-header-description-row">
+
+          <div
+            class="section-header-number section-header-number--blue"
+            aria-hidden="true"
+          >
+            01
+          </div>
+
+          <div class="section-header-main">
+            <span class="text-label">Winter in Georgia</span>
+            <h2 class="title-md">Skiing in Georgia</h2>
+          </div>
+
+        </div>
+
+        <div class="section-header-description-row flex-column">
+
+          <p class="text-md section-header-description">
+            From high-altitude mountain resorts to snowy villages,
+            Georgia offers fantastic winter escapes in the Caucasus.
+            Discover where to ski, when to visit and what to expect
+            on the slopes.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRACTICAL TIP -->
+
+    <aside class="tv-feature-intro-action tv-feature-header">
+
+      <div class="tv-tip-heading">
+
+        <svg
+          class="tv-tip-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="m2 20 5-5 4 3 6-9 5 5"></path>
+          <path d="m14 9 3-3 4 3"></path>
+          <path d="M7 15 4 12"></path>
+        </svg>
+
+        <h3 class="title-xxs">
+          Plan Your Mountain Escape
+        </h3>
+
+      </div>
+
+      <p class="text-sm tv-section-description">
+        Georgia has several ski destinations, each with its own
+        character. Gudauri is known for its wide slopes and
+        freeride opportunities, Bakuriani is popular with families
+        and beginners, while Mestia offers spectacular mountain
+        scenery and access to the slopes of Tetnuldi and Hatsvali.
+
+        Choose your resort based on your skiing experience,
+        travel plans and the kind of mountain adventure you want.
+      </p>
+
+    </aside>
+
+  </div>
+
+
+  <!-- =====================================
+       DESTINATIONS
+  ====================================== -->
+
+  <div class="tv-editorial-list width-1200">
+
+
+    <!-- =====================================
+         01. GUDAURI
+         CONTENT LEFT / IMAGE RIGHT
+    ====================================== -->
+
+    <article class="tv-editorial-row">
+
+      <div class="tv-editorial-content">
+
+        <span class="text-label">
+          01 / GUDAURI
+        </span>
+
+        <h3 class="title-xxs">
+          Gudauri — High-Altitude Skiing
+        </h3>
+
+        <p class="text-sm">
+          Located along the Georgian Military Highway,
+          Gudauri is Georgia's best-known ski resort.
+          It offers extensive slopes for different skill levels,
+          modern lifts, spectacular mountain views and
+          excellent freeride terrain for experienced skiers.
+        </p>
+
+
+        <!-- SOCIAL LINKS -->
+
+        <div class="tv-action-row tv-action-row--operators">
+
+     
+   <h4 class="text-label tv-action-title">
+    LOCAL SKI OPERATORS
+  </h4>
+
+          <div class="tv-social-links">
+
+
+            <!-- GUDAURI RESORT -->
+
+   
+<!-- =====================================
+     GUDAURI RESORT — SOCIAL LINKS
+===================================== -->
+
+<div class="tv-split-link-group">
+
+  <div class="tv-split-link tv-split-link--operator">
+
+    <!-- FIRST ACTION — INSTAGRAM -->
+
+    <a
+      class="tv-split-link-action tv-split-link-action--start"
+      href="https://www.instagram.com/gudauri_resort/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Gudauri Resort on Instagram"
+    >
+      <span class="tv-split-link-icon">
+        <img
+          src="/icons/insta.svg"
+          width="22"
+          height="22"
+          alt=""
+          aria-hidden="true"
+        >
+      </span>
+    </a>
+
+
+    <!-- CIRCULAR AVATAR -->
+
+    <span class="tv-split-link-text" aria-hidden="true">
+      <img
+        class="tv-split-link-avatar"
+        src="/img/pages/map-page/gudauri.jpg"
+        alt=""
+        width="60"
+        height="60"
+        loading="lazy"
+      >
+    </span>
+
+
+    <!-- SECOND ACTION — WEBSITE -->
+
+    <a
+      class="tv-split-link-action tv-split-link-action--end"
+      href="https://www.gudauri.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit Gudauri Resort website"
+    >
+      <span class="tv-split-link-icon">
+        <img
+          src="/icons/site-button.svg"
+          width="22"
+          height="22"
+          alt=""
+          aria-hidden="true"
+        >
+      </span>
+    </a>
+
+  </div>
+
+
+  <!-- CAPTION -->
+
+  <div class="tv-split-link-caption">
+
+    <span class="tv-split-link-caption-name">
+      Gudauri Resort
+    </span>
+
+    <span class="tv-split-link-caption-links">
+      Instagram · Website
+    </span>
+
+  </div>
+
+</div>
+
+<!-- =====================================
+     SNOWLAB — SOCIAL LINKS
+===================================== -->
+
+<div class="tv-split-link-group">
+
+  <div class="tv-split-link tv-split-link--operator">
+
+    <!-- FIRST ACTION — INSTAGRAM -->
+
+    <a
+      class="tv-split-link-action tv-split-link-action--start"
+      href="https://www.instagram.com/snowlab_gudauri/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Snowlab on Instagram"
+    >
+      <span class="tv-split-link-icon">
+        <img
+          src="/icons/insta.svg"
+          width="22"
+          height="22"
+          alt=""
+          aria-hidden="true"
+        >
+      </span>
+    </a>
+
+
+    <!-- CIRCULAR AVATAR -->
+
+    <span class="tv-split-link-text" aria-hidden="true">
+      <img
+        class="tv-split-link-avatar"
+        src="/img/pages/map-page/gudauri.jpg"
+        alt=""
+        width="60"
+        height="60"
+        loading="lazy"
+      >
+    </span>
+
+
+    <!-- SECOND ACTION — WEBSITE -->
+
+    <a
+      class="tv-split-link-action tv-split-link-action--end"
+     href="https://www.snow-lab.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit Snowlab website"
+    >
+      <span class="tv-split-link-icon">
+        <img
+          src="/icons/site-button.svg"
+          width="22"
+          height="22"
+          alt=""
+          aria-hidden="true"
+        >
+      </span>
+    </a>
+
+  </div>
+
+
+  <!-- CAPTION -->
+
+  <div class="tv-split-link-caption">
+
+    <span class="tv-split-link-caption-name">
+      Snowlab
+    </span>
+
+    <span class="tv-split-link-caption-links">
+      Instagram · Website
+    </span>
+
+  </div>
+
+</div>
+
+<!-- =====================================
+     BIG BROTHERS TEAM — SOCIAL LINKS
+===================================== -->
+
+<div class="tv-split-link-group">
+
+  <div class="tv-split-link tv-split-link--operator">
+
+    <!-- FIRST ACTION — INSTAGRAM -->
+
+    <a
+      class="tv-split-link-action tv-split-link-action--start"
+      href="https://www.instagram.com/big_brothers_team/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Big Brothers Team on Instagram"
+    >
+      <span class="tv-split-link-icon">
+        <img
+          src="/icons/insta.svg"
+          width="22"
+          height="22"
+          alt=""
+          aria-hidden="true"
+        >
+      </span>
+    </a>
+
+
+    <!-- CIRCULAR AVATAR -->
+
+    <span class="tv-split-link-text" aria-hidden="true">
+      <img
+        class="tv-split-link-avatar"
+        src="/img/pages/map-page/gudauri.jpg"
+        alt=""
+        width="60"
+        height="60"
+        loading="lazy"
+      >
+    </span>
+
+
+    <!-- SECOND ACTION — WEBSITE -->
+
+    <a
+      class="tv-split-link-action tv-split-link-action--end"
+      href="https://en.bigbrothersteam.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit Big Brothers Team website"
+    >
+      <span class="tv-split-link-icon">
+        <img
+          src="/icons/site-button.svg"
+          width="22"
+          height="22"
+          alt=""
+          aria-hidden="true"
+        >
+      </span>
+    </a>
+
+  </div>
+
+
+  <!-- CAPTION -->
+
+  <div class="tv-split-link-caption">
+
+    <span class="tv-split-link-caption-name">
+      Big Brothers Team
+    </span>
+
+    <span class="tv-split-link-caption-links">
+      Instagram · Website
+    </span>
+
+  </div>
+
+</div>
+
+
+
+
+          </div> <!-- .tv-social-links -->
+
+        </div> <!-- .tv-action-row -->
+
+      </div> <!-- .tv-editorial-content -->
+
+
+      <!-- GUDAURI IMAGE — RIGHT -->
+
+      <img
+        src="/img/pages/map-page/gudauri.jpg"
+        alt="Ski slopes and snowy mountains in Gudauri"
+        loading="lazy"
+      >
+
+    </article>
+
+
+<!-- =====================================
+     02. BAKURIANI
+     CONTENT LEFT / IMAGE RIGHT
+===================================== -->
+
+<article class="tv-editorial-row">
+
+  <div class="tv-editorial-content">
+
+    <span class="text-label">
+      02 / BAKURIANI
+    </span>
+
+    <h3 class="title-xxs">
+      Bakuriani — Perfect for Families
+    </h3>
+
+    <p class="text-sm">
+      Surrounded by pine forests in the Lesser Caucasus,
+      Bakuriani is a favourite for families, beginners
+      and relaxed winter holidays. Its ski areas include
+      Didveli, Kokhta and Mitarbi, with slopes for
+      different experience levels.
+    </p>
+
+
+
+
+<!-- =====================================
+     LOCAL SKI OPERATORS
+===================================== -->
+<div class="tv-action-row tv-action-row--operators">
+
+     
+   <h4 class="text-label tv-action-title">
+    LOCAL SKI OPERATORS
+  </h4>
+   <div class="tv-social-links">
+
+
+<!-- =====================================
+     WINTER SPORT BAKURIANI
+===================================== -->
+
+<div class="tv-split-link-group">
+
+  <div class="tv-split-link tv-split-link--operator">
+
+    <a
+      class="tv-split-link-action tv-split-link-action--start"
+      href="https://www.instagram.com/wintersport_bakuriani/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Winter Sport Bakuriani on Instagram"
+    >
+      <span class="tv-split-link-icon">
+        <img src="/icons/insta.svg" width="22" height="22" alt="" aria-hidden="true">
+      </span>
+    </a>
+
+    <span class="tv-split-link-text" aria-hidden="true">
+      <img
+        class="tv-split-link-avatar"
+        src="/img/pages/map-page/gudauri.jpg"
+        alt=""
+        width="60"
+        height="60"
+        loading="lazy"
+      >
+    </span>
+
+    <a
+      class="tv-split-link-action tv-split-link-action--end"
+      href="https://wintersportbakuriani.com/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit Winter Sport Bakuriani website"
+    >
+      <span class="tv-split-link-icon">
+        <img src="/icons/site-button.svg" width="22" height="22" alt="" aria-hidden="true">
+      </span>
+    </a>
+
+  </div>
+
+  <div class="tv-split-link-caption">
+    <span class="tv-split-link-caption-name">Winter Sport Bakuriani</span>
+    <span class="tv-split-link-caption-links">Instagram · Website</span>
+  </div>
+
+</div>
+
+
+<!-- =====================================
+     MTA — BAKURIANI
+===================================== -->
+
+<div class="tv-split-link-group">
+
+  <div class="tv-split-link tv-split-link--operator">
+
+    <a
+      class="tv-split-link-action tv-split-link-action--start"
+      href="https://www.instagram.com/m.t.a_mountain_trails_agency/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Mountain Trails Agency on Instagram"
+    >
+      <span class="tv-split-link-icon">
+        <img src="/icons/insta.svg" width="22" height="22" alt="" aria-hidden="true">
+      </span>
+    </a>
+
+    <span class="tv-split-link-text" aria-hidden="true">
+      <img
+        class="tv-split-link-avatar"
+        src="/img/pages/map-page/gudauri.jpg"
+        alt=""
+        width="60"
+        height="60"
+        loading="lazy"
+      >
+    </span>
+
+    <a
+      class="tv-split-link-action tv-split-link-action--end"
+      href="https://mta.ski/en"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit Mountain Trails Agency website"
+    >
+      <span class="tv-split-link-icon">
+        <img src="/icons/site-button.svg" width="22" height="22" alt="" aria-hidden="true">
+      </span>
+    </a>
+
+  </div>
+
+  <div class="tv-split-link-caption">
+    <span class="tv-split-link-caption-name">MTA Bakuriani</span>
+    <span class="tv-split-link-caption-links">Instagram · Website</span>
+  </div>
+
+</div>
+
+    </div> <!-- .tv-social-links -->
+
+    </div> <!-- .tv-action-row -->
+
+  </div> <!-- .tv-editorial-content -->
+
+  <img
+    src="/img/pages/map-page/bakuriani.jpg"
+    alt="Winter ski resort in Bakuriani"
+    loading="lazy"
+  >
+
+</article>
+
+
+    <!-- =====================================
+         03. SVANETI / MESTIA
+         CONTENT LEFT / IMAGE RIGHT
+    ====================================== -->
+
+    <article class="tv-editorial-row">
+
+      <div class="tv-editorial-content">
+
+        <span class="text-label">
+          03 / SVANETI
+        </span>
+
+        <h3 class="title-xxs">
+          Mestia — Skiing in the Caucasus
+        </h3>
+
+        <p class="text-sm">
+          For a more dramatic mountain setting, head to
+          Svaneti. The Tetnuldi and Hatsvali ski areas offer
+          beautiful views of the Caucasus, varied terrain
+          and a chance to combine skiing with the region's
+          unique medieval villages and traditions.
+        </p>
+
+
+
+<!-- =====================================
+     MESTIA — LOCAL SKI OPERATORS
+===================================== -->
+
+<div class="tv-action-row tv-action-row--operators">
+
+  <h4 class="text-label tv-action-title">
+    LOCAL SKI OPERATORS
+  </h4>
+
+  <div class="tv-social-links">
+
+
+    <!-- =====================================
+         SVANETI TOURS
+    ====================================== -->
+
+    <div class="tv-split-link-group">
+
+      <div class="tv-split-link tv-split-link--operator">
+
+        <!-- INSTAGRAM -->
+
+        <a
+          class="tv-split-link-action tv-split-link-action--start"
+          href="https://www.instagram.com/svanetitours__/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Svaneti Tours on Instagram"
+        >
+          <span class="tv-split-link-icon">
+            <img
+              src="/icons/insta.svg"
+              width="22"
+              height="22"
+              alt=""
+              aria-hidden="true"
+            >
+          </span>
+        </a>
+
+        <!-- AVATAR -->
+
+        <span class="tv-split-link-text" aria-hidden="true">
+          <img
+            class="tv-split-link-avatar"
+            src="/img/pages/map-page/mestia.jpg"
+            alt=""
+            width="60"
+            height="60"
+            loading="lazy"
+          >
+        </span>
+
+        <!-- WEBSITE -->
+
+        <a
+          class="tv-split-link-action tv-split-link-action--end"
+          href="https://svanetitours.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Svaneti Tours website"
+        >
+          <span class="tv-split-link-icon">
+            <img
+              src="/icons/site-button.svg"
+              width="22"
+              height="22"
+              alt=""
+              aria-hidden="true"
+            >
+          </span>
+        </a>
+
+      </div>
+
+      <div class="tv-split-link-caption">
+        <span class="tv-split-link-caption-name">
+          Svaneti Tours
+        </span>
+        <span class="tv-split-link-caption-links">
+          Instagram · Website
+        </span>
+      </div>
+
+    </div>
+
+
+    <!-- =====================================
+         MTA MESTIA
+    ====================================== -->
+
+    <div class="tv-split-link-group">
+
+      <div class="tv-split-link tv-split-link--operator">
+
+        <!-- INSTAGRAM -->
+
+        <a
+          class="tv-split-link-action tv-split-link-action--start"
+          href="https://www.instagram.com/m.t.a_mountain_trails_agency/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="MTA Mestia on Instagram"
+        >
+          <span class="tv-split-link-icon">
+            <img
+              src="/icons/insta.svg"
+              width="22"
+              height="22"
+              alt=""
+              aria-hidden="true"
+            >
+          </span>
+        </a>
+
+        <!-- AVATAR -->
+
+        <span class="tv-split-link-text" aria-hidden="true">
+          <img
+            class="tv-split-link-avatar"
+            src="/img/pages/map-page/mestia.jpg"
+            alt=""
+            width="60"
+            height="60"
+            loading="lazy"
+          >
+        </span>
+
+        <!-- WEBSITE -->
+
+        <a
+          class="tv-split-link-action tv-split-link-action--end"
+          href="https://mta.ski/en"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit MTA website"
+        >
+          <span class="tv-split-link-icon">
+            <img
+              src="/icons/site-button.svg"
+              width="22"
+              height="22"
+              alt=""
+              aria-hidden="true"
+            >
+          </span>
+        </a>
+
+      </div>
+
+      <div class="tv-split-link-caption">
+        <span class="tv-split-link-caption-name">
+          MTA Mestia
+        </span>
+        <span class="tv-split-link-caption-links">
+          Instagram · Website
+        </span>
+      </div>
+
+    </div>
+
+
+    <!-- =====================================
+         SKI RENTAL IN MESTIA
+    ====================================== -->
+
+    <div class="tv-split-link-group">
+
+      <div class="tv-split-link tv-split-link--operator">
+
+        <!-- INSTAGRAM -->
+
+        <a
+          class="tv-split-link-action tv-split-link-action--start"
+          href="https://www.instagram.com/ski_mestia._.aclassa_travelers/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Ski Rental in Mestia on Instagram"
+        >
+          <span class="tv-split-link-icon">
+            <img
+              src="/icons/insta.svg"
+              width="22"
+              height="22"
+              alt=""
+              aria-hidden="true"
+            >
+          </span>
+        </a>
+
+        <!-- AVATAR -->
+
+        <span class="tv-split-link-text" aria-hidden="true">
+          <img
+            class="tv-split-link-avatar"
+            src="/img/pages/map-page/mestia.jpg"
+            alt=""
+            width="60"
+            height="60"
+            loading="lazy"
+          >
+        </span>
+
+        <!-- PUBLIC BUSINESS PAGE -->
+
+        <a
+          class="tv-split-link-action tv-split-link-action--end"
+          href="https://account.localgymsandfitness.com/GE/Mestia/202639406258056/Ski-rental-in-MESTIA"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit Ski Rental in Mestia business page"
+        >
+          <span class="tv-split-link-icon">
+            <img
+              src="/icons/site-button.svg"
+              width="22"
+              height="22"
+              alt=""
+              aria-hidden="true"
+            >
+          </span>
+        </a>
+
+      </div>
+
+      <div class="tv-split-link-caption">
+        <span class="tv-split-link-caption-name">
+          Ski Rental Mestia
+        </span>
+        <span class="tv-split-link-caption-links">
+          Instagram · Business Page
+        </span>
+      </div>
+
+    </div>
+
+
+  </div> <!-- .tv-social-links -->
+
+</div> <!-- .tv-action-row -->
+
+
+
+
+      </div>
+
+      <img
+        src="/img/pages/map-page/mestia.jpg"
+        alt="Skiing beneath Mount Tetnuldi in Svaneti"
+        loading="lazy"
+      >
+
+    </article>
+
+
+  </div> <!-- .tv-editorial-list -->
+
+</section>
+
+
+{{ partial "strips/strip--caves.html" . }}
+
+
+
+
+<section id="wellnessingeorgia" class="tv-editorial page-layout tv-bg-halite-blue width-1600 section-md">
+
+  <!-- =====================================
+       SECTION INTRODUCTION
+  ====================================== -->
+
+  <div class="tv-feature-intro width-1400">
+
+    <div class="tv-editorial-header">
+
+      <div class="tv-feature-header">
+
+        <div class="section-header-description-row">
+
+          <div class="section-header-number section-header-number--blue" aria-hidden="true">
+            01
+          </div>
+
+          <div class="section-header-main">
+            <span class="text-label">Natural Wellness in Georgia</span>
+            <h2 class="title-md">Health & Wellness in Georgia</h2>
+          </div>
+
+        </div>
+
+        <div class="section-header-description-row flex-column">
+
+          <p class="text-md section-header-description">
+            Discover Georgia's famous mineral springs, thermal baths
+            and historic health resorts. From traditional mud treatments
+            to mountain spa retreats, explore destinations where
+            nature and wellness come together.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- PRACTICAL TIP -->
+
+    <aside class="tv-feature-intro-action tv-feature-header">
+
+      <div class="tv-tip-heading">
+
+        <svg
+          class="tv-tip-icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.7"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <path d="M12 22s8-4 8-11V5l-8-3-8 3v6c0 7 8 11 8 11z"></path>
+          <path d="m9 12 2 2 4-4"></path>
+        </svg>
+
+        <h3 class="title-xxs">
+          Find Your Wellness Escape
+        </h3>
+
+      </div>
+
+      <p class="text-sm tv-section-description">
+        Georgia has a long tradition of balneotherapy and natural
+        wellness. Tskaltubo is famous for its warm mineral springs,
+        Sairme for its mineral and thermal waters, while Akhtala
+        is known for its therapeutic mud. Borjomi combines
+        mineral-water heritage with modern spa facilities,
+        and Nunisi offers a peaceful forest retreat.
+
+        Choose your destination for relaxation, nature or
+        professionally supervised wellness treatments.
+      </p>
+
+    </aside>
+
+  </div>
+
+
+  <!-- =====================================
+       DESTINATIONS
+  ====================================== -->
+
+  <div class="tv-editorial-list width-1200">
+
+
+    <!-- =====================================
+         01. TSKALTUBO
+    ====================================== -->
+
+
+<article class="tv-editorial-row">
+
+  <div class="tv-editorial-content">
+
+    <!-- INTRODUCTION -->
+
+    <span class="text-label">01 / TSKALTUBO</span>
+
+    <h3 class="title-xxs">
+      Tskaltubo — Mineral Water &amp; Wellness
+    </h3>
+
+    <p class="text-sm">
+      Famous for its naturally warm mineral waters (33–35°C),
+      Tskaltubo has a long tradition of balneotherapy. Its spa
+      programmes are designed to support a range of chronic
+      health conditions.
+    </p>
+
+    <!-- CONTENT BELOW IMAGE ON MOBILE -->
+
+    <div class="under-media-block">
+
+      <div class="text-block">
+
+        <h4 class="text-label">TRADITIONAL TREATMENT AREAS</h4>
+
+        <ul class="list-vertical text-sm">
+          <li>Joint and musculoskeletal conditions</li>
+          <li>Back pain and sciatica</li>
+          <li>Certain neurological conditions</li>
+          <li>Chronic skin conditions, including psoriasis</li>
+        </ul>
+
+      </div>
+
+      <div class="text-block">
+
+        <h4 class="text-label">GETTING THERE</h4>
+
+        <div class="tv-transport-item text-sm">
+          <strong>By car</strong>
+          <span>Approximately 4 hours from Tbilisi.</span>
+        </div>
+
+        <div class="tv-transport-item text-sm">
+          <strong>By minibus</strong>
+          <span>
+            Direct minibuses from Didube Bus Station, or travel
+            via Kutaisi and continue by local minibus or taxi.
+          </span>
+        </div>
+
+      </div>
+
+      <div class="text-block">
+
+        <h4 class="text-label">SANATORIUM OR PRIVATE HOTEL?</h4>
+
+        <p class="text-sm">
+          Both options are possible. You can stay at a sanatorium
+          and receive treatment there, or book your own hotel and
+          arrange treatment separately at a local medical or
+          wellness facility. If you choose a private hotel, check
+          whether the treatment facility accepts external guests
+          and whether appointments need to be arranged in advance.
+        </p>
+
+      </div>
+
+      <div class="tv-action-row tv-action-row--operators">
+
+        <h4 class="text-label tv-action-title">
+          WELLNESS &amp; TREATMENT
+        </h4>
+
+        <div class="tv-social-links">
+
+          <div class="tv-split-link-group">
+
+            <div class="tv-split-link tv-split-link--operator">
+
+              <a
+                class="tv-split-link-action tv-split-link-action--end"
+                href="https://www.tskaltuboresort.ge/eng"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Tskaltubo Medical Wellness Resort website">
+
+                <span class="tv-split-link-icon">
+                  <img
+                    src="/icons/site-button.svg"
+                    width="22"
+                    height="22"
+                    alt=""
+                    aria-hidden="true">
+                </span>
+
+              </a>
+
+            </div>
+
+            <div class="tv-split-link-caption">
+
+              <span class="tv-split-link-caption-name">
+                Tskaltubo Medical Wellness Resort
+              </span>
+
+              <span class="tv-split-link-caption-links">
+                Spa programmes · Official website
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- IMAGE AND RATING -->
+
+  <div class="tv-editorial-media">
+
+    <img
+      src="/img/pages/wellness/tskaltubo.jpg"
+      alt="Historic mineral bathhouse in Tskaltubo, Georgia"
+      loading="lazy">
+
+   
+
+  </div>
+
+</article>
+
+
+
+    <!-- =====================================
+         02. SAIRME
+    ====================================== -->
+
+
+<article class="tv-editorial-row">
+
+  <div class="tv-editorial-content">
+
+    <!-- INTRODUCTION -->
+
+    <span class="text-label">02 / SAIRME</span>
+
+    <h3 class="title-xxs">
+      Sairme — Mineral Waters &amp; Mountain Wellness
+    </h3>
+
+    <p class="text-sm">
+      Sairme is famous for its different mineral-water springs
+      and their traditional use in digestive and metabolic health.
+
+      Sairme is particularly associated with kidney and urinary
+      health, gallbladder conditions, digestive disorders and
+      metabolic health. Its thermal baths are also used in
+      musculoskeletal and neurological wellness programmes.
+    </p>
+
+    <!-- CONTENT BELOW IMAGE ON MOBILE -->
+
+    <div class="under-media-block">
+
+      <div class="text-block">
+
+        <h4 class="text-label">TRADITIONAL TREATMENT AREAS</h4>
+
+        <ul class="list-vertical text-sm">
+          <li>Chronic kidney and urinary tract conditions</li>
+          <li>Gallbladder and biliary tract disorders</li>
+          <li>Gastrointestinal conditions, including gastritis and colitis</li>
+          <li>Metabolic disorders, including diabetes-related conditions</li>
+          <li>Musculoskeletal and joint conditions</li>
+        </ul>
+
+      </div>
+
+      <div class="text-block">
+
+        <h4 class="text-label">GETTING THERE</h4>
+
+        <div class="tv-transport-item text-sm">
+          <strong>By car</strong>
+          <span>
+            Around 4–4.5 hours from Tbilisi to Sairme,
+            via Kutaisi and Baghdati.
+          </span>
+        </div>
+
+        <div class="tv-transport-item text-sm">
+          <strong>By minibus</strong>
+          <span>
+            Take a minibus from Tbilisi to Kutaisi,
+            then continue to Baghdati. A taxi is needed
+            for the final 20 km to Sairme.
+          </span>
+        </div>
+
+      </div>
+
+      <div class="tv-action-row tv-action-row--operators">
+
+        <h4 class="text-label tv-action-title">
+          WELLNESS &amp; TREATMENT
+        </h4>
+
+        <div class="tv-social-links">
+
+          <div class="tv-split-link-group">
+
+            <div class="tv-split-link tv-split-link--operator">
+
+              <a
+                class="tv-split-link-action tv-split-link-action--end"
+                href="https://sairmeresort.ge/en"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Sairme Resort website">
+
+                <span class="tv-split-link-icon">
+                  <img
+                    src="/icons/site-button.svg"
+                    width="22"
+                    height="22"
+                    alt=""
+                    aria-hidden="true">
+                </span>
+
+              </a>
+
+            </div>
+
+            <div class="tv-split-link-caption">
+
+              <span class="tv-split-link-caption-name">
+                Sairme Resort
+              </span>
+
+              <span class="tv-split-link-caption-links">
+                Spa &amp; Wellness · Official website
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- IMAGE AND RATING -->
+
+  <div class="tv-editorial-media">
+
+    <img
+      src="/img/pages/wellness/sairme.jpg"
+      alt="Sairme mountain resort surrounded by forests"
+      loading="lazy">
+
+  
+
+  </div>
+
+</article>
+
+
+
+    <!-- =====================================
+         03. BORJOMI
+    ====================================== -->
+
+<article class="tv-editorial-row">
+
+  <div class="tv-editorial-content">
+
+    <!-- INTRODUCTION -->
+
+    <span class="text-label">03 / BORJOMI</span>
+
+    <h3 class="title-xxs">
+      Borjomi — Mineral Water &amp; Forest Retreats
+    </h3>
+
+    <p class="text-sm">
+      Borjomi is particularly famous for its carbonated,
+      sodium-bicarbonate mineral water, traditionally used
+      in drinking-water therapy. Its main wellness focus is
+      the digestive system, liver, gallbladder and metabolism.
+    </p>
+
+    <!-- CONTENT BELOW IMAGE ON MOBILE -->
+
+    <div class="under-media-block">
+
+      <div class="text-block">
+
+        <h4 class="text-label">TRADITIONAL TREATMENT AREAS</h4>
+
+        <ul class="list-vertical text-sm">
+          <li>Chronic gastritis and stomach disorders</li>
+          <li>Chronic colitis and intestinal disorders</li>
+          <li>Gallbladder and bile duct conditions</li>
+          <li>Chronic liver and pancreatic conditions</li>
+          <li>Metabolic disorders, including certain forms of diabetes</li>
+        </ul>
+
+      </div>
+
+      <div class="text-block">
+
+        <h4 class="text-label">GETTING THERE</h4>
+
+        <div class="tv-transport-item text-sm">
+          <strong>By car</strong>
+          <span>Around 2.5 hours from Tbilisi to Borjomi.</span>
+        </div>
+
+        <div class="tv-transport-item text-sm">
+          <strong>By minibus</strong>
+          <span>
+            Regular minibuses depart from Didube Bus Station
+            to Borjomi, taking approximately 2.5–3 hours.
+          </span>
+        </div>
+
+      </div>
+
+      <div class="tv-action-row tv-action-row--operators">
+
+        <h4 class="text-label tv-action-title">
+          SPA &amp; WELLNESS
+        </h4>
+
+        <div class="tv-social-links">
+
+          <div class="tv-split-link-group">
+
+            <div class="tv-split-link tv-split-link--operator">
+
+              <a
+                class="tv-split-link-action tv-split-link-action--end"
+                href="https://borjomilikaniresort.com/en/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Borjomi Likani website">
+
+                <span class="tv-split-link-icon">
+                  <img
+                    src="/icons/site-button.svg"
+                    width="22"
+                    height="22"
+                    alt=""
+                    aria-hidden="true">
+                </span>
+
+              </a>
+
+            </div>
+
+            <div class="tv-split-link-caption">
+
+              <span class="tv-split-link-caption-name">
+                Borjomi Likani
+              </span>
+
+              <span class="tv-split-link-caption-links">
+                Spa Center · Official website
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- IMAGE AND RATING -->
+
+  <div class="tv-editorial-media">
+
+    <img
+      src="/img/pages/wellness/borjomi.jpg"
+      alt="Borjomi forest resort and mountain scenery"
+      loading="lazy">
+
+    {{ partial "rating/international.html" . }}
+
+  </div>
+
+</article>
+
+
+
+    <!-- =====================================
+         04. AKHTALA
+    ====================================== -->
+
+
+<article class="tv-editorial-row">
+
+  <div class="tv-editorial-content">
+
+    <!-- INTRODUCTION -->
+
+    <span class="text-label">04 / AKHTALA</span>
+
+    <h3 class="title-xxs">
+      Akhtala — Georgia's Famous Mud Resort
+    </h3>
+
+    <p class="text-sm">
+      Akhtala's main wellness resource is therapeutic mud rather
+      than mineral-water bathing or drinking. Its traditional
+      treatment programmes focus on joint disorders, peripheral
+      nervous system conditions, certain skin conditions and
+      gynaecological conditions.
+    </p>
+
+    <!-- CONTENT BELOW IMAGE ON MOBILE -->
+
+    <div class="under-media-block">
+
+      <div class="text-block">
+
+        <h4 class="text-label">TRADITIONAL TREATMENT AREAS</h4>
+
+        <ul class="list-vertical text-sm">
+          <li>Osteoarthritis and chronic joint disorders</li>
+          <li>Chronic back pain, sciatica and radiculitis</li>
+          <li>Psoriasis, eczema and neurodermatitis</li>
+          <li>Chronic gynaecological inflammatory conditions</li>
+          <li>Muscle, tendon and soft-tissue disorders</li>
+        </ul>
+
+      </div>
+
+      <div class="text-block">
+
+        <h4 class="text-label">GETTING THERE</h4>
+
+        <div class="tv-transport-item text-sm">
+          <strong>By car</strong>
+          <span>
+            Around 1.5–2 hours from Tbilisi to Akhtala,
+            near Gurjaani in Kakheti.
+          </span>
+        </div>
+
+        <div class="tv-transport-item text-sm">
+          <strong>By minibus</strong>
+          <span>
+            Take a minibus from Tbilisi to Gurjaani.
+            From there, arrange a local taxi to Akhtala.
+          </span>
+        </div>
+
+      </div>
+
+      <div class="tv-action-row tv-action-row--operators">
+
+        <h4 class="text-label tv-action-title">
+          MUD THERAPY &amp; TREATMENT
+        </h4>
+
+        <div class="tv-social-links">
+
+          <div class="tv-split-link-group">
+
+            <div class="tv-split-link tv-split-link--operator">
+
+              <a
+                class="tv-split-link-action tv-split-link-action--end"
+                href="https://www.akhtala.ge/About?lang=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Akhtala Resort website">
+
+                <span class="tv-split-link-icon">
+                  <img
+                    src="/icons/site-button.svg"
+                    width="22"
+                    height="22"
+                    alt=""
+                    aria-hidden="true">
+                </span>
+
+              </a>
+
+            </div>
+
+            <div class="tv-split-link-caption">
+
+              <span class="tv-split-link-caption-name">
+                Akhtala Sanatorium
+              </span>
+
+              <span class="tv-split-link-caption-links">
+                Mud Treatments · Official website
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- IMAGE AND RATING -->
+
+  <div class="tv-editorial-media">
+
+    <img
+      src="/img/pages/wellness/akhtala.jpg"
+      alt="Natural therapeutic mud at Akhtala resort in Kakheti"
+      loading="lazy">
+
+  
+
+  </div>
+
+</article>
+
+
+
+    <!-- =====================================
+         05. NUNISI
+    ====================================== -->
+
+
+<article class="tv-editorial-row">
+
+  <div class="tv-editorial-content">
+
+    <!-- INTRODUCTION -->
+
+    <span class="text-label">05 / NUNISI</span>
+
+    <h3 class="title-xxs">
+      Nunisi — Mineral Baths in the Forest
+    </h3>
+
+    <p class="text-sm">
+      Nunisi is particularly famous for its naturally warm,
+      mildly sulphurous mineral water, traditionally used in
+      dermatological balneotherapy.
+
+      Unlike Borjomi and Sairme, which are strongly associated
+      with drinking mineral water, Nunisi is best known for its
+      mineral baths and treatments for chronic skin conditions.
+      Its forest environment is another important attraction.
+    </p>
+
+    <!-- CONTENT BELOW IMAGE ON MOBILE -->
+
+    <div class="under-media-block">
+
+      <div class="text-block">
+
+        <h4 class="text-label">TRADITIONAL TREATMENT AREAS</h4>
+
+        <ul class="list-vertical text-sm">
+          <li>Psoriasis</li>
+          <li>Atopic dermatitis (eczema)</li>
+          <li>Seborrheic dermatitis</li>
+          <li>Lichen planus</li>
+          <li>Chronic urticaria (hives)</li>
+        </ul>
+
+      </div>
+
+      <div class="text-block">
+
+        <h4 class="text-label">GETTING THERE</h4>
+
+        <div class="tv-transport-item text-sm">
+          <strong>By car</strong>
+          <span>
+            Around 3–3.5 hours from Tbilisi to Nunisi,
+            near Kharagauli.
+          </span>
+        </div>
+
+        <div class="tv-transport-item text-sm">
+          <strong>By train</strong>
+          <span>
+            Take a train from Tbilisi towards Moliti Railway
+            Station. The resort is approximately 6 km away
+            and can arrange a minibus transfer from the station.
+          </span>
+        </div>
+
+      </div>
+
+      <div class="tv-action-row tv-action-row--operators">
+
+        <h4 class="text-label tv-action-title">
+          WELLNESS &amp; TREATMENT
+        </h4>
+
+        <div class="tv-social-links">
+
+          <div class="tv-split-link-group">
+
+            <div class="tv-split-link tv-split-link--operator">
+
+              <a
+                class="tv-split-link-action tv-split-link-action--end"
+                href="https://www.nunisi.ge/en/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Visit Nunisi Resort website">
+
+                <span class="tv-split-link-icon">
+                  <img
+                    src="/icons/site-button.svg"
+                    width="22"
+                    height="22"
+                    alt=""
+                    aria-hidden="true">
+                </span>
+
+              </a>
+
+            </div>
+
+            <div class="tv-split-link-caption">
+
+              <span class="tv-split-link-caption-name">
+                Nunisi Forest Resort &amp; Spa
+              </span>
+
+              <span class="tv-split-link-caption-links">
+                Mineral Baths · Official website
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- IMAGE AND RATING -->
+
+  <div class="tv-editorial-media">
+
+    <img
+      src="/img/pages/wellness/nunisi.jpg"
+      alt="Nunisi forest resort surrounded by green woodland"
+      loading="lazy">
+
+    {{ partial "rating/emerging.html" . }}
+
+  </div>
+
+</article>
+
+
+  </div>
+
+</section>
+
+
+<script src="/js/georgia-regions.js"></script>
+<script src="/js/regions-filters.js"></script>
+
+{{ end }}

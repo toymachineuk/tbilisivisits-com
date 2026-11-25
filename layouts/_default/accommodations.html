@@ -1,0 +1,226 @@
+{{ define "main" }}
+
+
+<!-- =========================================
+     JUST LANDED — HERO
+========================================= -->
+
+
+<section class="tv-editorial-hero page-layout tv-editorial-hero--default">
+
+  <!-- HERO IMAGE -->
+
+  <div class="tv-editorial-hero-media">
+    <img
+      src="/img/pages/accommodations/hero.jpg"
+      alt="Historic architecture and accommodation in Tbilisi"
+      fetchpriority="high"
+    >
+  </div>
+
+
+  <!-- HERO CONTENT -->
+
+  <div class="tv-editorial-hero-content">
+
+    <span class="text-label">
+      STAY IN TBILISI / ACCOMMODATION GUIDE
+    </span>
+
+    <h1 class="title-lg tv-editorial-hero-title">
+
+      <span class="tv-hero-title-main">
+        Find a Stay   That Feels
+        <span class="tv-gradient-text">Right.</span>
+      </span>
+
+      <span class="tv-hero-title-secondary">
+        That Feels
+        <span class="tv-gradient-text">Right.</span>
+      </span>
+
+    </h1>
+
+
+
+
+
+    <!-- HERO NAVIGATION -->
+
+    <nav
+      class="tv-quick-links tv-quick-links--compact"
+      aria-label="Explore accommodation by budget"
+    >
+
+      <a class="tv-quick-link" href="#luxury-stays">
+
+        <span class="tv-quick-link-number">
+          01 / LUXURY STAYS
+        </span>
+
+        <span class="tv-quick-link-title">
+          $100+ / night
+        </span>
+
+        <span class="tv-quick-link-detail">
+          Premium hotels &amp; distinctive stays
+        </span>
+
+        <span class="tv-quick-link-arrow" aria-hidden="true">
+          ↗
+        </span>
+
+      </a>
+
+
+      <a class="tv-quick-link" href="#value-stays">
+
+        <span class="tv-quick-link-number">
+          02 / VALUE STAYS
+        </span>
+
+        <span class="tv-quick-link-title">
+          $35–99 / night
+        </span>
+
+        <span class="tv-quick-link-detail">
+          Comfort, character &amp; great value
+        </span>
+
+        <span class="tv-quick-link-arrow" aria-hidden="true">
+          ↗
+        </span>
+
+      </a>
+
+
+      <a class="tv-quick-link" href="#budget-stays">
+
+        <span class="tv-quick-link-number">
+          03 / BUDGET STAYS
+        </span>
+
+        <span class="tv-quick-link-title">
+          Under $35 / night
+        </span>
+
+        <span class="tv-quick-link-detail">
+          Affordable rooms &amp; local guesthouses
+        </span>
+
+        <span class="tv-quick-link-arrow" aria-hidden="true">
+          ↗
+        </span>
+
+      </a>
+
+    </nav>
+
+  </div>
+
+</section>
+
+
+
+
+
+<section class="tv-columns-story page-layout  tv-columns-story--hero-extension width-1600 ">
+
+  <div class="tv-editorial ">
+
+  <div class="tv-columns-story-header">
+
+  <span class="text-label">
+    HOW WE SELECT ACCOMMODATION
+  </span>
+
+</div>
+
+    <div class="tv-columns-story-grid tv-columns-story-grid--2">
+
+      <!-- 01 / FIRST IMPRESSIONS -->
+
+      <article class="tv-columns-story-item">
+
+        <span class="text-label">
+          01 / FIRST IMPRESSIONS
+        </span>
+
+        <h3 class="title-xxs">The Façade Matters</h3>
+
+        <div class="tv-columns-story-text">
+
+          <p class="text-md">
+            The exterior of a building can be part of
+            the experience, especially among the historic
+            streets and distinctive architecture
+            of Tbilisi's Old Town.
+          </p>
+
+          <p class="text-md">
+            But appearances only tell part of the story.
+            Some of the most welcoming hotels and
+            apartments may look unremarkable outside,
+            yet surprise you with beautiful interiors.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <!-- 02 / WHAT REALLY MATTERS -->
+
+      <article class="tv-columns-story-item">
+
+        <span class="text-label">
+          02 / WHAT REALLY MATTERS
+        </span>
+
+        <h3 class="title-xxs">Beyond Appearances</h3>
+
+        <div class="tv-columns-story-text">
+
+          <p class="text-md">
+            Our selection considers more than
+            photographs and first impressions.
+            We pay attention to location, comfort
+            and the atmosphere of a place.
+          </p>
+
+          <p class="text-md">
+            Is it somewhere you can enjoy a quiet
+            evening or meet fellow travellers?
+            Finding the right accommodation is
+            about balancing different priorities.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+    <p class="tv-columns-story-closing text-md">
+      We're simply here to encourage you to explore
+      that balance for yourself.
+      <strong>Here is our selection.</strong>
+    </p>
+
+  </div>
+
+</section>
+
+
+<div class="accommodation--cars">  
+
+
+{{ partial "carousels/accommodation/luxury.html" . }}
+
+{{ partial "carousels/accommodation/value.html" . }}
+
+{{ partial "carousels/accommodation/budget.html" . }}
+
+</div>
+
+{{end}}

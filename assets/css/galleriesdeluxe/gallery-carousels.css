@@ -1,0 +1,469 @@
+
+/* =========================================================
+   DESTINATION CAROUSEL
+========================================================= */
+
+
+/* =========================================================
+   1. GALLERY WRAPPER
+========================================================= */
+
+.tv-destination-carousel {
+  width: 70%;
+  max-width: 1050px;
+  min-width: 0;
+  margin: 0 auto 0 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.tv-editorial--index-page .tv-editorial-gallery {
+  width: 100%;
+  max-width: 1500px;
+  min-width: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.tv-editorial--index-page .tv-editorial-gallery
+.tv-destination-carousel {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+}
+
+
+/* =========================================================
+   2. STAGE & TRACK
+========================================================= */
+
+.tv-destination-stage {
+  position: relative;
+  width: 100%;
+  min-width: 0;
+}
+
+.tv-destination-track {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 490px;
+  padding: 35px 54px;
+
+  box-sizing: border-box;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: 54px;
+
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tv-destination-track::-webkit-scrollbar {
+  display: none;
+}
+
+.tv-destination-track.is-dragging {
+  cursor: grabbing;
+  scroll-snap-type: none;
+}
+
+
+/* =========================================================
+   3. DESTINATION CARDS
+========================================================= */
+
+.tv-destination-carousel .tv-destination-card {
+  position: relative;
+  flex: 0 0 250px;
+  width: 250px;
+  height: 365px;
+
+  margin: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  isolation: isolate;
+
+  border-radius: 21px;
+  background: var(--tv-pearl);
+
+  scroll-snap-align: start;
+
+  opacity: 0.96;
+  transform: none;
+  transform-origin: center center;
+  z-index: 1;
+
+  transition:
+    transform 400ms ease,
+    opacity 400ms ease,
+    box-shadow 400ms ease;
+}
+
+
+/* Staggered heights */
+
+.tv-destination-carousel .tv-destination-card:nth-child(4n + 1) {
+  height: 330px;
+}
+
+.tv-destination-carousel .tv-destination-card:nth-child(4n + 2),
+.tv-destination-carousel .tv-destination-card:nth-child(4n) {
+  height: 385px;
+}
+
+.tv-destination-carousel .tv-destination-card:nth-child(4n + 3) {
+  height: 435px;
+}
+
+
+/* Active card */
+
+.tv-destination-carousel .tv-destination-card.is-active {
+  opacity: 1;
+  transform: scale(1.025);
+  z-index: 5;
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================================
+   4. CARD IMAGES & OVERLAY
+========================================================= */
+
+.tv-destination-carousel .tv-destination-card > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+  transform: none;
+  transition: none;
+}
+
+.tv-destination-carousel .tv-destination-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.02) 35%,
+    rgba(0, 0, 0, 0.12) 55%,
+    rgba(0, 0, 0, 0.72) 100%
+  );
+}
+
+
+/* =========================================================
+   5. CARD CONTENT
+========================================================= */
+
+.tv-destination-carousel .tv-destination-content {
+  position: absolute;
+  left: 19px;
+  right: 19px;
+  bottom: 21px;
+  z-index: 3;
+  color: var(--tv-white);
+}
+
+.tv-destination-carousel .tv-destination-content h3 {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 25px;
+  line-height: 1.05;
+  font-weight: var(--weight-heavy);
+  letter-spacing: -0.045em;
+  color: inherit;
+}
+
+.tv-destination-carousel .tv-destination-content p {
+  max-width: 30ch;
+  margin: 8px 0 0;
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.5;
+  color: inherit;
+  overflow-wrap: normal;
+}
+
+
+/* =========================================================
+   6. DISTRICT BADGES
+========================================================= */
+
+.district-vake {
+  --district-color: var(--district-vake);
+}
+
+.district-saburtalo {
+  --district-color: var(--district-saburtalo);
+}
+
+.tv-destination-card .vertical-badge {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  left: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0 0 6px;
+  box-sizing: border-box;
+
+  background: var(--district-color);
+  border-radius: 2px;
+  z-index: 4;
+
+  writing-mode: horizontal-tb;
+  transform: none;
+}
+
+.tv-destination-card .tv-category {
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   7. CAROUSEL CONTROLS
+========================================================= */
+
+.tv-destination-controls {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  right: 8px;
+  z-index: 10;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.tv-destination-control {
+  appearance: none;
+  -webkit-appearance: none;
+
+  display: grid;
+  place-items: center;
+
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  flex: 0 0 46px;
+
+  padding: 0 !important;
+  margin: 0;
+
+  border: 1px solid rgba(23, 24, 23, 0.18) !important;
+  border-radius: 50% !important;
+
+  background: var(--tv-white) !important;
+  color: var(--tv-black) !important;
+  box-shadow: 0 3px 14px rgba(0, 0, 0, 0.09);
+
+  pointer-events: auto;
+  cursor: pointer;
+
+  transition:
+    background 200ms ease,
+    color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.tv-destination-control svg {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.tv-destination-control:hover:not(:disabled) {
+  background: var(--tv-black) !important;
+  color: var(--tv-white) !important;
+  border-color: var(--tv-black) !important;
+}
+
+.tv-destination-control:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+
+/* =========================================================
+   8. TABLET — UP TO 900px
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .tv-editorial--index-page .tv-editorial-gallery {
+    max-width: 100%;
+  }
+
+  .tv-destination-carousel {
+    width: 90%;
+    max-width: none;
+  }
+
+  .tv-destination-track {
+    gap: 16px;
+    min-height: 420px;
+    padding: 26px 42px;
+    scroll-padding-inline: 42px;
+  }
+
+  .tv-destination-carousel .tv-destination-card {
+    flex-basis: 225px;
+    width: 225px;
+    height: 340px;
+  }
+
+  .tv-destination-carousel .tv-destination-card:nth-child(4n + 1) {
+    height: 295px;
+  }
+
+  .tv-destination-carousel .tv-destination-card:nth-child(4n + 2),
+  .tv-destination-carousel .tv-destination-card:nth-child(4n) {
+    height: 340px;
+  }
+
+  .tv-destination-carousel .tv-destination-card:nth-child(4n + 3) {
+    height: 380px;
+  }
+
+  .tv-destination-controls {
+    left: 5px;
+    right: 5px;
+  }
+
+  .tv-destination-control {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    flex-basis: 40px;
+  }
+
+}
+
+
+/* =========================================================
+   9. MOBILE — UP TO 650px
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .tv-destination-carousel {
+    width: 100%;
+  }
+
+  .tv-destination-track {
+    gap: 14px;
+    min-height: 365px;
+    padding: 22px 20px 26px;
+    scroll-padding-inline: 20px;
+  }
+
+  .tv-destination-carousel .tv-destination-card,
+  .tv-destination-carousel .tv-destination-card:nth-child(n) {
+    flex: 0 0 235px;
+    width: 235px;
+    height: 315px;
+    border-radius: 17px;
+  }
+
+  .tv-destination-carousel .tv-destination-card:nth-child(4n + 1) {
+    height: 280px;
+  }
+
+  .tv-destination-carousel .tv-destination-card:nth-child(4n + 2),
+  .tv-destination-carousel .tv-destination-card:nth-child(4n) {
+    height: 315px;
+  }
+
+  .tv-destination-carousel .tv-destination-card:nth-child(4n + 3) {
+    height: 345px;
+  }
+
+  .tv-destination-carousel .tv-destination-card.is-active {
+    transform: scale(1.015);
+  }
+
+  .tv-destination-carousel .tv-destination-content {
+    left: 15px;
+    right: 15px;
+    bottom: 16px;
+  }
+
+  .tv-destination-carousel .tv-destination-content h3 {
+    font-size: 22px;
+  }
+
+  .tv-destination-carousel .tv-destination-content p {
+    font-size: 11px;
+  }
+
+  .tv-destination-controls {
+    display: none;
+  }
+
+}
+
+
+/* =========================================================
+   10. SMALL MOBILE — UP TO 380px
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .tv-destination-track {
+    gap: 12px;
+    min-height: 360px;
+    padding-right: 16px;
+    padding-left: 16px;
+    scroll-padding-inline: 16px;
+  }
+
+  .tv-destination-carousel .tv-destination-card {
+    flex-basis: 215px;
+    width: 215px;
+    height: 310px;
+  }
+
+  .tv-destination-carousel .tv-destination-card.is-active {
+    transform: scale(1.015);
+  }
+
+}
+
+
+/* =========================================================
+   11. ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .tv-destination-carousel .tv-destination-card,
+  .tv-destination-carousel .tv-destination-control {
+    transition: none;
+  }
+
+}

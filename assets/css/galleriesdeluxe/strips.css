@@ -1,0 +1,1878 @@
+
+/* =========================================================
+   TBILISI VISITS — CAROUSEL & STRIP COMPONENTS
+========================================================= */
+
+
+/* =========================================================
+   01. NARROW CAROUSEL INTRO
+========================================================= */
+
+.tv-narrow-carousel-intro {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
+
+  width: 90%;
+  margin: 0 auto var(--space-lg);
+  padding: 0;
+}
+
+.tv-narrow-carousel-intro p {
+  max-width: 420px;
+  margin: 0;
+  color: var(--tv-black);
+}
+
+.tv-narrow-carousel-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 8px 13px;
+
+  border: 1px solid var(--tv-black);
+  border-radius: 999px;
+
+  color: var(--tv-black);
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: background-color .2s ease, color .2s ease;
+}
+
+.tv-narrow-carousel-button span {
+  font-size: 13px;
+  line-height: 0;
+  transition: transform .2s ease;
+}
+
+.tv-narrow-carousel-button:hover {
+  background: var(--tv-black);
+  color: var(--tv-cream);
+}
+
+.tv-narrow-carousel-button:hover span {
+  transform: translate(2px, -2px);
+}
+
+
+/* =========================================================
+   02. GENERAL CAROUSEL
+========================================================= */
+
+.tv-carousel {
+  display: flex;
+  gap: 24px;
+
+  width: 100%;
+  min-width: 0;
+  margin: 0 auto;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tv-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.tv-carousel-card {
+  flex: 0 0 200px;
+  width: 200px;
+  min-width: 0;
+
+  scroll-snap-align: start;
+}
+
+.tv-carousel-card a {
+  display: block;
+  width: 100%;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.tv-carousel-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.tv-carousel-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.tv-carousel-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-width: 0;
+}
+
+.tv-carousel-category {
+  display: block;
+  margin-bottom: 5px;
+
+  color: var(--tv-black);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.tv-carousel-description {
+  display: block;
+  max-width: 420px;
+
+  color: var(--tv-black);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: -.005em;
+}
+
+
+/* GENERAL CAROUSEL — MOBILE */
+
+@media (max-width: 650px) {
+
+  .tv-carousel {
+    gap: 16px;
+    flex-wrap: nowrap;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
+  }
+
+  .tv-carousel-card {
+    flex: 0 0 140px;
+    width: 140px;
+    min-width: 140px;
+  }
+
+  .tv-carousel-image {
+    width: 140px;
+    height: 140px;
+    aspect-ratio: auto;
+  }
+
+  .tv-carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  .tv-carousel-content {
+    padding-top: 18px;
+  }
+
+}
+
+
+/* =========================================================
+   03. NARROW PHOTO CAROUSEL
+========================================================= */
+
+.carousel-narrow {
+  width: 100%;
+  padding: var(--space-xl) 5vw;
+
+  background: var(--tv-green);
+  overflow: hidden;
+}
+
+.carousel-narrow-track {
+  display: flex;
+  gap: 24px;
+
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel-narrow-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-narrow-card {
+  flex: 0 0 240px;
+  width: 240px;
+
+  scroll-snap-align: start;
+}
+
+.carousel-narrow-card img {
+  display: block;
+  width: 240px;
+  height: 180px;
+  object-fit: cover;
+}
+
+
+/* NARROW PHOTO CAROUSEL — MOBILE */
+
+@media (max-width: 650px) {
+
+  .carousel-narrow {
+    padding: var(--space-lg) 0;
+  }
+
+  .carousel-narrow-track {
+    gap: 16px;
+    padding: 0 24px;
+    scroll-padding-left: 24px;
+  }
+
+}
+
+
+/* =========================================================
+   04. SUPER NARROW — SECTION SPACING
+========================================================= */
+
+.tv-super-narrow.lg {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+}
+
+.tv-super-narrow.md {
+  padding-top: var(--space-md);
+  padding-bottom: var(--space-md);
+}
+
+.tv-super-narrow.sm {
+  padding-top: var(--space-sm);
+  padding-bottom: var(--space-sm);
+}
+
+.tv-super-narrow.xs {
+  padding-top: var(--space-xs);
+  padding-bottom: var(--space-xs);
+}
+
+
+/* =========================================================
+   05. SUPER NARROW — CAROUSEL
+========================================================= */
+
+.tv-super-narrow .tv-carousel {
+  width: 100%;
+  scrollbar-width: none;
+}
+
+.tv-super-narrow .tv-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.tv-super-narrow .tv-carousel-card {
+  display: flex;
+  align-items: center;
+
+  flex: 0 0 280px;
+  width: 280px;
+  height: 120px;
+  min-width: 0;
+
+  scroll-snap-align: start;
+}
+
+
+/* IMAGE */
+
+.tv-super-narrow .tv-carousel-image {
+  flex: 0 0 88px;
+  width: 88px;
+  height: 88px;
+  overflow: hidden;
+}
+
+.tv-super-narrow .tv-carousel-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+  box-sizing: border-box;
+  object-fit: cover;
+}
+
+
+/* CONTENT */
+
+.tv-super-narrow .tv-carousel-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-width: 0;
+  padding: 4px 0 4px 14px;
+}
+
+
+/* CATEGORY */
+
+.tv-super-narrow .tv-carousel-category {
+  margin-bottom: 7px;
+
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+
+  color: var(--tv-black);
+}
+
+
+/* DESCRIPTION */
+
+.tv-super-narrow .tv-carousel-description {
+  display: block;
+  max-width: 175px;
+
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -.005em;
+
+  color: var(--tv-black);
+}
+
+
+/* SUPER NARROW — MOBILE */
+
+@media (max-width: 650px) {
+
+  .tv-carousel-section.tv-super-narrow {
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-md);
+  }
+
+  .tv-super-narrow .tv-carousel-card {
+    flex: 0 0 250px;
+    width: 250px;
+    height: 110px;
+  }
+
+  .tv-super-narrow .tv-carousel-image {
+    flex: 0 0 78px;
+    width: 78px;
+    height: 78px;
+  }
+
+  .tv-super-narrow .tv-carousel-content {
+    padding: 4px 0 4px 12px;
+  }
+
+  .tv-super-narrow .tv-carousel-category {
+    margin-bottom: 6px;
+    font-size: 11px;
+  }
+
+  .tv-super-narrow .tv-carousel-description {
+    max-width: 165px;
+    font-size: 10.5px;
+    line-height: 1.4;
+  }
+
+}
+
+
+/* =========================================================
+   06. SUPER NARROW — FEATURE LAYOUT
+========================================================= */
+
+.tv-super-narrow .tv-feature-header {
+  grid-column: 1;
+  min-width: 0;
+}
+
+.tv-super-narrow .tv-feature-content {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.tv-super-narrow .tv-carousel-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 16px;
+}
+
+.tv-super-narrow .tv-feature-content .tv-carousel {
+  width: 100%;
+  min-width: 0;
+}
+
+@media (max-width: 768px) {
+
+  .tv-super-narrow .tv-feature-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .tv-super-narrow .tv-feature-header,
+  .tv-super-narrow .tv-feature-content {
+    grid-column: 1;
+  }
+
+}
+
+
+/* =========================================================
+   07. SUPER NARROW — HEADER
+========================================================= */
+
+.wide-cards-strip .tv-super-narrow-heading {
+  min-width: 0;
+}
+
+.wide-cards-strip .tv-super-narrow-intro {
+  max-width: 360px;
+  margin: 0;
+
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.45;
+
+  color: var(--tv-black);
+}
+
+
+/* =========================================================
+   08. WIDE CARDS STRIP
+========================================================= */
+
+.wide-cards-strip .tv-carousel {
+  display: flex;
+  gap: 4px;
+
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  box-sizing: border-box;
+}
+
+.wide-cards-strip .tv-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* CARD */
+
+.wide-cards-strip .tv-carousel-card {
+  display: flex;
+  align-items: center;
+
+  flex: 0 0 280px;
+  width: 280px;
+  height: 120px;
+  min-width: 0;
+
+  scroll-snap-align: start;
+}
+
+
+/* IMAGE */
+
+.wide-cards-strip .tv-carousel-image {
+  flex: 0 0 125px;
+  width: 125px;
+  height: 125px;
+  overflow: hidden;
+}
+
+.wide-cards-strip .tv-carousel-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
+
+  border-radius: 14px;
+  box-sizing: border-box;
+  object-fit: cover;
+}
+
+
+/* CONTENT */
+
+.wide-cards-strip .tv-carousel-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  min-width: 0;
+}
+
+
+/* CATEGORY */
+
+.wide-cards-strip .tv-carousel-category {
+  display: block;
+  margin-bottom: 8px;
+
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+
+  color: var(--tv-black);
+}
+
+
+/* DESCRIPTION */
+
+.wide-cards-strip .tv-carousel-description {
+  display: block;
+  max-width: 215px;
+
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.45;
+  letter-spacing: -.005em;
+
+  color: var(--tv-black);
+}
+
+
+/* WIDE CARDS — MOBILE */
+
+@media (max-width: 650px) {
+
+  .tv-carousel-section.tv-super-narrow.wide-cards-strip {
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-md);
+  }
+
+  .wide-cards-strip .tv-super-narrow-intro {
+    max-width: 300px;
+    margin-top: 10px;
+    font-size: 12px;
+  }
+
+  .wide-cards-strip .tv-carousel-card {
+    flex: 0 0 280px;
+    width: 280px;
+    height: 120px;
+  }
+
+  .wide-cards-strip .tv-carousel-image {
+    flex: 0 0 105px;
+    width: 105px;
+    height: 106px;
+  }
+
+  .wide-cards-strip .tv-carousel-content {
+    padding: 7px 0 7px 14px;
+  }
+
+  .wide-cards-strip .tv-carousel-category {
+    margin-bottom: 6px;
+    font-size: 11px;
+  }
+
+  .wide-cards-strip .tv-carousel-description {
+    max-width: 185px;
+    font-size: 10.5px;
+    line-height: 1.4;
+  }
+
+}
+
+
+/* =========================================================
+   09. CAROUSEL METADATA
+========================================================= */
+
+.tv-carousel-meta {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+}
+
+.tv-carousel-meta-row {
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -.005em;
+  color: var(--tv-black);
+}
+
+
+/* REGION LOCATION */
+
+.tv-carousel-meta-row--location {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+
+/* REGION DOT */
+
+.region-badge {
+  display: inline-block;
+  flex: 0 0 9px;
+
+  width: 9px;
+  height: 9px;
+
+  border-radius: 50%;
+  background: var(--region-color, #999);
+}
+
+
+/* REGION COLORS */
+
+.region-badge[data-region="kakheti"] {
+  --region-color: #B08A38;
+}
+
+.region-badge[data-region="imereti"] {
+  --region-color: #8BAFC5;
+}
+
+.region-badge[data-region="adjara"] {
+  --region-color: #76ADA9;
+}
+
+.region-badge[data-region="guria"] {
+  --region-color: #91B68B;
+}
+
+.region-badge[data-region="kvemo-kartli"] {
+  --region-color: #C49A65;
+}
+
+.region-badge[data-region="mtskheta-mtianeti"] {
+  --region-color: #A69AC2;
+}
+
+.region-badge[data-region="racha-lechkhumi-kvemo-svaneti"] {
+  --region-color: #8DA8C9;
+}
+
+.region-badge[data-region="samegrelo-zemo-svaneti"] {
+  --region-color: #7EAD9E;
+}
+
+.region-badge[data-region="samtskhe-javakheti"] {
+  --region-color: #C58F80;
+}
+
+.region-badge[data-region="shida-kartli"] {
+  --region-color: #B59A83;
+}
+
+
+/* =========================================================
+   10. CAVES STRIP — CARD CONTENT
+========================================================= */
+
+.caves-strip .tv-carousel-card {
+  align-items: stretch;
+}
+
+.caves-strip .tv-carousel-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  height: 100%;
+  min-height: 0;
+  box-sizing: border-box;
+
+  padding: 12px 0 0 14px;
+}
+
+.caves-strip .tv-carousel-meta {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  min-height: 0;
+  gap: 3px;
+}
+
+
+/* DESCRIPTION */
+
+.caves-strip .tv-info-row--description {
+  display: block;
+  max-width: 215px;
+}
+
+
+/* LOCATION — DESKTOP BOTTOM ALIGNMENT */
+
+.caves-strip .tv-info-row--location,
+.caves-strip .tv-carousel-meta-row--location {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+}
+
+
+/* LENGTH */
+
+.caves-strip .tv-info-row--length {
+  display: flex;
+  align-items: center;
+}
+
+
+/* CAVES — MOBILE */
+
+@media (max-width: 650px) {
+
+  .caves-strip .tv-info-row--location,
+  .caves-strip .tv-carousel-meta-row--location {
+    margin-top: 6px;
+  }
+
+}
+
+
+/* =========================================================
+   11. AFFILIATIONS STRIP
+========================================================= */
+
+.tv-affiliations-section {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* CENTERED BOX */
+
+.tv-affiliations-box {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  width: min(840px, calc(100% - 32px));
+  height: 150px;
+
+  overflow: hidden;
+
+  background: #f7f5f2;
+  border-radius: 28px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .12);
+}
+
+
+/* MOVING TRACK */
+
+.tv-affiliations-track {
+  display: flex;
+  align-items: center;
+
+  width: max-content;
+  height: 100%;
+
+  will-change: transform;
+  animation: tv-affiliations-scroll 24s linear infinite;
+}
+
+
+/* GROUP */
+
+.tv-affiliations-group {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+
+  gap: 18px;
+  padding-right: 18px;
+}
+
+
+/* AFFILIATION CARD */
+
+.tv-affiliation-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  flex: 0 0 250px;
+  width: 250px;
+  height: 70px;
+
+  padding: 10px 14px;
+  box-sizing: border-box;
+
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
+}
+
+
+/* LOGO BADGE */
+
+.tv-affiliation-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+
+  background: #000;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.tv-affiliation-logo {
+  font-family: var(--font-sans);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+
+/* TEXT */
+
+.tv-affiliation-description {
+  min-width: 0;
+}
+
+.tv-affiliation-description h3 {
+  margin: 0 0 4px;
+
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.1;
+
+  color: #111;
+}
+
+.tv-affiliation-description p {
+  margin: 0;
+
+  font-family: var(--font-sans);
+  font-size: 11px;
+  line-height: 1.35;
+
+  color: #666;
+}
+
+
+/* ANIMATION */
+
+@keyframes tv-affiliations-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* AFFILIATIONS — MOBILE */
+
+@media (max-width: 767px) {
+
+  .tv-affiliations-box {
+    width: calc(100% - 24px);
+    height: 130px;
+    border-radius: 20px;
+  }
+
+  .tv-affiliation-item {
+    flex-basis: 220px;
+    width: 220px;
+    height: 64px;
+  }
+
+  .tv-affiliations-group {
+    gap: 14px;
+    padding-right: 14px;
+  }
+
+}
+
+
+/* =========================================================
+   12. AIRLINE LOGO STRIP
+========================================================= */
+
+.tv-logo-strip-section {
+  padding: var(--space-lg) 4vw;
+
+  color: var(--tv-black);
+  background: var(--tv-white);
+}
+
+
+/* HEADER */
+
+.tv-logo-strip-section .tv-super-narrow-header {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: var(--space-md);
+
+  margin-bottom: var(--space-md);
+}
+
+.tv-logo-strip-section .text-label {
+  margin-bottom: 10px;
+  color: var(--tv-green-dark);
+}
+
+.tv-logo-strip-section .tv-super-narrow-header > .text-sm {
+  max-width: 340px;
+  margin: 0;
+  color: #6f6f6f;
+}
+
+
+/* GRID */
+
+.tv-logo-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.tv-logo-item {
+  min-width: 0;
+}
+
+
+/* CARD */
+
+.tv-logo-card {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+  min-width: 0;
+  padding: 12px;
+  box-sizing: border-box;
+
+  color: var(--tv-black);
+  background: var(--tv-white);
+  border: 1px solid var(--tv-pearl);
+  border-radius: 5px;
+
+  text-decoration: none;
+
+  transition:
+    border-color .2s ease,
+    background .2s ease,
+    transform .2s ease;
+}
+
+.tv-logo-card:hover {
+  border-color: var(--tv-green-border);
+  background: #fafcfb;
+  transform: translateY(-3px);
+}
+
+.tv-logo-card:focus-visible {
+  outline: 2px solid var(--tv-green-dark);
+  outline-offset: 3px;
+}
+
+
+/* LOGO PANEL */
+
+.tv-logo-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100px;
+  padding: 16px;
+  box-sizing: border-box;
+
+  background: #f7f7f5;
+  border-radius: 3px;
+}
+
+.tv-logo-panel img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+  max-width: 190px;
+  max-height: 55px;
+
+  object-fit: contain;
+}
+
+
+/* DESCRIPTION */
+
+.tv-logo-description {
+  flex: 1;
+  padding: 16px 2px 20px;
+}
+
+.tv-logo-description h3 {
+  margin: 0 0 7px;
+
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  line-height: 1.25;
+  letter-spacing: var(--tracking-tight);
+}
+
+.tv-logo-description p {
+  margin: 0;
+
+  color: #6f6f6f;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  line-height: 1.45;
+}
+
+
+/* FOOTER */
+
+.tv-logo-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  padding: 12px 2px 2px;
+
+  border-top: 1px solid var(--tv-pearl);
+
+  color: var(--tv-green-dark);
+  font-size: 10px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.tv-logo-arrow {
+  font-size: 17px;
+  line-height: 1;
+  transition: transform .2s ease;
+}
+
+.tv-logo-card:hover .tv-logo-arrow {
+  transform: translate(2px, -2px);
+}
+
+
+/* AIRLINE STRIP — TABLET */
+
+@media (max-width: 900px) {
+
+  .tv-logo-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+
+/* AIRLINE STRIP — MOBILE */
+
+@media (max-width: 600px) {
+
+  .tv-logo-strip-section {
+    padding: var(--space-lg) 5vw;
+  }
+
+  .tv-logo-strip-section .tv-super-narrow-header {
+    display: block;
+  }
+
+  .tv-logo-strip-section .tv-super-narrow-header > .text-sm {
+    margin-top: 12px;
+  }
+
+  .tv-logo-strip {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .tv-logo-card {
+    padding: 8px;
+  }
+
+  .tv-logo-panel {
+    height: 76px;
+    padding: 10px;
+  }
+
+  .tv-logo-description {
+    padding: 12px 2px 16px;
+  }
+
+  .tv-logo-description h3 {
+    font-size: 14px;
+  }
+
+  .tv-logo-description p {
+    font-size: 12px;
+  }
+
+  .tv-logo-footer {
+    font-size: 9px;
+  }
+
+}
+
+
+/* =========================================================
+   13. PARTNERS — LOGO STRIP
+========================================================= */
+
+.tv-partners {
+  width: 100%;
+  margin: 0;
+  padding: 16px 0;
+  box-sizing: border-box;
+
+  background: transparent;
+}
+
+.tv-partners-inner {
+  margin-inline: auto;
+  box-sizing: border-box;
+
+  border-block: 1px solid var(--tv-border, #e7e5df);
+}
+
+
+/* HEADER */
+
+.tv-partners-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  padding-top: 12px;
+}
+
+.tv-partners-label,
+.tv-partners-caption {
+  margin: 0;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+
+  color: var(--tv-muted, #666);
+}
+
+
+/* LOGO TRACK */
+
+.tv-partners-track {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  align-items: center;
+  gap: clamp(12px, 2vw, 28px);
+
+  width: 100%;
+  padding: 12px 0 16px;
+  box-sizing: border-box;
+}
+
+
+/* LOGOS */
+
+.tv-partners .tv-partner-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 0;
+  min-height: 38px;
+}
+
+.tv-partners .tv-partner-logo img {
+  display: block;
+
+  width: 100%;
+  max-width: 110px;
+  height: 32px;
+
+  object-fit: contain;
+}
+
+
+/* INDIVIDUAL LOGO SIZES */
+
+.tv-partners .tv-partner-logo:nth-child(1) img,
+.tv-partners .tv-partner-logo:nth-child(4) img {
+  max-width: 85px;
+}
+
+.tv-partners .tv-partner-logo:nth-child(2) img {
+  max-width: 80px;
+  height: 34px;
+}
+
+.tv-partners .tv-partner-logo:nth-child(3) img,
+.tv-partners .tv-partner-logo:nth-child(6) img {
+  max-width: 115px;
+}
+
+.tv-partners .tv-partner-logo:nth-child(4) img {
+  height: 34px;
+}
+
+.tv-partners .tv-partner-logo:nth-child(5) img {
+  max-width: 100px;
+}
+
+.tv-partners .tv-partner-logo:nth-child(7) img {
+  max-width: 105px;
+}
+
+
+/* PARTNERS — TABLET */
+
+@media (max-width: 1000px) {
+
+  .tv-partners-track {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 28px;
+
+    padding: 22px 0 28px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x proximity;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tv-partners-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .tv-partners .tv-partner-logo {
+    flex: 0 0 145px;
+    min-height: 60px;
+    scroll-snap-align: start;
+  }
+
+}
+
+
+/* PARTNERS — MOBILE */
+
+@media (max-width: 650px) {
+
+  .tv-partners {
+    padding: 12px 0;
+  }
+
+  .tv-partners-inner {
+    width: calc(100% - 32px);
+  }
+
+  .tv-partners-label {
+    font-size: 9px;
+  }
+
+  .tv-partners-caption {
+    display: none;
+  }
+
+  .tv-partners-track {
+    gap: 16px;
+    padding: 10px 0 12px;
+  }
+
+  .tv-partners .tv-partner-logo {
+    flex-basis: 100px;
+    min-height: 36px;
+  }
+
+  .tv-partners .tv-partner-logo img {
+    max-width: 100px;
+    height: 30px;
+  }
+
+  .tv-partners .tv-partner-logo:nth-child(2) img,
+  .tv-partners .tv-partner-logo:nth-child(4) img {
+    max-width: 85px;
+    height: 34px;
+  }
+
+}
+
+
+/* =========================================================
+   14. INFO STRIP
+========================================================= */
+
+.tv-info-strip {
+  display: flex;
+  align-items: stretch;
+
+  width: 100%;
+  margin: var(--space-lg) 0 var(--space-xl);
+  padding: var(--space-md) 0;
+
+  border-top: 1px solid #b8b8b8;
+  border-bottom: 1px solid #b8b8b8;
+
+  box-sizing: border-box;
+}
+
+
+/* INFO ITEMS */
+
+.tv-info-item {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  gap: 5px;
+
+  min-width: 0;
+  padding: 0 var(--space-md);
+
+  box-sizing: border-box;
+}
+
+.tv-info-item:first-child {
+  padding-left: 0;
+}
+
+.tv-info-item + .tv-info-item {
+  border-left: 1px solid #b8b8b8;
+}
+
+
+/* LABELS AND VALUES */
+
+.tv-info-label {
+  color: var(--color-text-muted);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+
+.tv-info-value {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+
+/* ITEM CONTENT */
+
+.tv-info-item p {
+  margin: 3px 0 0;
+
+  color: var(--color-text-muted);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.tv-info-item ul {
+  margin: 3px 0 0;
+
+  color: var(--color-text-muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+
+/* TWO-COLUMN INFO ITEM */
+
+.tv-info-item--2col {
+  flex: 0 0 640px;
+  min-width: 640px;
+}
+
+.tv-info-row--divided {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.tv-info-row--divided > * + * {
+  padding-left: 16px;
+}
+
+.tv-info-detail {
+  min-width: 0;
+}
+
+.tv-info-detail p {
+  margin: 3px 0 0;
+
+  color: var(--color-text-muted);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+/* REGION DETAILS — HORIZONTAL SCROLL */
+
+.tv-info-strip.tv-region-details {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: flex-start;
+
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tv-region-details::-webkit-scrollbar {
+  display: none;
+}
+
+.tv-region-details > .tv-info-item {
+  flex: 0 0 240px;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.tv-region-details > .tv-info-item + .tv-info-item {
+  border-left: 1px solid #b8b8b8;
+}
+
+.tv-region-details > .tv-info-item--2col {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+
+/* INFO STRIP — MOBILE */
+
+@media (max-width: 600px) {
+
+  .tv-info-strip:not(.tv-region-details) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    row-gap: var(--space-md);
+
+    padding-inline: 16px;
+  }
+
+  .tv-info-strip:not(.tv-region-details) .tv-info-item {
+    padding: 0 var(--space-sm);
+  }
+
+  .tv-info-strip:not(.tv-region-details) .tv-info-item:nth-child(odd) {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .tv-info-strip:not(.tv-region-details) .tv-info-item:nth-child(even) {
+    border-left: 1px solid var(--color-border);
+  }
+
+  .tv-info-strip.tv-region-details {
+    padding-inline: 0;
+  }
+
+  .tv-region-details > .tv-info-item {
+    flex-basis: 220px;
+  }
+
+  .tv-info-row--divided {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tv-info-row--divided > * + * {
+    border-top: none;
+    padding: 0 0 0 16px;
+  }
+
+}
+
+
+/* =========================================================
+   15. UNIVERSAL APP STRIPS
+========================================================= */
+
+.tv-apps-section {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+
+/* LAYOUT */
+
+.tv-apps-layout {
+  display: grid;
+  grid-template-columns: minmax(200px, .7fr) minmax(0, 1.8fr);
+  align-items: center;
+  gap: clamp(24px, 4vw, 64px);
+
+  width: 100%;
+  min-width: 0;
+}
+
+.tv-apps-intro {
+  min-width: 0;
+}
+
+.tv-apps-intro .text-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--tv-brand-accent, #c66b49);
+}
+
+.tv-apps-intro h2 {
+  margin: 0;
+  color: var(--tv-black, #151515);
+}
+
+.tv-apps-intro p {
+  max-width: 340px;
+  margin: 14px 0 0;
+  color: var(--tv-muted, #666);
+}
+
+
+/* CAROUSEL */
+
+.tv-apps-carousel {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 12px;
+
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.tv-apps-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* APP CARD */
+
+.tv-app-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  flex: 0 0 280px;
+  min-width: 0;
+  padding: 12px;
+
+  box-sizing: border-box;
+
+  background: var(--tv-white, #fff);
+  border: 1px solid var(--tv-border, #e7e5df);
+  border-radius: 8px;
+
+  scroll-snap-align: start;
+
+  transition:
+    border-color .2s ease,
+    background-color .2s ease;
+}
+
+.tv-app-item:hover {
+  border-color: var(--tv-brand-accent, #c66b49);
+  background: var(--tv-brand-warm-ivory, #f5f2ea);
+}
+
+
+/* APP BADGE */
+
+.tv-app-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 auto;
+  padding: 0;
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.tv-app-badge:focus-visible,
+.tv-app-arrow:focus-visible {
+  outline: 2px solid var(--tv-brand-accent, #c66b49);
+  outline-offset: 3px;
+}
+
+
+/* APP LOGO */
+
+.tv-app-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+
+  overflow: hidden;
+  border-radius: 8px;
+
+  background: #f5f5f5;
+  color: #fff;
+
+  font-family: var(--font-sans, "DM Sans", sans-serif);
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.tv-app-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.tv-app-logo--wolt {
+  background: #009de0;
+}
+
+.tv-app-logo--bolt {
+  background: #34c759;
+}
+
+.tv-app-logo--maps {
+  background: #4285f4;
+}
+
+
+/* APP DESCRIPTION */
+
+.tv-app-description {
+  flex: 1;
+  min-width: 0;
+}
+
+.tv-app-description h3 {
+  margin: 0 0 5px;
+
+  color: var(--tv-black, #151515);
+  font-family: var(--font-sans, "DM Sans", sans-serif);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.tv-app-description p {
+  margin: 0;
+
+  color: var(--tv-muted, #666);
+  font-family: var(--font-sans, "DM Sans", sans-serif);
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+
+/* APP ARROW */
+
+.tv-app-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+
+  border: 1px solid var(--tv-border, #e7e5df);
+  border-radius: 50%;
+
+  color: var(--tv-black, #151515);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.tv-app-arrow:hover {
+  background: var(--tv-black, #151515);
+  color: #fff;
+}
+
+
+/* SINGLE APP */
+
+.tv-apps-carousel > .tv-app-item:only-child {
+  flex: 0 1 340px;
+  width: 100%;
+}
+
+
+/* APP STRIP — TABLET */
+
+@media (max-width: 900px) {
+
+  .tv-apps-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .tv-apps-intro p {
+    max-width: 480px;
+  }
+
+}
+
+
+/* APP STRIP — MOBILE */
+
+@media (max-width: 650px) {
+
+  .tv-apps-layout {
+    gap: 18px;
+  }
+
+  .tv-apps-intro .text-label {
+    margin-bottom: 6px;
+  }
+
+  .tv-apps-intro p {
+    margin-top: 10px;
+  }
+
+  .tv-apps-carousel {
+    gap: 10px;
+  }
+
+  .tv-app-item {
+    flex-basis: 260px;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 7px;
+  }
+
+  .tv-app-logo {
+    flex-basis: 40px;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .tv-app-description h3 {
+    font-size: 13px;
+  }
+
+  .tv-app-description p {
+    font-size: 11px;
+  }
+
+  .tv-apps-carousel > .tv-app-item:only-child {
+    flex: 1 1 auto;
+    max-width: 340px;
+  }
+
+}
+
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .tv-apps-carousel {
+    scroll-behavior: auto;
+  }
+
+  .tv-app-item {
+    transition: none;
+  }
+
+}

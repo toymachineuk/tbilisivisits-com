@@ -1,0 +1,17 @@
+{
+  "files.exclude": {
+    "**/public": true,
+     "**/galleriesdeluxe-main.zip": true,
+    "**/.hugo_build.lock": true,
+    "**/README.md": true,
+    "**/LICENSE": true,
+    "**/theme.toml": true,
+    "**/netlify.toml": true,
+    "**/hugo-ci.sh": true,
+    "**/exampleSite": true,
+    "**/go.mod": true,
+    "**/go.sum": true,
+    "**/images": true,
+    "**/i18n": true
+  }
+}

@@ -1,0 +1,683 @@
+/* =========================================
+   TBILISI VISITS — NAVBAR
+   Clean desktop + editorial mobile navigation
+========================================= */
+
+/* 01. HEADER */
+.nav {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2vw, 32px);
+  width: 100%;
+  height: 80px;
+  padding: 0 3.2vw;
+  box-sizing: border-box;
+  background: var(--tv-page, #fff);
+  color: var(--tv-text, #171717);
+  border: 0;
+  border-radius: 0;
+  font-family: var(--font-sans, 'DM Sans', sans-serif);
+}
+
+/* 02. BRAND — LOGO + NAME + TAGLINE */
+.nav-brand {
+  order: 1;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  gap: 12px;
+  min-width: 0;
+}
+
+.nav .nav-brand .logo {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  width: 75px;
+  margin: 0;
+  color: inherit;
+  text-decoration: none;
+}
+
+.nav .nav-brand .logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.nav-brand__text { display: none; }
+.nav-brand__name { display: block; }
+.nav-tagline { display: block; }
+
+/* Prevent theme-wide link underline rules on all navbar states. */
+.nav a,
+.nav a:link,
+.nav a:visited,
+.nav a:hover,
+.nav a:focus,
+.nav a:active,
+.mobile-menu a,
+.mobile-menu a:link,
+.mobile-menu a:visited,
+.mobile-menu a:hover,
+.mobile-menu a:focus,
+.mobile-menu a:active {
+  text-decoration: none !important;
+  text-decoration-line: none !important;
+}
+
+/* 03. DESKTOP LINKS */
+.nav .nav-links {
+  order: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 2vw, 34px);
+  min-width: 0;
+  margin: 0 auto;
+}
+.nav .nav-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  color: var(--tv-text, #171717);
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 550;
+  line-height: 1.3;
+  letter-spacing: -0.015em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 180ms ease;
+}
+.nav .nav-links a:hover,
+.nav .nav-links a[aria-current='page'],
+.nav .nav-links a.active {
+  color: var(--tv-brand-accent, #c66b49);
+}
+.nav .nav-links a[aria-current='page'],
+.nav .nav-links a.active { font-weight: 700; }
+.nav .nav-links a[aria-current='page']::after,
+.nav .nav-links a.active::after {
+  content: '';
+  display: block;
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--tv-brand-accent, #c66b49);
+}
+.nav .nav-links a svg { display: block; flex: 0 0 auto; }
+
+/* 04. RIGHT-SIDE ACTION */
+.nav .nav-actions,
+.nav .hero-header-aside {
+  order: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex: 0 0 auto;
+  min-width: 0;
+  margin: 0;
+}
+
+/* 05. COMPASS BUTTON — GRADIENT DASHED BORDER */
+.nav-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  box-sizing: border-box;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 1px dashed transparent;
+  border-radius: 8px;
+  background:
+    linear-gradient(#fff, #fff) padding-box,
+    linear-gradient(110deg, #e64423, #eb8d1c, #4bb7b8, #e64423) border-box;
+  color: var(--tv-text, #171717);
+  font-family: var(--font-sans, 'DM Sans', sans-serif);
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: color 180ms ease, opacity 180ms ease;
+}
+.nav-button:hover {
+  background:
+    linear-gradient(#fffaf6, #fffaf6) padding-box,
+    linear-gradient(110deg, #e64423, #eb8d1c, #4bb7b8, #e64423) border-box;
+}
+.nav-button__icon {
+  display: block;
+  flex: 0 0 auto;
+  width: 18px;
+  height: 18px;
+  color: var(--tv-brand-accent, #c66b49);
+}
+.chevron { display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+.chevron svg { display: block; width: 14px; height: 14px; transition: transform 180ms ease; }
+.nav-dropdown:focus-within .chevron svg,
+.nav-dropdown.is-open .chevron svg { transform: rotate(180deg); }
+
+/* 06. BEYOND TBILISI — DESTINATIONS DROPDOWN */
+.nav-dropdown { position: relative; }
+
+.nav-dropdown__menu {
+  position: absolute;
+  z-index: 110;
+  top: calc(100% + 10px);
+  right: 0;
+  width: 250px;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: var(--tv-section-soft, #f5f2ea);
+  border: 1px solid var(--tv-border, #e7e5df);
+  border-radius: 12px;
+  box-shadow: 0 18px 45px rgb(0 0 0 / 11%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity 180ms ease, transform 180ms ease, visibility 180ms ease;
+}
+
+.nav-dropdown.is-open .nav-dropdown__menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.nav-dropdown__menu a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 43px;
+  padding: 10px 22px;
+  box-sizing: border-box;
+  color: var(--tv-text, #171717);
+  font-family: var(--font-sans, 'DM Sans', sans-serif);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 160ms ease, color 160ms ease;
+}
+
+.nav-dropdown__menu a:hover,
+.nav-dropdown__menu a:focus-visible {
+  background: #fff;
+  color: var(--tv-brand-accent, #c66b49);
+}
+
+/* Full-width map header; image source stays in HTML. */
+.nav-dropdown__menu a:first-child {
+  position: relative;
+  isolation: isolate;
+  min-height: 76px;
+  margin-bottom: 10px;
+  padding: 16px 22px;
+  overflow: hidden;
+  background: var(--tv-section-soft, #f5f2ea);
+  border-bottom: 1px solid var(--tv-border, #e7e5df);
+  font-weight: 700;
+}
+
+.nav-dropdown__featured-image,
+.nav-dropdown__featured-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-dropdown__featured-image {
+  z-index: -2;
+  object-fit: cover;
+  object-position: center;
+}
+
+.nav-dropdown__featured-overlay {
+  z-index: -1;
+  background: linear-gradient(90deg,
+    rgb(245 242 234 / 96%) 0%,
+    rgb(245 242 234 / 75%) 55%,
+    rgb(245 242 234 / 25%) 100%);
+}
+
+.nav-dropdown__menu strong { font-weight: inherit; }
+
+.nav-dropdown__featured svg {
+  position: relative;
+  z-index: 1;
+  flex: 0 0 auto;
+  width: 26px;
+  height: 26px;
+  padding: 9px;
+  box-sizing: content-box;
+  color: var(--tv-brand-accent, #c66b49);
+  background: #fff;
+  border-radius: 50%;
+}
+
+.nav-dropdown__menu a:first-child:hover,
+.nav-dropdown__menu a:first-child:focus-visible {
+  background: var(--tv-section-soft, #f5f2ea);
+  color: var(--tv-text, #171717);
+}
+
+.nav-dropdown__menu a:last-child { margin-bottom: 12px; }
+
+.nav-dropdown__menu a:not(:first-child)::after {
+  content: '↗';
+  color: var(--tv-brand-accent, #c66b49);
+  font-size: 15px;
+  opacity: 0.65;
+  transition: opacity 160ms ease;
+}
+
+.nav-dropdown__menu a:not(:first-child):hover::after { opacity: 1; }
+
+/* 07. HAMBURGER */
+.nav > .menu {
+  display: none;
+  order: 4;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  flex: 0 0 auto;
+  padding: 8px;
+  border: 0;
+  background: transparent;
+  color: var(--tv-text, #171717);
+  cursor: pointer;
+}
+.nav > .menu span {
+  display: block;
+  width: 21px;
+  height: 2px;
+  background: currentColor;
+  transition: transform 200ms ease;
+}
+.nav > .menu.is-open span:first-child { transform: translateY(3.5px) rotate(45deg); }
+.nav > .menu.is-open span:last-child { transform: translateY(-3.5px) rotate(-45deg); }
+
+/* 08. MOBILE MENU DEFAULT */
+.mobile-menu { display: none; }
+
+/* =========================================
+   09. DESKTOP BRAND — LOGO + TEXT
+========================================= */
+@media (min-width: 901px) {
+  .nav .nav-brand .logo { width: 62px; }
+  .nav-brand__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .nav-brand__name {
+    color: var(--tv-text, #171717);
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: .025em;
+    white-space: nowrap;
+  }
+  .nav-tagline {
+    color: var(--tv-muted, #666);
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.3;
+    white-space: nowrap;
+  }
+}
+
+/* =========================================
+   10. MOBILE NAVIGATION — ONE SOURCE OF TRUTH
+========================================= */
+@media (max-width: 900px) {
+  /* Header: brand left, hamburger right */
+  .nav {
+    height: 76px;
+    padding: 0 5vw;
+    gap: 12px;
+    justify-content: space-between;
+  }
+  .nav-brand {
+    order: 1;
+    display: flex;
+    align-items: center;
+    flex: 0 1 auto;
+    min-width: 0;
+    gap: 10px;
+    margin-right: auto;
+  }
+  .nav .nav-brand .logo { width: 52px; margin: 0; }
+  .nav-brand__text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    min-width: 0;
+  }
+  .nav-brand__name {
+    color: var(--tv-text, #171717);
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: .01em;
+    white-space: nowrap;
+  }
+  .nav-tagline {
+    color: var(--tv-muted, #666);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+  .nav .nav-links,
+  .nav .nav-actions,
+  .nav .hero-header-aside { display: none; }
+  .nav > .menu {
+    position: relative;
+    z-index: 3;
+    order: 2;
+    display: flex;
+    margin: 0 0 0 auto;
+  }
+
+  /* Full-height overlay */
+  .mobile-menu {
+    position: fixed;
+    z-index: 90;
+    inset: 76px 0 0;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 42px 9vw 36px;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    background: var(--tv-page, #fff);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-8px);
+    transition: opacity 200ms ease, transform 200ms ease, visibility 200ms ease;
+  }
+  .mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  /* Main navigation */
+  .mobile-menu__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+  .mobile-menu__nav a {
+    position: relative;
+    display: block;
+    width: fit-content;
+    margin: 0;
+    padding: 2px 0;
+    border: 0;
+    color: var(--tv-text, #171717);
+    font-family: var(--font-sans, 'DM Sans', sans-serif);
+    font-size: 21px;
+    font-weight: 450;
+    line-height: 1.3;
+    letter-spacing: -.025em;
+    text-decoration: none;
+    transition: color 180ms ease;
+  }
+  .mobile-menu__nav a:hover { color: var(--tv-brand-accent, #c66b49); }
+  .mobile-menu__nav a.active,
+  .mobile-menu__nav a[aria-current='page'] { font-weight: 650; }
+  .mobile-menu__nav a.active::before,
+  .mobile-menu__nav a[aria-current='page']::before {
+    content: '';
+    position: absolute;
+    left: -17px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--tv-brand-accent, #c66b49);
+    transform: translateY(-50%);
+  }
+
+  /* Map card + accordion: single combined panel */
+  .mobile-menu__explore {
+    margin-top: 28px;
+    overflow: hidden;
+    border: 1px solid var(--tv-border, #e7e5df);
+    border-radius: 12px;
+    background: #fff;
+  }
+  .mobile-menu__featured-map {
+    position: relative;
+    isolation: isolate;
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 175px;
+    margin: 0;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0;
+    background: var(--tv-section-soft, #f5f2ea);
+    color: var(--tv-text, #171717);
+    text-decoration: none;
+  }
+  .mobile-menu__featured-image {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 65% center;
+    transition: transform 300ms ease;
+  }
+  .mobile-menu__featured-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+      rgb(245 242 234 / 98%) 0%,
+      rgb(245 242 234 / 90%) 35%,
+      rgb(245 242 234 / 35%) 72%,
+      rgb(245 242 234 / 5%) 100%);
+  }
+  .mobile-menu__featured-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 24px 22px;
+  }
+  .mobile-menu__featured-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--tv-brand-accent, #c66b49);
+    font-family: var(--font-sans, 'DM Sans', sans-serif);
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: .08em;
+  }
+  .mobile-menu__featured-label svg { flex: 0 0 auto; }
+  .mobile-menu__featured-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    font-family: var(--font-sans, 'DM Sans', sans-serif);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -.035em;
+  }
+  .mobile-menu__featured-arrow {
+    flex: 0 0 auto;
+    color: var(--tv-brand-accent, #c66b49);
+    font-size: 25px;
+    font-weight: 400;
+    transition: transform 180ms ease;
+  }
+  .mobile-menu__featured-description {
+    max-width: 205px;
+    color: var(--tv-muted, #666);
+    font-family: var(--font-sans, 'DM Sans', sans-serif);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.55;
+  }
+  .mobile-menu__featured-map:hover .mobile-menu__featured-image { transform: scale(1.05); }
+  .mobile-menu__featured-map:hover .mobile-menu__featured-arrow { transform: translate(3px, -3px); }
+
+  /* Beyond Tbilisi: rotate only the SVG, never the text */
+  .mobile-menu__beyond {
+    min-width: 0;
+    border-top: 1px solid var(--tv-border, #e7e5df);
+  }
+  .mobile-menu__beyond-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    min-height: 52px;
+    padding: 12px 20px;
+    border: 0;
+    background: #fff;
+    color: var(--tv-text, #171717);
+    font-family: var(--font-sans, 'DM Sans', sans-serif);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    cursor: pointer;
+  }
+  .mobile-menu__beyond-toggle svg {
+    flex: 0 0 auto;
+    color: var(--tv-brand-accent, #c66b49);
+    transition: transform 180ms ease;
+  }
+  .mobile-menu__beyond-toggle[aria-expanded='true'] svg { transform: rotate(180deg); }
+  .mobile-menu__beyond-list[hidden] { display: none; }
+  .mobile-menu__beyond-list:not([hidden]) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    padding: 0 16px 16px;
+  }
+  .mobile-menu__beyond-list a {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 42px;
+    padding: 10px 12px;
+    border-radius: 7px;
+    background: var(--tv-section-soft, #f5f2ea);
+    color: var(--tv-text, #171717);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .mobile-menu__beyond-list a:hover { color: var(--tv-brand-accent, #c66b49); }
+
+  /* About + Contact */
+  .mobile-menu__actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid var(--tv-border, #e7e5df);
+  }
+  .mobile-menu__action-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    box-sizing: border-box;
+    min-height: 48px;
+    padding: 0 15px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-family: var(--font-sans, 'DM Sans', sans-serif);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-decoration: none;
+    transition: background-color 180ms ease, border-color 180ms ease, transform 180ms ease;
+  }
+  .mobile-menu__action-button--secondary {
+    background: var(--tv-section-soft, #f5f2ea);
+    border-color: var(--tv-border, #e7e5df);
+    color: var(--tv-text, #171717);
+  }
+  .mobile-menu__action-button--primary {
+    background: var(--tv-text, #171717);
+    color: #fff;
+  }
+  .mobile-menu__action-button span { font-size: 18px; font-weight: 400; line-height: 1; }
+  .mobile-menu__action-button:hover { transform: translateY(-2px); }
+  .mobile-menu__action-button--secondary:hover { border-color: var(--tv-brand-accent, #c66b49); }
+  .mobile-menu__action-button--primary:hover { background: #303030; }
+}
+
+/* =========================================
+   11. SMALL PHONES
+========================================= */
+@media (max-width: 480px) {
+  .nav { height: 72px; padding: 0 14px; gap: 8px; }
+  .nav-brand { gap: 9px; }
+  .nav .nav-brand .logo { width: 48px; }
+  .nav-brand__name { font-size: 12px; }
+  .nav-tagline { font-size: 11px; }
+  .nav > .menu { padding: 6px; }
+  .mobile-menu { inset: 72px 0 0; padding: 36px 9vw 32px; }
+  .mobile-menu__nav { gap: 11px; }
+  .mobile-menu__nav a { font-size: 20px; }
+}
+
+/* =========================================
+   12. ACCESSIBILITY
+========================================= */
+.nav-button:focus-visible,
+.nav .nav-brand .logo:focus-visible,
+.nav > .menu:focus-visible,
+.nav .nav-links a:focus-visible,
+.nav-dropdown__menu a:focus-visible,
+.mobile-menu__nav a:focus-visible,
+.mobile-menu__featured-map:focus-visible,
+.mobile-menu__beyond-toggle:focus-visible,
+.mobile-menu__beyond-list a:focus-visible,
+.mobile-menu__action-button:focus-visible {
+  outline: 2px solid var(--tv-logo-blue, #3a98b9);
+  outline-offset: 3px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .nav *, .mobile-menu, .mobile-menu * { transition: none !important; }
+}
