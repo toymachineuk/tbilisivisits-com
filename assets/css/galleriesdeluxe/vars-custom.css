@@ -220,9 +220,70 @@
     background: #16354B;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =====================================
    SECTION BACKGROUNDS
 ===================================== */
+
+
+:root {
+  /* SECTION BACKGROUNDS */
+
+  --tv-bg-white: #FFFFFF;
+  --tv-bg-beige: #FBF0E2;
+  --tv-bg-charcoal: #232B2D;
+  --tv-bg-blue: #62818C;
+  --tv-bg-turquoise: #4DBDBF;
+}
+
+
+/* =========================================
+   BACKGROUND UTILITIES
+========================================= */
+
+.tv-bg-white {
+  background-color: var(--tv-bg-white);
+}
+
+.tv-bg-beige {
+  background-color: var(--tv-bg-beige);
+}
+
+.tv-bg-charcoal {
+  background-color: var(--tv-bg-charcoal);
+}
+
+.tv-bg-blue {
+  background-color: var(--tv-bg-blue);
+}
+
+.tv-bg-turquoise {
+  background-color: var(--tv-bg-turquoise);
+}
+
+
 
 /* Pure white */
 .tv-section-white {

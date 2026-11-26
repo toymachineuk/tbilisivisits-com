@@ -1032,3 +1032,127 @@ main > section.tv-filter-section > .tv-grid--wrapper {
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   UNIVERSAL PANEL
+========================================================= */
+
+.tv-panel {
+  --panel-padding: clamp(24px, 3vw, 36px);
+  --panel-radius: 16px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PANEL HEADER & CONTENT — SHARED
+========================================================= */
+
+.tv-panel > .tv-panel-header,
+.tv-panel > .tv-panel-content {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+
+  margin: 0;
+  padding: var(--panel-padding);
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   PANEL HEADER
+========================================================= */
+
+.tv-panel > .tv-panel-header {
+  align-items: center;
+
+  border-radius:
+    var(--panel-radius)
+    var(--panel-radius)
+    0
+    0;
+}
+
+
+/* =========================================================
+   PANEL CONTENT
+========================================================= */
+
+.tv-panel > .tv-panel-content {
+  border-radius:
+    0
+    0
+    var(--panel-radius)
+    var(--panel-radius);
+}
+
+.tv-panel-content > :first-child {
+  margin-top: 0;
+}
+
+.tv-panel-content > :last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   PANEL — COMPACT VARIANT
+========================================================= */
+
+.tv-panel--compact {
+  --panel-padding: 20px;
+  --panel-radius: 10px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  .tv-panel {
+    --panel-padding: 20px;
+    --panel-radius: 12px;
+  }
+
+  .tv-panel > .tv-panel-header {
+    gap: 20px;
+  }
+
+  .tv-panel--compact {
+    --panel-padding: 16px;
+  }
+
+}

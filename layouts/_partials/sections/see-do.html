@@ -1,114 +1,191 @@
+<section
+  id="see-do"
+  class="tv-filter-section section-md tv-see-do width-1400 tv-panel"
+  aria-labelledby="see-do-title"
+>
 
+  <!-- =========================================
+       EDITORIAL HEADER
+  ========================================== -->
 
-<section id="see-do" class=" tv-filter-section section-md tv-see-do width-1400 ">
-  
-  
-<!-- WHERE TO GO — EDITORIAL HEADER -->
+  <div class="section-header section-header--universal tv-panel-header tv-bg-charcoal tv-text-white">
 
+    <div class="section-header-main">
 
-<div class="section-header section-header--universal mb-md">
-
-  <div class="section-header-main">
- <span class="text-label">
+      <span class="text-label">
         Explore the city
       </span>
-    <div class="section-header-title-row">
 
-      <div class="section-header-number" aria-hidden="true">
-        01
+      <div class="section-header-title-row">
+
+        <div class="section-header-number" aria-hidden="true">
+          01
+        </div>
+
+        <h2 id="see-do-title" class="title-md">
+          Places worth discovering
+        </h2>
+
       </div>
- <h2 class="title-md">
-      Places worth discovering
-    </h2>
-     
 
     </div>
 
-   
+    <div class="section-header-aside">
+
+      <p class="text-md section-header-description">
+        From hidden courtyards and historic neighborhoods
+        to museums, gardens and remarkable architecture.
+        Discover the many sides of Tbilisi.
+      </p>
+
+    </div>
 
   </div>
 
-  <div class="section-header-aside">
 
-    <p class="text-md section-header-description">
-      From hidden courtyards and historic neighborhoods
-      to museums, gardens and remarkable architecture.
-      Discover the many sides of Tbilisi.
-    </p>
+  <!-- =========================================
+       PANEL CONTENT
+  ========================================== -->
 
-  </div>
+  <div class="tv-feature-content tv-panel-content tv-bg-beige">
 
-</div>
+    <!-- FILTERS -->
+
+    <div class="tv-filters">
+
+      <!-- ALL -->
+
+      <button
+        class="tv-filter tv-filter-all active"
+        type="button"
+        data-filter="all"
+      >
+        All
+      </button>
 
 
+      <!-- PARKS -->
+
+      <button
+        class="tv-filter tv-filter-parks"
+        type="button"
+        data-filter="parks"
+      >
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="tv-filter-icon"
+          width="24"
+          height="24"
+          viewBox="0 -960 960 960"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path d="M200-80v-80h240v-160h-80q-83 0-141.5-58.5T160-520q0-60 33-110.5t89-73.5q9-75 65.5-125.5T480-880q76 0 132.5 50.5T678-704q56 23 89 73.5T800-520q0 83-58.5 141.5T600-320h-80v160h240v80H200Zm160-320h240q50 0 85-35t35-85q0-36-20.5-66T646-630l-42-18-6-46q-6-45-39.5-75.5T480-800q-45 0-78.5 30.5T362-694l-6 46-42 18q-33 14-53.5 44T240-520q0 50 35 85t85 35Zm120-200Z"/>
+        </svg>
+
+        <span class="tv-filter-label">
+          Parks
+        </span>
+
+      </button>
 
 
-  <div class="tv-feature-content"> 
-  <div class="tv-filters">
-    <button class="tv-filter tv-filter-all active" type="button" data-filter="all">
-      All
-    </button>
-    <button class="tv-filter tv-filter-parks" type="button" data-filter="parks">
+      <!-- ARCHITECTURE -->
+
+      <button
+        class="tv-filter tv-filter-architecture"
+        type="button"
+        data-filter="architecture"
+      >
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="tv-filter-icon"
+          width="24"
+          height="24"
+          viewBox="0 -960 960 960"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path d="M40-120v-480h80v80h80v-320h80v80h80v-80h80v80h80v-80h80v80h80v-80h80v320h80v-80h80v480H560v-120q0-33-23.5-56.5T480-320q-33 0-56.5 23.5T400-240v120H40Zm80-80h200v-40q0-66 47-113t113-47q66 0 113 47t47 113v40h200v-240H680v-240H280v240H120v240Zm240-280h80v-120h-80v120Zm160 0h80v-120h-80v120Zm-40 40Z"/>
+        </svg>
+
+        <span class="tv-filter-label">
+          Architecture
+        </span>
+
+      </button>
 
 
-      <svg xmlns="http://www.w3.org/2000/svg"   class="tv-filter-icon" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M200-80v-80h240v-160h-80q-83 0-141.5-58.5T160-520q0-60 33-110.5t89-73.5q9-75 65.5-125.5T480-880q76 0 132.5 50.5T678-704q56 23 89 73.5T800-520q0 83-58.5 141.5T600-320h-80v160h240v80H200Zm160-320h240q50 0 85-35t35-85q0-36-20.5-66T646-630l-42-18-6-46q-6-45-39.5-75.5T480-800q-45 0-78.5 30.5T362-694l-6 46-42 18q-33 14-53.5 44T240-520q0 50 35 85t85 35Zm120-200Z"/></svg>
+      <!-- FAITH & HISTORY -->
+
+      <button
+        class="tv-filter tv-filter-religion"
+        type="button"
+        data-filter="religion"
+      >
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="tv-filter-icon"
+          width="24"
+          height="24"
+          viewBox="0 -960 960 960"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path d="M620-320v-109l-45-81q-7 5-11 13t-4 17v229L663-80h-93l-90-148v-252q0-31 15-57t41-43l-56-99q-20-38-17.5-80.5T495-832l68-68 276 324 41 496h-80l-39-464-203-238-6 6q-10 10-11.5 23t4.5 25l155 278v130h-80Zm-360 0v-130l155-278q6-12 4.5-25T408-776l-6-6-203 238-39 464H80l41-496 276-324 68 68q30 30 32.5 72.5T480-679l-56 99q26 17 41 43t15 57v252L390-80h-93l103-171v-229q0-9-4-17t-11-13l-45 81v109h-80Z"/>
+        </svg>
+
+        <span class="tv-filter-label">
+          Faith &amp; History
+        </span>
+
+      </button>
+
+
+      <!-- HISTORY & MUSEUMS -->
+
+      <button
+        class="tv-filter tv-filter-history"
+        type="button"
+        data-filter="history"
+      >
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="tv-filter-icon"
+          width="24"
+          height="24"
+          viewBox="0 -960 960 960"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path d="M80-80v-80h80v-360H80v-80l400-280 400 280v80h-80v360h80v80H80Zm160-80h480-480Zm80-80h80v-160l80 120 80-120v160h80v-280h-80l-80 120-80-120h-80v280Zm400 80v-454L480-782 240-614v454h480Z"/>
+        </svg>
+
+        <span class="tv-filter-label">
+          History &amp; Museums
+        </span>
+
+      </button>
+
+    </div>
+
+
+    <!-- PLACE COUNTER -->
+
+    <div class="tv-filter-count" aria-live="polite">
+      <strong></strong> places
+    </div>
+
+
   
-  
-   <span class="tv-filter-label">
-    Parks
-  </span>
-  
- 
-    </button>
 
+    <div class="tv-see-do-grid tv-grid--wrapper">
 
-
-
-<button class="tv-filter tv-filter-architecture" type="button" data-filter="architecture">
-
- 
-<svg xmlns="http://www.w3.org/2000/svg" class="tv-filter-icon" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M40-120v-480h80v80h80v-320h80v80h80v-80h80v80h80v-80h80v80h80v-80h80v320h80v-80h80v480H560v-120q0-33-23.5-56.5T480-320q-33 0-56.5 23.5T400-240v120H40Zm80-80h200v-40q0-66 47-113t113-47q66 0 113 47t47 113v40h200v-240H680v-240H280v240H120v240Zm240-280h80v-120h-80v120Zm160 0h80v-120h-80v120Zm-40 40Z"/></svg>
-
-  <span class="tv-filter-label">
-    Architecture 
-  </span>
-
-</button>
-
-
-<button class="tv-filter tv-filter-religion" type="button" data-filter="religion">
-
-
-  
-
-<svg xmlns="http://www.w3.org/2000/svg" class="tv-filter-icon"  height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M620-320v-109l-45-81q-7 5-11 13t-4 17v229L663-80h-93l-90-148v-252q0-31 15-57t41-43l-56-99q-20-38-17.5-80.5T495-832l68-68 276 324 41 496h-80l-39-464-203-238-6 6q-10 10-11.5 23t4.5 25l155 278v130h-80Zm-360 0v-130l155-278q6-12 4.5-25T408-776l-6-6-203 238-39 464H80l41-496 276-324 68 68q30 30 32.5 72.5T480-679l-56 99q26 17 41 43t15 57v252L390-80h-93l103-171v-229q0-9-4-17t-11-13l-45 81v109h-80Z"/></svg>
-
-  <span class="tv-filter-label">
-    Faith & History
-  </span>
-
-</button>
-
-
-<button class="tv-filter tv-filter-history" type="button" data-filter="history">
-
-<svg xmlns="http://www.w3.org/2000/svg"   class="tv-filter-icon" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M80-80v-80h80v-360H80v-80l400-280 400 280v80h-80v360h80v80H80Zm160-80h480-480Zm80-80h80v-160l80 120 80-120v160h80v-280h-80l-80 120-80-120h-80v280Zm400 80v-454L480-782 240-614v454h480Z"/></svg>
-
-
-
-
-  <span class="tv-filter-label">
-    History &amp; Museums
-  </span>
-
-</button>
-  </div>
-<div class="tv-filter-count" aria-live="polite">
-  <strong></strong> places
-</div>
-  <div class="tv-see-do-grid tv-grid--wrapper">
-    
- <div class="tv-grid">
+      <div class="tv-grid">
 
 
 
