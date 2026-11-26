@@ -499,3 +499,72 @@
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   ANIMATION — IMAGE CAPTION
+========================================================= */
+
+.hero-caption-line {
+  display: block;
+}
+
+
+/* STAGE 01 — FIRST LINE */
+
+.hero-animate .hero-caption-line--first {
+  animation: hero-caption-in 900ms
+    cubic-bezier(.16, 1, .3, 1) both;
+
+  animation-delay: 200ms;
+}
+
+
+/* STAGE 02 — SECOND LINE */
+
+.hero-animate .hero-caption-line--second {
+  animation: hero-caption-in 900ms
+    cubic-bezier(.16, 1, .3, 1) both;
+
+  animation-delay: 600ms;
+}
+
+
+/* STAGE 03 — DESCRIPTION */
+
+.hero-animate .tv-editorial-hero-caption-description {
+  animation: hero-caption-in 1000ms
+    cubic-bezier(.16, 1, .3, 1) both;
+
+  animation-delay: 1100ms;
+}
+
+
+/* KEYFRAMES */
+
+@keyframes hero-caption-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
