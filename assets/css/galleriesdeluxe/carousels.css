@@ -131,3 +131,287 @@
 .tv-georgia-destinations .tv-rectangle-card {
   max-height: 480px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   TV LARGE EDITORIAL — UNIVERSAL COMPONENT
+========================================================= */
+
+.tv-large-editorial {
+  --editorial-card-width: 480px;
+  --editorial-card-gap: 24px;
+  --editorial-card-radius: 8px;
+  --editorial-image-ratio: 4 / 5;
+  --editorial-card-bg: #fff;
+
+  width: 100%;
+  min-width: 0;
+
+  color: var(--tv-text, #171717);
+}
+
+
+/* =========================================================
+   CAROUSEL
+========================================================= */
+
+.tv-large-editorial-carousel {
+  display: flex;
+  align-items: stretch;
+  gap: var(--editorial-card-gap);
+
+  width: 100%;
+  min-width: 0;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+
+  scrollbar-width: none;
+  overscroll-behavior-inline: contain;
+
+  padding-bottom: 4px;
+}
+
+.tv-large-editorial-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.tv-large-editorial-card {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  flex: 0 0 var(--editorial-card-width);
+  min-width: 0;
+
+  background: var(--editorial-card-bg);
+  border: 1px solid var(--tv-border, #e7e5df);
+  border-radius: var(--editorial-card-radius);
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  scroll-snap-align: start;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.tv-large-editorial-media {
+  position: relative;
+
+  width: 100%;
+  aspect-ratio: var(--editorial-image-ratio);
+
+  overflow: hidden;
+  background: var(--tv-section-soft, #f5f2ea);
+}
+
+.tv-large-editorial-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.tv-large-editorial-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  gap: 14px;
+
+  padding: clamp(20px, 2vw, 30px);
+}
+
+.tv-large-editorial-content > .text-label {
+  color: var(--tv-muted, #666);
+}
+
+.tv-large-editorial-content h3 {
+  margin: 0;
+}
+
+.tv-large-editorial-content p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   INFORMATION ROWS
+========================================================= */
+
+.tv-large-editorial-content .tv-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+.tv-large-editorial-content .tv-info-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tv-large-editorial-content .tv-card-divider {
+  width: 100%;
+  margin: 6px 0;
+
+  border: 0;
+  border-top: 1px solid var(--tv-border, #e7e5df);
+}
+
+
+/* =========================================================
+   CAROUSEL CONTROLS
+========================================================= */
+
+.tv-large-editorial-controls {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.tv-large-editorial-controls button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+  padding: 0;
+
+  border: 1px solid var(--tv-border, #e7e5df);
+  border-radius: 50%;
+
+  background: #fff;
+  color: var(--tv-text, #171717);
+
+  font-size: 22px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.tv-large-editorial-controls button:disabled {
+  opacity: .35;
+  cursor: default;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1024px) {
+
+  .tv-large-editorial {
+    --editorial-card-width: 380px;
+    --editorial-card-gap: 20px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .tv-large-editorial {
+    --editorial-card-width: min(300px, 82vw);
+    --editorial-card-gap: 16px;
+  }
+
+  .tv-large-editorial-content {
+    gap: 12px;
+    padding: 18px;
+  }
+
+  .tv-large-editorial-controls button {
+    width: 40px;
+    height: 40px;
+
+    font-size: 18px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .tv-large-editorial-carousel {
+    scroll-behavior: auto;
+  }
+
+}

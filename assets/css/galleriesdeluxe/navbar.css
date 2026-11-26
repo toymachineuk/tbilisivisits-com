@@ -5,20 +5,27 @@
 
 /* 01. HEADER */
 .nav {
-  position: relative;
-  z-index: 100;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
   display: flex;
   align-items: center;
   gap: clamp(18px, 2vw, 32px);
+
   width: 100%;
   height: 80px;
   padding: 0 3.2vw;
   box-sizing: border-box;
+
   background: var(--tv-page, #fff);
   color: var(--tv-text, #171717);
+
   border: 0;
   border-radius: 0;
+
   font-family: var(--font-sans, 'DM Sans', sans-serif);
+
 }
 
 /* 02. BRAND — LOGO + NAME + TAGLINE */
@@ -681,3 +688,23 @@
 @media (prefers-reduced-motion: reduce) {
   .nav *, .mobile-menu, .mobile-menu * { transition: none !important; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
