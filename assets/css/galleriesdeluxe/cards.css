@@ -679,3 +679,41 @@ img.tv-square-image { object-fit: cover; }
   font-size: var(--tv-card-info-size);
   line-height: 1.45;
 }
+
+
+
+
+
+/* =========================================
+   TV CARD LIST — UNIVERSAL
+========================================= */
+
+.tv-card-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  width: 100%;
+  min-width: 0;
+}
+
+.tv-card-list ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+
+  width: 100%;
+  margin: 0;
+  padding-left: 20px;
+
+  list-style: disc outside;
+}
+
+.tv-card-list li {
+  display: list-item;
+  width: 100%;
+
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
