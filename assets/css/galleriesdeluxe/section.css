@@ -377,7 +377,7 @@ main > section.tv-filter-section > .section-header,
 }
 
 /* Style two: compact price header */
-.accommodation--cars .tv-filter-section.tv-card-section--style-two > .section-header {
+ .tv-filter-section.tv-card-section--style-two > .section-header {
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -494,12 +494,6 @@ main > section.tv-filter-section > .section-header,
   margin-top: var(--space-sm);
 }
 
-/* Editorial modifiers — layout inherited */
-.tv-editorial--money,
-.tv-editorial--transport {
-  /* Shared editorial layout */
-}
-
 /* Editorial row responsive layout */
 @media (max-width: 900px) {
   .tv-editorial-row {
@@ -570,11 +564,6 @@ main > section.tv-filter-section > .tv-grid--wrapper {
   margin: 0 0 24px;
   border-radius: 12px;
 }
-
-
-
-
-
 
 /* =========================================================
    COMING SOON LABEL
@@ -1001,22 +990,6 @@ main > section.tv-filter-section > .tv-grid--wrapper {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* =========================================
    FEATURE HEADER — MOBILE SPACING
 ========================================= */
@@ -1032,28 +1005,6 @@ main > section.tv-filter-section > .tv-grid--wrapper {
   }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* =========================================================
    UNIVERSAL PANEL
@@ -1072,7 +1023,6 @@ main > section.tv-filter-section > .tv-grid--wrapper {
   box-sizing: border-box;
 }
 
-
 /* =========================================================
    PANEL HEADER & CONTENT — SHARED
 ========================================================= */
@@ -1089,7 +1039,6 @@ main > section.tv-filter-section > .tv-grid--wrapper {
   box-sizing: border-box;
 }
 
-
 /* =========================================================
    PANEL HEADER
 ========================================================= */
@@ -1103,7 +1052,6 @@ main > section.tv-filter-section > .tv-grid--wrapper {
     0
     0;
 }
-
 
 /* =========================================================
    PANEL CONTENT
@@ -1125,7 +1073,6 @@ main > section.tv-filter-section > .tv-grid--wrapper {
   margin-bottom: 0;
 }
 
-
 /* =========================================================
    PANEL — COMPACT VARIANT
 ========================================================= */
@@ -1134,7 +1081,6 @@ main > section.tv-filter-section > .tv-grid--wrapper {
   --panel-padding: 20px;
   --panel-radius: 10px;
 }
-
 
 /* =========================================================
    MOBILE
@@ -1157,18 +1103,131 @@ main > section.tv-filter-section > .tv-grid--wrapper {
 
 }
 
+/* =========================================================
+   FEATURE LAYOUT — UNIVERSAL EDITORIAL PANEL
+========================================================= */
 
+.tv-feature-layout.tv-feature-layout--panel {
+  display: grid;
+  grid-template-columns: minmax(0, 24%) minmax(0, 1fr);
+  grid-template-areas: "header content";
+  align-items: stretch;
+  gap: 20px;
+  padding: 24px;
+  background: #f9efe1;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
 
+.tv-feature-layout.tv-feature-layout--panel.tv-feature-layout--reverse {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 24%);
+  grid-template-areas: "content header";
+}
 
+.tv-feature-layout.tv-feature-layout--panel > .tv-feature-header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 24px;
+  width: 100%;
+  min-width: 0;
+  padding: 24px;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
 
+.tv-feature-layout--panel .tv-feature-intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
 
+.tv-feature-layout--panel .tv-feature-intro .title-md {
+  margin: 0;
+  font-size: clamp(26px, 2.5vw, 38px);
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
 
+.tv-feature-layout--panel .section-header-description {
+  flex: none;
+  margin: 0;
+  color: #292929;
+  line-height: 1.5;
+}
 
+.tv-feature-layout.tv-feature-layout--panel > .tv-feature-content {
+  grid-area: content;
+  width: 100%;
+  min-width: 0;
+  padding: 0;
+  background: transparent;
+  box-sizing: border-box;
+}
 
+.tv-feature-layout--panel .tv-filters {
+  margin: 0 0 20px;
+}
 
+/* Rectangle cards — editorial panels only */
+.tv-feature-layout--panel .tv-rectangle-card {
+  background-color: #fff;
+  border-radius: 12px;
+}
 
+.tv-feature-layout--panel .tv-rectangle-card-content {
+  background-color: #fff;
+  border-radius: 0 0 12px 12px;
+}
 
+/* Universal panel CTA */
+.tv-panel-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 12px 14px;
+  background: #171717;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+}
 
+/* Both panel directions stack header first on mobile */
+@media (max-width: 900px) {
+  .tv-feature-layout.tv-feature-layout--panel,
+  .tv-feature-layout.tv-feature-layout--panel.tv-feature-layout--reverse {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "header" "content";
+    padding: 16px;
+    gap: 16px;
+    border-radius: 12px;
+  }
 
+  .tv-feature-layout.tv-feature-layout--panel > .tv-feature-header {
+    padding: 20px;
+  }
 
+  .tv-feature-layout--panel .tv-feature-intro .title-md br {
+    display: none;
+  }
+}
 
+/* =========================================================
+   SQUARE CARDS — GLOBAL APPEARANCE
+   No changes to carousel sizing or scrolling.
+========================================================= */
+
+.tv-square-card {
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.tv-square-card .tv-square-card-content {
+  background-color: #fff;
+  border-radius: 0 0 12px 12px;
+}

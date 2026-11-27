@@ -14,8 +14,7 @@
   scroll-snap-align: start;
 }
 
-:is(.tv-rectangle-card, .tv-square-card) .tv-rectangle-card-content h3,
-:is(.tv-rectangle-card, .tv-square-card) .tv-square-card-content h3 {
+:is(.tv-rectangle-card, .tv-square-card) :is(.tv-card-content, .tv-rectangle-card-content, .tv-square-card-content) h3 {
   margin: 0 0 12px;
   font-family: var(--font-sans, "DM Sans", sans-serif);
   font-size: var(--tv-card-title-size);
@@ -88,16 +87,28 @@
   color: var(--tv-text, #171717);
 }
 
+/* UNIVERSAL CONTENT WRAPPER */
+.tv-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.tv-square-card .tv-card-content h3 {
+  margin-bottom: 8px;
+}
+
 /* 02 — RECTANGLE CARD */
 .tv-rectangle-card {
   width: 320px;
   min-width: 320px;
   max-height: 520px;
-  background: white;
+  background: #fff;
+  border-radius: 12px;
+  box-sizing: border-box;
 }
-
-
-
 
 .tv-rectangle-card.is-hidden { display: none; }
 
@@ -127,13 +138,17 @@ img.tv-rectangle-image { object-fit: cover; }
   border-radius: 0 14px 14px 0;
 }
 
-.tv-rectangle-card .tv-rectangle-card-content {
+.tv-rectangle-card :is(.tv-card-content, .tv-rectangle-card-content) {
   display: flex;
   flex-direction: column;
   flex: 1;
   min-width: 0;
   box-sizing: border-box;
   padding: 18px 20px 20px;
+}
+
+.tv-rectangle-card .tv-card-details > .tv-info-row {
+  width: 100%;
 }
 
 .tv-rectangle-card .tv-card-details > .tv-info-row strong {
@@ -145,15 +160,18 @@ img.tv-rectangle-image { object-fit: cover; }
 .tv-square-card {
   width: 230px;
   min-width: 230px;
+  background: #fff;
+  border-radius: 12px;
+  box-sizing: border-box;
 }
 
 .tv-square-image {
   position: relative;
   display: block;
-  width: 230px;
+  width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  border-radius: 14px;
+  border-radius: 12px 12px 0 0;
   background: #eee;
 }
 
@@ -169,14 +187,17 @@ img.tv-square-image { object-fit: cover; }
 .tv-square-image:hover img { transform: scale(1.035); }
 
 /* Supports both the existing rectangle-named wrapper and square-specific wrapper */
-.tv-square-card :is(.tv-rectangle-card-content, .tv-square-card-content) {
+.tv-square-card :is(.tv-card-content, .tv-rectangle-card-content, .tv-square-card-content) {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  padding: 11px 13px;
+  padding: 20px;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 0 0 12px 12px;
 }
 
-.tv-square-card :is(.tv-rectangle-card-content, .tv-square-card-content) .text-label {
+.tv-square-card :is(.tv-card-content, .tv-rectangle-card-content, .tv-square-card-content) .text-label {
   margin-bottom: 8px;
 }
 
@@ -340,7 +361,7 @@ img.tv-square-image { object-fit: cover; }
   border-radius: 0;
 }
 
-.accommodation--cars .tv-rectangle-card-content h3 {
+.accommodation--cars :is(.tv-card-content, .tv-rectangle-card-content) h3 {
   font-size: 19px;
   font-weight: 700;
   letter-spacing: -0.025em;
@@ -405,197 +426,6 @@ img.tv-square-image { object-fit: cover; }
   opacity: .7;
 }
 
-/* 06 — RESPONSIVE */
-@media (max-width: 768px) {
-  .tv-rectangle-card,
-  .tv-square-card {
-    width: 100%;
-    min-width: 0;
-  }
-
-  .tv-rectangle-image { aspect-ratio: 1.55 / 1; }
-  .tv-square-image { width: 100%; }
-
-  .tv-rectangle-card .tv-rectangle-card-content {
-    padding: 16px;
-  }
-
-  .tv-rectangle-card .tv-rectangle-card-content h3 {
-    font-size: 17px;
-    margin-bottom: 10px;
-  }
-
-  .tv-square-card :is(.tv-rectangle-card-content, .tv-square-card-content) h3 {
-    font-size: 17px;
-    margin-bottom: 10px;
-  }
-
-  .tv-rectangle-card .tv-info { gap: 12px; }
-  .tv-rectangle-card .tv-info-row--location { padding-top: 12px; }
-
-  .accommodation--cars .tv-rectangle-card-content h3 {
-    font-size: 18px;
-  }
-
-  .accommodation--cars .tv-card-details { gap: 10px; }
-  .accommodation--cars .tv-card-divider { margin: 13px 0; }
-  .accommodation--cars .tv-info-row--location { padding-top: 13px; }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =====================================
-   CARD DETAILS — INFORMATION VALUES
-===================================== */
-
-.tv-rectangle-card
-.tv-card-details > .tv-info-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-}
-
-.tv-rectangle-card
-.tv-card-details > .tv-info-row > strong {
-  margin-left: auto;
-  font-weight: 600;
-  color: var(--tv-text);
-  white-space: nowrap;
-}
-
-
-
-/* =====================================
-   SQUARE CARD — CONTENT REFINEMENT
-===================================== */
-
-.tv-square-card .tv-rectangle-card-content {
-  display: flex;
-  flex-direction: column;
-  padding: 14px 0;
-  min-width: 0;
-}
-
-.tv-square-card .tv-info {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 0;
-}
-
-.tv-square-card .tv-card-details {
-  padding: 0;
-  margin: 0;
-}
-
-.tv-square-card .tv-info-row--location {
-  margin-top: 6px;
-  padding-top: 12px;
-  border-top: 1px solid var(--tv-border);
-}
-
-
-
-/* =====================================
-   CARD CONTENT — UNIVERSAL
-===================================== */
-
-.tv-card-content {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-  min-width: 0;
-  box-sizing: border-box;
-}
-
-/* RECTANGLE */
-
-.tv-rectangle-card .tv-card-content {
-  padding: 18px 20px 20px;
-}
-
-/* SQUARE */
-
-.tv-square-card .tv-card-content {
-  padding: 14px 0;
-}
-
-
-.tv-square-card .tv-card-content {
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  padding: 14px 0;
-}
-
-/* =====================================
-   CARD TITLES — UNIVERSAL
-===================================== */
-
-:is(.tv-square-card, .tv-rectangle-card)
-.tv-card-content h3 {
-  margin: 0 0 12px;
-
-  font-family: var(--font-sans);
-  font-size: 19px;
-  font-weight: 600;
-  line-height: 1.3;
-  letter-spacing: -0.02em;
-
-  color: var(--tv-text);
-}
-
-/* SQUARE CARD */
-
-.tv-square-card .tv-card-content h3 {
-  margin-bottom: 8px;
-}
-
-/* ACCOMMODATION CARD */
-
-.accommodation--cars .tv-rectangle-card .tv-card-content h3 {
-  font-weight: 700;
-}
-
-
-
-.tv-square-card .tv-info-row--location {
-  gap: 7px;
-}
-
 /* =====================================
    SQUARE CARD — LOCATION LINK
 ===================================== */
@@ -604,6 +434,9 @@ img.tv-square-image { object-fit: cover; }
   display: flex;
   align-items: flex-start;
   gap: 8px;
+  margin-top: 6px;
+  padding-top: 12px;
+  border-top: 1px solid var(--tv-border, #e7e5df);
 }
 
 /* Allow text and arrow to flow together */
@@ -623,21 +456,6 @@ img.tv-square-image { object-fit: cover; }
   margin-left: 3px;
   white-space: nowrap;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* =====================================
    CARD — HOW TO GET THERE
@@ -681,10 +499,6 @@ img.tv-square-image { object-fit: cover; }
   line-height: 1.45;
 }
 
-
-
-
-
 /* =========================================
    TV CARD LIST — UNIVERSAL
 ========================================= */
@@ -717,4 +531,42 @@ img.tv-square-image { object-fit: cover; }
 
   font-size: 0.95rem;
   line-height: 1.5;
+}
+
+/* 06 — RESPONSIVE */
+@media (max-width: 768px) {
+  .tv-rectangle-card,
+  .tv-square-card {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .tv-rectangle-image { aspect-ratio: 1.55 / 1; }
+  .tv-square-image { width: 100%; }
+
+  .tv-rectangle-card :is(.tv-card-content, .tv-rectangle-card-content),
+  .tv-square-card :is(.tv-card-content, .tv-rectangle-card-content, .tv-square-card-content) {
+    padding: 16px;
+  }
+
+  .tv-rectangle-card :is(.tv-card-content, .tv-rectangle-card-content) h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .tv-square-card :is(.tv-card-content, .tv-rectangle-card-content, .tv-square-card-content) h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+
+  .tv-rectangle-card .tv-info { gap: 12px; }
+  .tv-rectangle-card .tv-info-row--location { padding-top: 12px; }
+
+  .accommodation--cars :is(.tv-card-content, .tv-rectangle-card-content) h3 {
+    font-size: 18px;
+  }
+
+  .accommodation--cars .tv-card-details { gap: 10px; }
+  .accommodation--cars .tv-card-divider { margin: 13px 0; }
+  .accommodation--cars .tv-info-row--location { padding-top: 13px; }
 }

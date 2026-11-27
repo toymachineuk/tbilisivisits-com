@@ -14,7 +14,13 @@
      HERO IMAGE & ANIMATED OVERLAY
 ====================================== -->
 
+<!-- =====================================
+     HERO IMAGE & ANIMATED OVERLAY
+====================================== -->
+
 <div class="tv-editorial-hero-media">
+
+  <!-- BACKGROUND PHOTO -->
 
   <img
     src="/img/pages/heros/index-hero.jpg"
@@ -25,18 +31,22 @@
     decoding="async"
   >
 
+  <!-- OVERLAY -->
+
   <div class="tv-editorial-hero-overlay">
 
-    <div class="tv-editorial-hero-caption">
+    <!-- LOGO -->
 
-        <img
-    src="/img/pages/heros/logo-hero--white.png"
-    alt="Historic Tbilisi at sunset"
-    width="50"
-    height="1000"
-    fetchpriority="high"
-    decoding="async"
-  >
+    <img
+      class="tv-editorial-hero-logo"
+      src="/img/pages/heros/logo-hero--white.png"
+      alt="Tbilisi Visits"
+      decoding="async"
+    >
+
+    <!-- ANIMATED CAPTION -->
+
+    <div class="tv-editorial-hero-caption">
 
       <h2 class="tv-editorial-hero-caption-title">
 
@@ -50,13 +60,20 @@
 
       </h2>
 
-      <p class="tv-editorial-hero-caption-description">
-        Explore the warm and unforgettable
-        heart of Georgia.
-      </p>
-
-      
-
+<p class="tv-editorial-hero-caption-description">
+  Explore the warm and unforgettable
+  <svg
+    class="tv-editorial-hero-heart"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    role="img"
+    aria-label="heart"
+  >
+    <path d="M12 21S2 14.5 2 8.5C2 2.5 9 1 12 6c3-5 10-3.5 10 2.5C22 14.5 12 21 12 21Z"/>
+  </svg>
+  of Georgia.
+</p>
     </div>
 
   </div>
@@ -189,7 +206,6 @@ PLAN YOUR TRIP TO GEORGIA
 
 
 
-
 <section class=" width-1400 tv-quick-links tv-quick-links--image tv-quick-links--featured section-lg">
 
 
@@ -299,10 +315,12 @@ Tbilisi Districts
 
 {{ partial "sections/food.html" . }}
 
-  {{ partial "carousels/foodcourts.html" . }}
+ {{ partial "sections/accommodation-promotion.html" . }}
+
+
 
  {{ partial "sections/see-do.html" . }}
-{{ partial "sections/tv-editorial.html" . }}
+
 
 
 
@@ -318,7 +336,7 @@ Tbilisi Districts
 
 
 
-{{ partial "carousels/chillout.html" . }}
+{{ partial "sections/chillout-promotion.html" . }}
 
 
 

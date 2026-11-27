@@ -634,3 +634,85 @@
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   HERO — OVERLAY LOGO
+========================================================= */
+
+.tv-editorial-hero-logo {
+  position: absolute;
+  top: 6%;
+  right: 6.5%;
+
+  display: block;
+
+  width: 22%;
+  max-width: 230px;
+  height: auto;
+
+  object-fit: contain;
+
+  opacity: .95;
+  pointer-events: none;
+}
+
+
+/* RESERVE SPACE FOR THE LOGO */
+
+.tv-editorial-hero-caption {
+  width: 74%;
+  max-width: 74%;
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .tv-editorial-hero-logo {
+    top: 6%;
+    right: 6%;
+
+    width: 19%;
+    height: auto;
+  }
+
+  .tv-editorial-hero-caption {
+    width: 76%;
+    max-width: 76%;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.tv-editorial-hero-heart {
+  display: inline-block;
+  position: static;
+
+  width: 1em;
+  height: 1em;
+
+  vertical-align: -.12em;
+  color: inherit;
+}
