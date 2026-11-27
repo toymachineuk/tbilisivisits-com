@@ -19,7 +19,7 @@
 
 
 /* =========================================================
-   IMAGE
+   HERO IMAGE
 ========================================================= */
 
 .tv-editorial-hero-media {
@@ -32,7 +32,7 @@
   border-radius: 4px;
 }
 
-.tv-editorial-hero-media img {
+.tv-editorial-hero-media > img {
   display: block;
 
   width: 100%;
@@ -88,6 +88,10 @@
   color: inherit;
 }
 
+.hero-caption-line {
+  display: block;
+}
+
 
 /* CAPTION DESCRIPTION */
 
@@ -108,27 +112,34 @@
 ========================================================= */
 
 .tv-editorial-hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: center;
+  gap: 22px;
+
+  width: 100%;
   min-width: 0;
   max-width: 680px;
 }
 
 .tv-editorial-hero-content > .text-label {
   display: block;
-  margin-bottom: 24px;
+  margin: 0;
 }
 
 
 /* =========================================================
-   HERO TITLE
+   HERO HEADLINE
 ========================================================= */
 
 .tv-editorial-hero-title {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 10px;
+  gap: 6px;
 
-  margin: 0 0 28px;
+  margin: 0;
 
   font-size: clamp(40px, 4.2vw, 58px);
   font-weight: var(--weight-bold);
@@ -154,8 +165,6 @@
 /* SECONDARY TITLE */
 
 .hero-title-secondary {
-  display: block;
-
   max-width: 580px;
 
   font-size: .68em;
@@ -188,27 +197,102 @@
 
 
 /* =========================================================
-   HERO CONCLUSION
+   TRAVEL PLANNING
 ========================================================= */
 
-.hero-title-conclusion {
-  display: inline-block;
+.tv-hero-planning {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
 
-  width: fit-content;
-  max-width: 100%;
+.tv-hero-planning-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: var(--tv-text);
+}
 
-  margin: 4px 0 22px;
-  padding: 12px 20px;
 
-  background: #E87524;
-  border-radius: 8px;
+/* =========================================================
+   CTA — BUTTON ROW
+========================================================= */
 
+.tv-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* =========================================================
+   CTA — BUTTON
+========================================================= */
+
+.tv-hero-action {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: auto;
+  min-height: 40px;
+  padding: 10px 16px;
+  box-sizing: border-box;
+  border-radius: 5px;
   color: #fff;
-
-  font-size: clamp(18px, 1.8vw, 23px);
+  text-decoration: none;
+  font-family: var(--font-sans);
+  font-size: 13px;
   font-weight: 600;
-  line-height: 1.35;
-  letter-spacing: -.02em;
+  line-height: 1.2;
+  transition: filter .2s ease;
+}
+
+.tv-hero-action:hover {
+  color: #fff;
+  filter: brightness(.93);
+}
+
+.tv-hero-action:focus-visible {
+  outline: 2px solid var(--tv-text, #171717);
+  outline-offset: 3px;
+}
+
+
+/* BUTTON COLOURS */
+
+.tv-hero-action--hotel {
+  background: #E98A32;
+}
+
+.tv-hero-action--flight {
+  background: #647FA3;
+}
+
+.tv-hero-action--transfer {
+  background: #222A2C;
+}
+
+
+/* BUTTON ARROW */
+
+.tv-hero-action-arrow {
+  position: static;
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1;
 }
 
 
@@ -217,15 +301,17 @@
 ========================================================= */
 
 .tv-hero-description {
-  max-width: 46ch;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .tv-hero-description p {
   margin: 0;
-
-  font-size: 16px;
-  font-weight: var(--weight-regular, 400);
-  line-height: 1.75;
+  color: var(--tv-muted, #666);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.6;
 }
 
 .tv-hero-description p + p {
@@ -238,17 +324,52 @@
 
 
 /* =========================================================
-   ANIMATION — WORDS & LETTERS
+   AFFILIATE PARTNERS
 ========================================================= */
 
-/* Keep individual words together */
+.tv-hero-partners {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.tv-hero-partners .text-label {
+  color: var(--tv-muted, #666);
+}
+
+
+/* AFFILIATE IMAGE */
+
+.tv-hero-partners-image {
+  display: block;
+
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  margin: 0;
+
+  aspect-ratio: 1080 / 207;
+  object-fit: contain;
+
+  opacity: .65;
+  mix-blend-mode: multiply;
+}
+
+
+/* =========================================================
+   ANIMATION — WORDS & LETTERS
+========================================================= */
 
 .ml2 .hero-word {
   display: inline-block;
   white-space: nowrap;
 }
-
-/* Letters generated by JavaScript */
 
 .ml2 .letter {
   display: inline-block;
@@ -259,8 +380,7 @@
 
 
 /* =========================================================
-   ANIMATION — STAGE 01
-   MAIN TITLE
+   ANIMATION — MAIN HEADLINE
 ========================================================= */
 
 .hero-animate .ml2 .letter {
@@ -271,6 +391,7 @@
 }
 
 @keyframes hero-letter-in {
+
   from {
     opacity: 0;
     transform: translateY(12px) scale(1.4);
@@ -280,12 +401,12 @@
     opacity: 1;
     transform: translateY(0) scale(1);
   }
+
 }
 
 
 /* =========================================================
-   ANIMATION — STAGE 02
-   SECONDARY TITLE
+   ANIMATION — SECONDARY HEADLINE
 ========================================================= */
 
 .hero-animate .hero-title-secondary {
@@ -296,6 +417,7 @@
 }
 
 @keyframes hero-secondary-in {
+
   from {
     opacity: 0;
     transform: translateY(22px);
@@ -305,160 +427,167 @@
     opacity: 1;
     transform: translateY(0);
   }
+
 }
 
 
 /* =========================================================
-   ANIMATION — STAGE 03
-   CONCLUSION
+   ANIMATION — IMAGE OVERLAY
 ========================================================= */
 
-.hero-animate .hero-title-conclusion {
-  animation: hero-conclusion-in 850ms
+/* STAGE 01 — FIRST LINE */
+
+.hero-animate .hero-caption-line--first {
+  animation: hero-caption-in 900ms
     cubic-bezier(.16, 1, .3, 1) both;
 
-  animation-delay: 1850ms;
+  animation-delay: 200ms;
 }
 
-@keyframes hero-conclusion-in {
+
+/* STAGE 02 — SECOND LINE */
+
+.hero-animate .hero-caption-line--second {
+  animation: hero-caption-in 900ms
+    cubic-bezier(.16, 1, .3, 1) both;
+
+  animation-delay: 600ms;
+}
+
+
+/* STAGE 03 — DESCRIPTION */
+
+.hero-animate .tv-editorial-hero-caption-description {
+  animation: hero-caption-in 1000ms
+    cubic-bezier(.16, 1, .3, 1) both;
+
+  animation-delay: 1100ms;
+}
+
+
+/* IMAGE CAPTION KEYFRAMES */
+
+@keyframes hero-caption-in {
+
   from {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(18px);
   }
 
   to {
     opacity: 1;
     transform: translateY(0);
   }
+
 }
 
+
+/* =========================================================
+   ARRIVAL LINK
+========================================================= */
+
+.tv-hero-arrival {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+
+  width: 100%;
+  margin: 0;
+  padding-top: 14px;
+
+  border-top: 1px solid var(--tv-border, #e7e5df);
+
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.tv-hero-arrival-label {
+  color: var(--tv-text);
+  font-weight: 500;
+}
+
+.tv-hero-arrival-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #C66B49;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tv-hero-arrival-link:hover {
+  text-decoration: underline;
+}
+
+.tv-hero-arrival-link span {
+  font-size: 20px;
+  line-height: 1;
+}
 
 /* =========================================================
    RESPONSIVE — TABLET
 ========================================================= */
 
 @media (max-width: 900px) {
-
-  /* LAYOUT */
-
   .tv-editorial-hero {
     grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr);
   }
-
-
-  /* CONTENT */
-
-  .tv-editorial-hero-content > .text-label {
-    margin-bottom: 18px;
-  }
-
-
-  /* TITLE */
-
   .tv-editorial-hero-title {
-    margin-bottom: 24px;
-
     font-size: clamp(32px, 4.2vw, 40px);
   }
-
-  .hero-title-secondary {
-    font-size: .72em;
-  }
-
-
-  /* DESCRIPTION */
-
-  .tv-hero-description p {
-    font-size: 15px;
-    line-height: 1.7;
-  }
-
+  .hero-title-secondary { font-size: .72em; }
+  .tv-hero-planning { gap: 12px; }
+  .tv-hero-planning-title { font-size: 15px; }
+  .tv-hero-partners-image { max-width: 340px; }
+  .tv-hero-arrival { font-size: 15px; }
 }
 
+@media (max-width: 768px) {
+  .tv-hero-actions { gap: 6px; }
+  .tv-hero-action {
+    padding: 10px 12px;
+    gap: 6px;
+    font-size: 12px;
+  }
+  .tv-hero-partners-image { max-width: 300px; }
+}
 
 /* =========================================================
    RESPONSIVE — MOBILE
 ========================================================= */
 
 @media (max-width: 650px) {
-
-  /* LAYOUT */
-
   .tv-editorial-hero {
     grid-template-columns: minmax(0, 1fr);
     gap: 20px;
   }
-
-
-  /* IMAGE */
-
   .tv-editorial-hero--featured .tv-editorial-hero-media {
     border-radius: 8px;
   }
-
-
-  /* CONTENT */
-
   .tv-editorial-hero-content {
     max-width: 100%;
+    gap: 16px;
   }
-
-  .tv-editorial-hero-content > .text-label {
-    margin-bottom: 12px;
-    font-size: 12px;
-  }
-
-
-  /* TITLE */
-
+  .tv-editorial-hero-content > .text-label { font-size: 12px; }
   .tv-editorial-hero-title {
-    gap: 8px;
-    margin-bottom: 22px;
-
     font-size: clamp(28px, 7.2vw, 34px);
     line-height: 1.12;
     letter-spacing: -.035em;
   }
-
   .hero-title-secondary {
     max-width: 100%;
-
     font-size: .78em;
     line-height: 1.3;
     letter-spacing: -.015em;
   }
-
-
-  /* CONCLUSION */
-
-  .hero-title-conclusion {
-    margin-bottom: 18px;
-    padding: 11px 15px;
-
-    font-size: 17px;
-  }
-
-
-  /* DESCRIPTION */
-
-  .tv-hero-description {
-    max-width: 100%;
-  }
-
-  .tv-hero-description p {
-    font-size: 15px;
-    line-height: 1.65;
-  }
-
-  .tv-hero-description p + p {
-    margin-top: 10px;
-  }
-
+  .tv-hero-description p { font-size: 14px; }
+  .tv-hero-arrival { font-size: 14px; }
 }
 
-
 /* =========================================================
-   RESPONSIVE — IMAGE CAPTION
+   RESPONSIVE — IMAGE OVERLAY
 ========================================================= */
 
 @media (max-width: 600px) {
@@ -494,77 +623,14 @@
 
   .hero-animate .ml2 .letter,
   .hero-animate .hero-title-secondary,
-  .hero-animate .hero-title-conclusion {
+  .hero-animate .hero-caption-line--first,
+  .hero-animate .hero-caption-line--second,
+  .hero-animate .tv-editorial-hero-caption-description {
     animation: none;
   }
 
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =========================================================
-   ANIMATION — IMAGE CAPTION
-========================================================= */
-
-.hero-caption-line {
-  display: block;
-}
-
-
-/* STAGE 01 — FIRST LINE */
-
-.hero-animate .hero-caption-line--first {
-  animation: hero-caption-in 900ms
-    cubic-bezier(.16, 1, .3, 1) both;
-
-  animation-delay: 200ms;
-}
-
-
-/* STAGE 02 — SECOND LINE */
-
-.hero-animate .hero-caption-line--second {
-  animation: hero-caption-in 900ms
-    cubic-bezier(.16, 1, .3, 1) both;
-
-  animation-delay: 600ms;
-}
-
-
-/* STAGE 03 — DESCRIPTION */
-
-.hero-animate .tv-editorial-hero-caption-description {
-  animation: hero-caption-in 1000ms
-    cubic-bezier(.16, 1, .3, 1) both;
-
-  animation-delay: 1100ms;
-}
-
-
-/* KEYFRAMES */
-
-@keyframes hero-caption-in {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
+  .tv-hero-action {
+    transition: none;
   }
 
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }

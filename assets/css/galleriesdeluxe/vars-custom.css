@@ -193,9 +193,7 @@
   background-color: var(--tv-logo-orange);
 }
 
-.tv-bg-blue {
-  background-color: var(--tv-logo-blue);
-}
+
 
 .tv-bg-teal {
   background-color: var(--tv-logo-teal);
@@ -254,8 +252,9 @@
   --tv-bg-white: #FFFFFF;
   --tv-bg-beige: #FBF0E2;
   --tv-bg-charcoal: #232B2D;
-  --tv-bg-blue: #62818C;
+  --tv-bg-blue: #4EBDC0;
   --tv-bg-turquoise: #4DBDBF;
+  --tv-bg-orange: #F3921D;
 }
 
 
@@ -282,7 +281,9 @@
 .tv-bg-turquoise {
   background-color: var(--tv-bg-turquoise);
 }
-
+.tv-bg-orange {
+  background-color: var(--tv-bg-orange);
+}
 
 
 /* Pure white */

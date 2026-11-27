@@ -1876,3 +1876,69 @@
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================
+   CAROUSEL — ROUNDED VARIANT
+========================================= */
+
+.tv-carousel--rounded .tv-carousel-card {
+  background-color: var(--tv-bg-white, #fff);
+  border: 1px solid var(--tv-border, #e7e5df);
+  border-radius: 14px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.tv-carousel--rounded .tv-carousel-image {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.tv-carousel--rounded .tv-carousel-image img {
+  border-radius: inherit;
+}
+
+.tv-carousel--rounded .tv-carousel-description {
+  color: var(--tv-muted, #666);
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .tv-carousel--rounded .tv-carousel-card {
+    padding: 10px;
+    border-radius: 12px;
+  }
+
+  .tv-carousel--rounded .tv-carousel-image {
+    border-radius: 8px;
+  }
+
+}
