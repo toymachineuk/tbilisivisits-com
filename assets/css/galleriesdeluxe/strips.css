@@ -1206,16 +1206,16 @@
 ========================================================= */
 
 .tv-partners {
-  --partner-width: 110px;
-  --partner-height: 42px;
-  --partner-gap: 24px;
+  --partner-width: 100px;
+  --partner-height: 22px;
+  --partner-gap: 20px;
 
   width: 100%;
   max-width: 100%;
   min-width: 0;
 
   margin: 0;
-  padding: 12px 0;
+  padding: 4px 0;
 
   box-sizing: border-box;
   background: transparent;

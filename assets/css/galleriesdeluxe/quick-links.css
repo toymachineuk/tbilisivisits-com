@@ -335,7 +335,7 @@
 
 .tv-quick-links.tv-quick-links--scroll {
   --quick-link-width: 165px;
-  --quick-link-height: 100px;
+  --quick-link-height: 85px;
   display: grid;
   grid-template-columns: none;
   grid-template-rows: auto;

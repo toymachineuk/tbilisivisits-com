@@ -1113,8 +1113,8 @@ main > section.tv-filter-section > .tv-grid--wrapper {
   grid-template-areas: "header content";
   align-items: stretch;
   gap: 20px;
-  padding: 24px;
- 
+
+
   border-radius: 16px;
   box-sizing: border-box;
 }
@@ -1163,8 +1163,8 @@ main > section.tv-filter-section > .tv-grid--wrapper {
   grid-area: content;
   width: 100%;
   min-width: 0;
-  padding: 0;
-  
+  padding: var(--panel-padding, 36px);
+  border-radius: var(--panel-radius, 16px);
   box-sizing: border-box;
 }
 
