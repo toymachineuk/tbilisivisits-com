@@ -335,6 +335,7 @@
 
 .tv-quick-links.tv-quick-links--scroll {
   --quick-link-width: 165px;
+  --quick-link-height: 100px;
   display: grid;
   grid-template-columns: none;
   grid-template-rows: auto;
@@ -361,8 +362,8 @@
   width: 100%;
   min-width: 0;
   max-width: none;
-  height: 100px;
-  min-height: 100px;
+  height: var(--quick-link-height);
+  min-height: var(--quick-link-height);
   box-sizing: border-box;
   margin: 0;
   padding: 10px;
@@ -438,12 +439,57 @@
 @media (max-width: 650px) {
   .tv-quick-links.tv-quick-links--scroll {
     --quick-link-width: 145px;
-  }
-  .tv-quick-links.tv-quick-links--scroll > .tv-quick-link {
-    height: 90px;
-    min-height: 90px;
+    --quick-link-height: 90px;
   }
   .tv-quick-links--scroll .tv-quick-link-title {
     font-size: 14px;
   }
 }
+
+/* =========================================
+   15. SCROLL IMAGE VARIANT — BLUR TO SHARP
+========================================= */
+
+.tv-quick-links--image.tv-quick-links--scroll > .tv-quick-link {
+  background: #333;
+}
+
+.tv-quick-links--image.tv-quick-links--scroll > .tv-quick-link::before {
+  inset: -6px;
+  filter: blur(4px);
+  transform: scale(1.08);
+  transition: filter 450ms ease, transform 450ms ease;
+  pointer-events: none;
+}
+
+.tv-quick-links--image.tv-quick-links--scroll > .tv-quick-link::after {
+  background: linear-gradient(180deg, rgba(0,0,0,.30), rgba(0,0,0,.65));
+  opacity: 1;
+  transition: opacity 450ms ease;
+  pointer-events: none;
+}
+
+@media (hover: hover) {
+  .tv-quick-links--image.tv-quick-links--scroll > .tv-quick-link:hover::before {
+    filter: blur(0);
+    transform: scale(1);
+  }
+  .tv-quick-links--image.tv-quick-links--scroll > .tv-quick-link:hover::after {
+    opacity: .8;
+  }
+}
+
+.tv-quick-links--image.tv-quick-links--scroll > .tv-quick-link:focus-visible::before,
+.tv-quick-links--image.tv-quick-links--scroll > .tv-quick-link:active::before {
+  filter: blur(0);
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tv-quick-links--image.tv-quick-links--scroll > .tv-quick-link::before,
+  .tv-quick-links--image.tv-quick-links--scroll > .tv-quick-link::after {
+    transition: none;
+    transform: none;
+  }
+}
+

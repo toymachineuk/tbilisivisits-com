@@ -116,7 +116,7 @@
   flex-direction: column;
   align-items: flex-start;
   align-self: center;
-  gap: 22px;
+  gap: 14px;
 
   width: 100%;
   min-width: 0;
@@ -137,11 +137,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 6px;
+  gap: 4px;
 
   margin: 0;
 
-  font-size: clamp(40px, 4.2vw, 58px);
+  font-size: clamp(40px, 4.2vw, 54px);
   font-weight: var(--weight-bold);
   line-height: 1.08;
   letter-spacing: var(--tracking-tight);
@@ -169,7 +169,7 @@
 
   font-size: .68em;
   font-weight: var(--weight-medium);
-  line-height: 1.35;
+  line-height: 1.2;
   letter-spacing: var(--tracking-heading);
 }
 
@@ -203,7 +203,7 @@
 .tv-hero-planning {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 10px;
   width: 100%;
   min-width: 0;
   margin: 0;
@@ -212,9 +212,9 @@
 
 .tv-hero-planning-title {
   margin: 0;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
   color: var(--tv-text);
 }
 
@@ -246,8 +246,8 @@
   justify-content: center;
   gap: 12px;
   width: auto;
-  min-height: 40px;
-  padding: 10px 16px;
+  min-height: 38px;
+  padding: 8px 14px;
   box-sizing: border-box;
   border-radius: 5px;
   color: #fff;
@@ -309,9 +309,9 @@
 .tv-hero-description p {
   margin: 0;
   color: var(--tv-muted, #666);
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
 .tv-hero-description p + p {
@@ -494,11 +494,11 @@
 
   width: 100%;
   margin: 0;
-  padding-top: 14px;
+  padding-top: 10px;
 
   border-top: 1px solid var(--tv-border, #e7e5df);
 
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.4;
 }
 

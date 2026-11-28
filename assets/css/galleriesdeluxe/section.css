@@ -1114,7 +1114,7 @@ main > section.tv-filter-section > .tv-grid--wrapper {
   align-items: stretch;
   gap: 20px;
   padding: 24px;
-  background: #f9efe1;
+ 
   border-radius: 16px;
   box-sizing: border-box;
 }
@@ -1164,7 +1164,7 @@ main > section.tv-filter-section > .tv-grid--wrapper {
   width: 100%;
   min-width: 0;
   padding: 0;
-  background: transparent;
+  
   box-sizing: border-box;
 }
 
