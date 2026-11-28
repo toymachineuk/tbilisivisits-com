@@ -147,37 +147,41 @@
        HOMEPAGE JAVASCRIPT
   ====================================== -->
 
-  {{ if .IsHome }}
+<!-- =====================================
+     HOMEPAGE JAVASCRIPT
+====================================== -->
 
-    {{ $homeScripts := slice
-      "js/tbilisi-districts.js"
-      "js/animated-title.js"
-      "js/filters.js"
-    }}
+{{ if .IsHome }}
 
-    {{ range $homeScripts }}
+  {{ $homeScripts := slice
+    "js/tbilisi-districts.js"
+    "js/animated-title.js"
+    "js/filters.js"
+    "js/partners.js"
+  }}
 
-      {{ with resources.Get . }}
+  {{ range $homeScripts }}
 
-        {{ $script := . }}
+    {{ with resources.Get . }}
 
-        {{ if hugo.IsProduction }}
-          {{ $script = $script | minify | fingerprint }}
-        {{ end }}
+      {{ $script := . }}
 
-        <script
-          src="{{ $script.RelPermalink }}"
-          {{ if hugo.IsProduction }}
-            integrity="{{ $script.Data.Integrity }}"
-          {{ end }}
-          defer></script>
-
+      {{ if hugo.IsProduction }}
+        {{ $script = $script | minify | fingerprint }}
       {{ end }}
+
+      <script
+        src="{{ $script.RelPermalink }}"
+        {{ if hugo.IsProduction }}
+          integrity="{{ $script.Data.Integrity }}"
+        {{ end }}
+        defer></script>
 
     {{ end }}
 
   {{ end }}
 
+{{ end }}
 
   <!-- =====================================
        CUSTOM HEAD CONTENT

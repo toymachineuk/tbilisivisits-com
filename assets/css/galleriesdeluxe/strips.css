@@ -1181,20 +1181,51 @@
 }
 
 
-/* =========================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========/* =========================================================
    13. PARTNERS — LOGO STRIP
 ========================================================= */
 
 .tv-partners {
-  width: 100%;
-  margin: 0;
-  padding: 16px 0;
-  box-sizing: border-box;
+  --partner-width: 110px;
+  --partner-height: 42px;
+  --partner-gap: 24px;
 
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
+  margin: 0;
+  padding: 12px 0;
+
+  box-sizing: border-box;
   background: transparent;
 }
 
 .tv-partners-inner {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+
   margin-inline: auto;
   box-sizing: border-box;
 
@@ -1202,13 +1233,16 @@
 }
 
 
-/* HEADER */
+/* =========================================================
+   HEADER
+========================================================= */
 
 .tv-partners-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 6px 16px;
 
   padding-top: 12px;
 }
@@ -1228,29 +1262,54 @@
 }
 
 
-/* LOGO TRACK */
+/* =========================================================
+   SCROLLABLE LOGO TRACK
+========================================================= */
 
 .tv-partners-track {
-  display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: nowrap;
   align-items: center;
-  gap: clamp(12px, 2vw, 28px);
+  justify-content: flex-start;
+
+  gap: var(--partner-gap);
 
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
+
   padding: 12px 0 16px;
   box-sizing: border-box;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  scroll-behavior: auto;
+
+  -webkit-overflow-scrolling: touch;
+}
+
+.tv-partners-track::-webkit-scrollbar {
+  display: none;
 }
 
 
-/* LOGOS */
+/* =========================================================
+   LOGOS
+========================================================= */
 
 .tv-partners .tv-partner-logo {
   display: flex;
   align-items: center;
   justify-content: center;
 
+  flex: 0 0 var(--partner-width);
+
+  width: var(--partner-width);
   min-width: 0;
-  min-height: 38px;
+  height: var(--partner-height);
 }
 
 .tv-partners .tv-partner-logo img {
@@ -1264,7 +1323,9 @@
 }
 
 
-/* INDIVIDUAL LOGO SIZES */
+/* =========================================================
+   INDIVIDUAL LOGO SIZES
+========================================================= */
 
 .tv-partners .tv-partner-logo:nth-child(1) img,
 .tv-partners .tv-partner-logo:nth-child(4) img {
@@ -1278,7 +1339,7 @@
 
 .tv-partners .tv-partner-logo:nth-child(3) img,
 .tv-partners .tv-partner-logo:nth-child(6) img {
-  max-width: 115px;
+  max-width: 110px;
 }
 
 .tv-partners .tv-partner-logo:nth-child(4) img {
@@ -1289,54 +1350,57 @@
   max-width: 100px;
 }
 
-.tv-partners .tv-partner-logo:nth-child(7) img {
+.tv-partners .tv-partner-logo:nth-child(7) img,
+.tv-partners .tv-partner-logo:nth-child(8) img {
   max-width: 105px;
 }
 
 
-/* PARTNERS — TABLET */
+/* =========================================================
+   HERO INTEGRATION
+========================================================= */
+
+.tv-editorial-hero-content,
+.tv-hero-partners {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.tv-hero-partners {
+  width: 100%;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
 
 @media (max-width: 1000px) {
 
-  .tv-partners-track {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    gap: 28px;
-
-    padding: 22px 0 28px;
-
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    scroll-snap-type: x proximity;
-    scrollbar-width: none;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .tv-partners-track::-webkit-scrollbar {
-    display: none;
-  }
-
-  .tv-partners .tv-partner-logo {
-    flex: 0 0 145px;
-    min-height: 60px;
-    scroll-snap-align: start;
+  .tv-partners {
+    --partner-width: 105px;
+    --partner-gap: 20px;
   }
 
 }
 
 
-/* PARTNERS — MOBILE */
+/* =========================================================
+   MOBILE
+========================================================= */
 
 @media (max-width: 650px) {
 
   .tv-partners {
-    padding: 12px 0;
+    --partner-width: 90px;
+    --partner-height: 36px;
+    --partner-gap: 16px;
+
+    padding: 8px 0;
   }
 
-  .tv-partners-inner {
-    width: calc(100% - 32px);
+  .tv-partners-header {
+    padding-top: 10px;
   }
 
   .tv-partners-label {
@@ -1348,28 +1412,58 @@
   }
 
   .tv-partners-track {
-    gap: 16px;
     padding: 10px 0 12px;
   }
 
-  .tv-partners .tv-partner-logo {
-    flex-basis: 100px;
-    min-height: 36px;
-  }
-
   .tv-partners .tv-partner-logo img {
-    max-width: 100px;
-    height: 30px;
-  }
-
-  .tv-partners .tv-partner-logo:nth-child(2) img,
-  .tv-partners .tv-partner-logo:nth-child(4) img {
-    max-width: 85px;
-    height: 34px;
+    max-width: 90px;
+    height: 28px;
   }
 
 }
 
+
+/* =========================================
+   PARTNERS — SCROLL FIX
+========================================= */
+
+.tv-editorial-hero-content,
+.tv-hero-partners,
+.tv-partners,
+.tv-partners-inner {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.tv-partners-track {
+  display: flex;
+  flex-wrap: nowrap;
+
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+
+  scrollbar-width: none;
+}
+
+.tv-partners .tv-partner-logo {
+  flex: 0 0 110px;
+  scroll-snap-align: none;
+}
+
+@media (max-width: 650px) {
+
+  .tv-partners .tv-partner-logo {
+    flex-basis: 90px;
+  }
+
+}
 
 /* =========================================================
    14. INFO STRIP
