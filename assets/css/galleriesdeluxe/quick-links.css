@@ -1,4 +1,3 @@
-
 /* =========================================
    QUICK LINKS
 ========================================= */
@@ -327,5 +326,124 @@
 
   .tv-quick-links--image .tv-quick-link:hover::before {
     transform: none;
+  }
+}
+
+/* =========================================
+   14. HORIZONTAL SCROLL VARIANT
+========================================= */
+
+.tv-quick-links.tv-quick-links--scroll {
+  --quick-link-width: 165px;
+  display: grid;
+  grid-template-columns: none;
+  grid-template-rows: auto;
+  grid-auto-flow: column;
+  grid-auto-columns: var(--quick-link-width);
+  justify-content: start;
+  align-items: stretch;
+  gap: 8px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 0 8px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x proximity;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+.tv-quick-links.tv-quick-links--scroll > .tv-quick-link {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+  height: 100px;
+  min-height: 100px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 10px;
+  gap: 6px;
+  border-radius: 6px;
+  scroll-snap-align: start;
+}
+
+.tv-quick-links--scroll .tv-quick-link-number {
+  font-size: 9px;
+}
+
+.tv-quick-links--scroll .tv-quick-link-title {
+  font-size: 15px;
+  line-height: 1.2;
+}
+
+.tv-quick-links--scroll .tv-quick-link-detail {
+  display: none;
+}
+
+.tv-quick-links--scroll .tv-quick-link-arrow {
+  top: 10px;
+  right: 10px;
+  font-size: 13px;
+}
+
+.tv-quick-links--scroll::-webkit-scrollbar { height: 5px; }
+.tv-quick-links--scroll::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.tv-quick-links-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+}
+
+.tv-quick-links-header .text-label {
+  margin: 0;
+  font-size: 10px;
+}
+
+.tv-quick-links-hint {
+  color: var(--tv-muted, #666);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+/* Hero integration: constrain the scroll viewport. */
+.tv-editorial-hero .tv-editorial-hero-content {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.tv-hero-quick-links {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 650px) {
+  .tv-quick-links.tv-quick-links--scroll {
+    --quick-link-width: 145px;
+  }
+  .tv-quick-links.tv-quick-links--scroll > .tv-quick-link {
+    height: 90px;
+    min-height: 90px;
+  }
+  .tv-quick-links--scroll .tv-quick-link-title {
+    font-size: 14px;
   }
 }

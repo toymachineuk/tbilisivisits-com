@@ -1094,8 +1094,11 @@ max-width: 480px;
 }
 
 .width-full {
-  width: 100%;
+
+    width: 100vw;
   max-width: none;
+  margin-inline: calc(50% - 50vw);
+  box-sizing: border-box;
 }
 
 
