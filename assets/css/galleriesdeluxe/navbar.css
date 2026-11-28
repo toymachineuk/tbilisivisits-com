@@ -15,13 +15,16 @@
 
   width: 100%;
   height: 80px;
-  padding: 0 3.2vw;
+   width: 100%;
+  max-width: 1400px;
+  margin-inline: auto;
   box-sizing: border-box;
 
   background: var(--tv-page, #fff);
   color: var(--tv-text, #171717);
 
-  border: 0;
+  border-bottom: 1px solid #e7e5df;
+padding-block: 12px;
   border-radius: 0;
 
   font-family: var(--font-sans, 'DM Sans', sans-serif);
